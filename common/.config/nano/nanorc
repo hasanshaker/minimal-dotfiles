@@ -1,0 +1,50 @@
+#-*-mode: conf -*-
+syntax "Nanorc" "\.?nanorc$"
+
+## Possible errors and parameters
+icolor brightwhite "^[[:space:]]*((un)?set|include|syntax|i?color).*$"
+
+## Keywords
+icolor brightgreen "^[[:space:]]*(set|unset)[[:space:]]+(autoindent|backup|backupdir|backwards|boldtext|brackets|casesensitive|const|cut|fill|historylog|matchbrackets|morespace|mouse|multibuffer|noconvert|nofollow|nohelp|nonewlines|nowrap|operatingdir|preserve|punct)\>" "^[[:space:]]*(set|unset)[[:space:]]+(quickblank|quotestr|rebinddelete|rebindkeypad|regexp|smarthome|smooth|speller|suspend|tabsize|tabstospaces|tempfile|undo|view|whitespace|wordbounds)\>"
+icolor green "^[[:space:]]*(set|unset|include|syntax|header)\>"
+
+## Colors
+icolor yellow "^[[:space:]]*i?color[[:space:]]*(bright)?(white|black|red|blue|green|yellow|magenta|cyan)?(,(white|black|red|blue|green|yellow|magenta|cyan))?\>"
+icolor magenta "^[[:space:]]*i?color\>" "\<(start|end)="
+
+## Strings
+icolor white ""(\\.|[^"])*""
+
+## Comments
+icolor brightblue "^[[:space:]]*#.*$"
+icolor cyan "^[[:space:]]*##.*$"
+
+## Convert typed tabs to spaces.
+set tabstospaces
+
+## dont enable this
+unset suspend
+
+## Use this spelling checker instead of the internal one.  This option
+## does not properly have a default value.
+set speller "aspell -x -c"
+
+## Enable soft line wrapping (AKA full-line display).
+set softwrap
+
+## When soft line wrapping is enabled, make it wrap lines at blanks
+## (tabs and spaces) instead of always at the edge of the screen.
+set atblanks
+
+## Back up files to the current filename plus a tilde.
+set backup
+
+## The directory to put unique backup files in.
+set backupdir "~/.config/nano/backups"
+
+## Display line numbers to the left of the text.
+set linenumbers
+
+## Do case-sensitive searches by default.
+set casesensitive
+
