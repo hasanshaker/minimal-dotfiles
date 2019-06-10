@@ -8,4 +8,4 @@
 [ -z "${VISUAL}" ] && export VISUAL="vi"
 
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
-[ -z ${GPG_TTY} ] && export GPG_TTY=$(tty)
+[ -z "${GPG_TTY}" ] && export GPG_TTY="$(tty)"
