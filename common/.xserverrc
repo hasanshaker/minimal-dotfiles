@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# $DISTRO defined at .profile
+case "$DISTRO" in
+    "arch")
+        exec /usr/bin/Xorg -nolisten tcp -keeptty "$@" vt$XDG_VTNR
+        ;;
+    "FreeBSD")
+        exec /usr/local/bin/Xorg #-nolisten tcp "$@"
+        ;;
+    *)
+        exec /usr/bin/Xorg -nolisten tcp "$@"
+        ;;
+esac
