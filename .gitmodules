@@ -1,0 +1,4 @@
+[submodule "wallpapers"]
+	path = wallpapers
+	url = git@gitlab.com:alexforsale/wallpapers.git
+	branch = master
