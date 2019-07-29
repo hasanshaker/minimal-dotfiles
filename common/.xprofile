@@ -1,1 +1,1 @@
-[ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
+# [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
