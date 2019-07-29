@@ -1,0 +1,40 @@
+! General Settings
+xterm*termName: xterm-256color
+xterm*geometry: 80x24
+xterm*saveLines: 4096
+xterm*scrollBar: true
+xterm*.LoginShell: True
+xterm*rightScrollBar: true
+xterm*scrollTtyOutput: false
+
+! Copy and paste with clipboard
+xterm.selectToClipboard: true
+xterm*translations: #override \
+	Ctrl Shift <KeyPress> C: copy-selection(CLIPBOARD) \n\
+        Ctrl Shift <KeyPress> V: insert-selection(CLIPBOARD) \n\
+        Ctrl <Btn1Up>: exec-formatted("xdg-open '%t'", PRIMARY)
+        ~Meta Shift<Key>Tab: string(\033[Z) \n\
+        Meta Shift<Key>Tab: string(\033\033[Z) \n\
+        Ctrl <Key> minus: smaller-vt-font() \n\
+        Ctrl <Key> plus: larger-vt-font() \n\
+        Ctrl <Key> 0: set-vt-font(d)
+
+! Fix alt-key inputting
+xterm*eightBitInput: false
+xterm*metaSendsEscape: true
+
+! Allow selecting email/url by double-click
+xterm*charClass: 33:48,37-38:48,45-47:48,64:48,58:48,126:48,61:48,63:48,43:48,35:48
+xterm*facename: Source Code Pro Light
+xterm*facesize: 10
+xterm*renderFont: true
+! VT Font Menu: Unreadable
+xterm*faceSize1: 8
+! VT font menu: Tiny
+xterm*faceSize2: 10
+! VT font menu: Medium
+xterm*faceSize3: 12
+! VT font menu: Large
+xterm*faceSize4: 16
+! VT font menu: Huge
+xterm*faceSize5: 22

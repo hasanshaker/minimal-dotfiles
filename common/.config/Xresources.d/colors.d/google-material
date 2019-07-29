@@ -1,0 +1,30 @@
+! Google Material Design
+! http://www.xcolors.net/dl/material
+
+#define _background                      #263238
+#define _foreground                      #eceff1
+
+! black
+#define _color0  			 #263238
+#define _color8  			 #37474f
+! red
+#define _color1  			 #ff9800
+#define _color9  			 #ffa74d
+! green
+#define _color2  			 #8bc34a
+#define _color10 			 #9ccc65
+! yellow
+#define _color3  			 #ffc107
+#define _color11 			 #ffa000
+! blue
+#define _color4  			 #03a9f4
+#define _color12 			 #81d4fa
+! magenta
+#define _color5  			 #e91e63
+#define _color13 			 #ad1457
+! cyan
+#define _color6  			 #009688
+#define _color14 			 #26a69a
+! white
+#define _color7  			 #cfd8dc
+#define _color15 			 #eceff1

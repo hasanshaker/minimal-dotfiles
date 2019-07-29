@@ -1,0 +1,43 @@
+! COLOR PALETTE HERE !
+! set the variables by including the files
+! in the colors.d directory
+
+#include "colors.d/DOOMICIDE-darkocean"
+
+*.foreground:   _foreground
+*.foreground1:  _foreground1
+*.foreground2:  _foreground2
+*.foreground3:  _foreground3
+*.background:   _background
+*.background1:  _background1
+*.background2:  _background2
+*.bg_alt:       _bg_alt
+*.bg_alt1:      _bg_alt1
+*.bg_alt2:      _bg_alt2
+*.bg_alt3:      _bg_alt3
+*.hl_bg:        _hl_bg
+*.hl_bg1:       _hl_bg1
+*.hl_bg2:       _hl_bg2
+*.hl_bg3:       _hl_bg3
+*.hl_fg:        _hl_fg
+*.hl_fg1:       _hl_fg1
+*.hl_fg2:       _hl_fg2
+*.hl_fg3:       _hl_fg3
+*.cursorColor:  _cursorColor
+
+*.color0:       _color0
+*.color1:       _color1
+*.color2:       _color2
+*.color3:       _color3
+*.color4:       _color4
+*.color5:       _color5
+*.color6:       _color6
+*.color7:       _color7
+*.color8:       _color8
+*.color9:       _color9
+*.color10:      _color10
+*.color11:      _color11
+*.color12:      _color12
+*.color13:      _color13
+*.color14:      _color14
+*.color15:      _color15

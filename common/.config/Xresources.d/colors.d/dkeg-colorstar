@@ -1,0 +1,24 @@
+!!!! dkeg - colorstar !!!!
+
+! http://www.xcolors.net/dl/dkeg%20-%20colorstar
+
+!*background:#111111
+#define _background #000000
+#define _foreground #d3d3d3
+
+#define _color0 #03010F
+#define _color1 #503b43
+#define _color2 #353B64
+#define _color3 #8c2424
+#define _color4 #6067AC
+#define _color5 #624D19
+#define _color6 #7C83C0
+#define _color7 #9A600F
+#define _color8 #AB9E9E
+#define _color9 #B28930
+#define _color10 #BBADA9
+#define _color11 #C37305
+#define _color12 #D0AE58
+#define _color13 #D7B559
+#define _color14 #F4E199
+#define _color15 #F6F4DF

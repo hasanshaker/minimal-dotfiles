@@ -1,0 +1,73 @@
+!DOOMICIDE darkocean
+!Black
+
+! http://www.xcolors.net/dl/DOOMICIDE%20darkocean
+
+! black
+#define _color0         #000000
+#define _background1    #000000
+
+! dark grey
+#define _color8         #38372c
+#define _hl_bg1         #38372c
+
+! blue
+#define _color1         #571dc2
+#define _cursorColor    #571dc2
+#define _hl_fg1         #571dc2
+
+! purple
+#define _color9         #7c54b0
+#define _foreground1    #7c54b0
+
+!Green
+#define _color2         #14db49
+#define _foreground2    #14db49
+#define _hl_fg3         #14db49
+
+!lighter Green
+#define _color10        #a2e655
+#define _bg_alt3        #a2e655
+#define _hl_fg2         #a2e655
+
+!dark purple
+#define _color3         #403d70
+#define _border         #403d70
+#define _hl_bg2         #403d70
+
+! light brown
+#define _color11        #9C6F59
+
+!Blue
+#define _color4         #385a70
+#define _separator      #385a70
+
+! darker blue
+#define _color12        #323f5c
+#define _background2    #323f5c
+#define _hl_bg3         #323f5c
+
+!Magenta
+#define _color5         #384894
+#define _bg_alt2        #384894
+
+! light magenta
+#define _color13        #5e6c99
+#define _background3    #5e6c99
+
+!Cyan
+#define _color6         #4F3A5E
+#define _foreground3    #4F3A5E
+
+! light cyan
+#define _color14        #667d77
+#define _bg_alt1        #667d77
+
+!White
+#define _color15        #ffffff
+
+! grey
+#define _color7         #999999
+
+#define _background     #000000
+#define _foreground     #ffffff

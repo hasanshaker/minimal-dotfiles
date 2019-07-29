@@ -1,0 +1,38 @@
+! vim:ft=xdefaults
+! euphrasia v. 1.0
+! by bohoomil
+! http://www.xcolors.net/dl/euphrasia
+
+! Xresources
+!URxvt*background:  #000C1A
+!URxvt*foreground:  #ACB4BF
+!URxvt*cursorColor: #335A80
+
+! fg/bg for Xorg apps
+#define _background    #CFCFD9
+#define _foreground    #1C2027
+
+! black
+#define _color0    #192033
+#define _color8    #666666
+! red
+#define _color1    #A62A3E
+#define _color9    #F04758
+! green
+#define _color2    #38912B
+#define _color10   #93C724
+! yellow
+#define _color3    #B27D12
+#define _color11   #DDB62B
+! blue
+#define _color4    #355C9A
+#define _color12   #45A3E6
+! magenta
+#define _color5    #7C4F9F
+#define _color13   #C953EF
+! cyan
+#define _color6    #258F8F
+#define _color14   #60C6C8
+! white
+#define _color7    #77858C
+#define _color15   #C0C0C0

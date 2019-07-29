@@ -1,0 +1,5 @@
+#include ".config/Xresources.d/colors"
+#include ".config/Xresources.d/URxvt"
+#include ".config/Xresources.d/rofi"
+#include ".config/Xresources.d/xterm"
+#include ".config/Xresources.d/URxvt"

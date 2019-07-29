@@ -1,0 +1,21 @@
+! http://www.xcolors.net/dl/paperko
+
+#define _foreground   #c0c0c0
+#define _background   #1d2325
+#define _cursorColor  #c0c0c0
+#define _color0       #252525
+#define _color8       #434343
+#define _color1       #7c4d72
+#define _color9       #c758af
+#define _color2       #727c4d
+#define _color10      #afc758
+#define _color3       #7c724d
+#define _color11      #c7af58
+#define _color4       #4d727c
+#define _color12      #58afc7
+#define _color5       #7d4d5b
+#define _color13      #c75877
+#define _color6       #4d5b7d
+#define _color14      #5877c7
+#define _color7       #c0c0c0
+#define _color15      #f3f3f3

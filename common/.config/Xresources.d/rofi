@@ -1,0 +1,20 @@
+! ROFI SETUP HERE !
+
+! Enable the extended coloring options
+rofi.color-enabled: true
+!                  bg            border        separator
+rofi.color-window: _background,  _border,      _separator
+!                  bg            fg            bg-alt    hl-bg    hl-fg
+rofi.color-normal: _background1, _foreground1, _bg_alt1, _hl_bg1, _hl_fg1
+rofi.color-active: _background2, _foreground2, _bg_alt2, _hl_bg2, _hl_fg2
+rofi.color-urgent: _background3, _foreground3, _bg_alt3, _hl_bg3, _hl_fg3
+
+rofi.separator-style: solid
+rofi.sidebar-mode: false
+rofi.lines: 5
+rofi.font: Source Code Pro 13
+rofi.bw: 1
+rofi.columns: 2
+rofi.padding: 5
+rofi.fixed-num-lines: true
+rofi.hide-scrollbar: true

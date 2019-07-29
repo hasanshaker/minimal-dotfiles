@@ -1,0 +1,21 @@
+! http://www.xcolors.net/dl/petals
+
+#define _foreground   #fffce9
+#define _background   #020002
+#define _cursorColor  #fffce9
+#define _color0       #020002
+#define _color8       #220211
+#define _color1       #b52f6a
+#define _color9       #ff7c87
+#define _color2       #6c60aa
+#define _color10      #aa96dd
+#define _color3       #a68189
+#define _color11      #ff9d80
+#define _color4       #ac428a
+#define _color12      #a94f8f
+#define _color5       #610064
+#define _color13      #b080b2
+#define _color6       #252b4f
+#define _color14      #9295a7
+#define _color7       #feeeca
+#define _color15      #fffce9
