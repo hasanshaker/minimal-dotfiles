@@ -412,7 +412,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </keybind>
 
   <!-- customization -->
-  <keybind key="W-d">
+  <keybind key="W-Menu">
     <action name="ShowMenu">
       <menu>root-menu</menu>
     </action>
