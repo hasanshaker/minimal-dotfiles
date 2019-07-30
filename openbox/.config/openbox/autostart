@@ -27,3 +27,6 @@ compton -b --config $HOME/.config/compton/compton.conf &
 
 # wallpaper
 ~/.local/bin/setwallpaper &
+
+# polybar
+~/.local/bin/polybar-${DISTRO}-top
