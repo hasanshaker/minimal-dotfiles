@@ -24,3 +24,6 @@ rofi -modi "window,drun,run" &
 
 # compton
 compton -b --config $HOME/.config/compton/compton.conf &
+
+# wallpaper
+~/.local/bin/setwallpaper &
