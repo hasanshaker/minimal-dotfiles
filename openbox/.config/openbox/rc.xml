@@ -433,6 +433,33 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       </action>
     </keybind>
   </keybind>
+
+  <!-- emacs Keybindings for desktop switching -->
+  <keybind key="W-b">
+    <action name="GoToDesktop"><to>left</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-f">
+    <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-p">
+    <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-n">
+    <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
+  </keybind>
+
+  <keybind key="W-S-b">
+    <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-S-f">
+    <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-S-p">
+    <action name="SendToDesktop"><to>up</to><wrap>no</wrap></action>
+  </keybind>
+  <keybind key="W-S-n">
+    <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
+  </keybind>
 </keyboard>
 
 <mouse>
