@@ -419,11 +419,19 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </keybind>
 
   <keybind key="W-x">
-    <!-- emacs style window switch-->
+    <keybind key="f">
+      <action name="GrowToEdgeEast"/>
+    </keybind>
+
     <keybind key="b">
-      <action name="Execute">
-        <command>rofi -show window</command>
-      </action>
+      <action name="GrowToEdgeWest"/>
+    </keybind>
+
+    <keybind key="p">
+      <action name="GrowToEdgeNorth"/>
+    </keybind>
+    <keybind key="n">
+      <action name="GrowToEdgeSouth"/>
     </keybind>
 
     <!-- rofi drun -->
@@ -432,6 +440,39 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
         <command>rofi -show drun</command>
       </action>
     </keybind>
+
+    <!-- toggle maximize window -->
+    <keybind key="space">
+      <action name="ToggleMaximize"/>
+    </keybind>
+
+    <!-- toggle fullscreen -->
+    <keybind key="W-space">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+
+    <keybind key="W-n">
+      <action name="ResizeRelative">
+        <bottom>5</bottom>
+      </action>
+    </keybind>
+    <keybind key="W-p">
+      <action name="ResizeRelative">
+        <top>5</top>
+      </action>
+    </keybind>
+  </keybind>
+  <keybind key="W-S-p">
+    <action name="ResizeRelative">
+      <top>5</top>
+      <right>10</right>
+    </action>
+  </keybind>
+  <keybind key="W-S-n">
+    <action name="ResizeRelative">
+      <top>-5</top>
+      <right>-10</right>
+    </action>
   </keybind>
 
   <!-- emacs Keybindings for desktop switching -->
@@ -448,16 +489,16 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
     <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
 
-  <keybind key="W-S-b">
+  <keybind key="W-C-b">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-S-f">
+  <keybind key="W-C-f">
     <action name="SendToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-S-p">
+  <keybind key="W-C-p">
     <action name="SendToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-S-n">
+  <keybind key="W-C-n">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
 </keyboard>
