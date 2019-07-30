@@ -29,4 +29,4 @@ compton -b --config $HOME/.config/compton/compton.conf &
 ~/.local/bin/setwallpaper &
 
 # polybar
-~/.local/bin/polybar-${DISTRO}-top
+~/.local/bin/polybar-${DISTRO:-common}-top
