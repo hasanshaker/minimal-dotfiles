@@ -16,28 +16,44 @@
 ;
 ;==========================================================
 
+[color]
+
+trans = #00000000
+white = #FFFFFF
+black = #000000
+
+bg = #1F1F1F
+fg = #FFFFFF
+fg-alt = #A9ABB0
+
+acolor = #3949ab
+curgent = #e53935
+coccupied = #43a047
+
 [bar/top]
 enable-ipc = true
 top = true
 
-background = #1f1f1f
-foreground = #eee
+background = ${color.bg}
+foreground = ${color.fg}
 
-line-color = ${bar/top.background}
 line-size = 1
 
 padding-left = 0
 padding-right = 0
-module-margin-left = 3
-module-margin-right = 3
+module-margin-left = 1
+module-margin-right = 1
 
 separator = |
+
+fixed-center = false
 
 font 0 = "SourceCodePro:pixelsize=12;0:style=Regular"
 font-1 = "NotoColorEmoji:pixelsize=12;0"
 font-2 = "NotoSans-Regular:size=9;0"
 font-3 = "Siji:pixelsize=11;1"
 
+modules-left = arch
 modules-right = volume date
 
 [module/date]
@@ -45,15 +61,28 @@ type = internal/date
 date =    %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
 date-alt = %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
 
+[module/arch]
+type = custom/text
+content = 
+;alt-icon = 
+content-padding = 2
+content-background = ${color.acolor}
+content-foreground = ${color.fg}
+click-left = rmenu_g
+click-middle = rfull
+click-right = rmenu_wi_g
+
 [module/volume]
-type = internal/volume
+type = internal/alsa
 ;speaker-mixer = Speaker
 ;headphone-mixer = Headphone
 :headphone-id = 9
 
 format-volume = <ramp-volume> <label-volume>
+label-volume = %percentage%%
 label-muted =   muted
 label-muted-foreground = #66
+format-muted-prefix = " "
 
 ramp-volume-0 = 
 ramp-volume-1 = 
