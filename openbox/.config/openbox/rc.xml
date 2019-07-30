@@ -418,11 +418,18 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
     </action>
   </keybind>
 
-  <!-- emacs style window switch-->
   <keybind key="W-x">
+    <!-- emacs style window switch-->
     <keybind key="b">
       <action name="Execute">
         <command>rofi -show window</command>
+      </action>
+    </keybind>
+
+    <!-- rofi drun -->
+    <keybind key="W-f">
+      <action name="Execute">
+        <command>rofi -show drun</command>
       </action>
     </keybind>
   </keybind>
