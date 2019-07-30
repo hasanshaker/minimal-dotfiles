@@ -158,7 +158,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
        and back in -->
 
   <!-- The number of virtual desktops to use. -->
-  <number>4</number>
+  <number>10</number>
 
   <!-- The number of the desktop to use when first started. -->
   <firstdesk>1</firstdesk>
@@ -260,16 +260,16 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   <keybind key="S-A-Down">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-F1">
+  <keybind key="W-1">
     <action name="GoToDesktop"><to>1</to></action>
   </keybind>
-  <keybind key="W-F2">
+  <keybind key="W-2">
     <action name="GoToDesktop"><to>2</to></action>
   </keybind>
-  <keybind key="W-F3">
+  <keybind key="W-3">
     <action name="GoToDesktop"><to>3</to></action>
   </keybind>
-  <keybind key="W-F4">
+  <keybind key="W-4">
     <action name="GoToDesktop"><to>4</to></action>
   </keybind>
   <keybind key="W-d">
@@ -388,6 +388,13 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   <keybind key="S+W+Print">
     <action name="Execute">
       <command>exec ~/.local/bin/record-screen ogv</command>
+    </action>
+  </keybind>
+
+  <!-- customization -->
+  <keybind key="W-d">
+    <action name="ShowMenu">
+      <menu>root-menu</menu>
     </action>
   </keybind>
 </keyboard>
