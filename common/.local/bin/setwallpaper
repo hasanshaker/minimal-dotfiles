@@ -1,0 +1,14 @@
+#!/bin/sh
+# Sets the background. If given an argument, will set file as background.
+if [ -n "$1" ];then
+    cp "$1" ~/.config/setwall.png && notify-send -i "$HOME/.config/setwall.png" "Wallpaper changed."
+    xwallpaper --zoom ~/.config/wall.png
+elif [ ! -f ~/.config/setwall.png ];then
+    if [ -n "$DISTRO" ];then
+        wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+    else
+        wp=$(shuf -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
+    fi
+    xwallpaper --zoom $wp
+fi
+
