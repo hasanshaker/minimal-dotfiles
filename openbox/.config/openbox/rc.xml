@@ -348,7 +348,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </keybind>
 
   <!-- Keybindings for window switching with the arrow keys -->
-  <keybind key="W-S-Right">
+<!--  <keybind key="W-S-Right">
     <action name="DirectionalCycleWindows">
       <direction>right</direction>
     </action>
@@ -368,7 +368,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       <direction>down</direction>
     </action>
   </keybind>
-
+-->
   <!-- Keybindings for running applications -->
   <keybind key="W-e">
     <action name="Execute">
