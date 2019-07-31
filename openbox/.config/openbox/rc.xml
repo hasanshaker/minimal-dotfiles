@@ -931,6 +931,10 @@ type="the window's _OB_APP_TYPE property (see obxprob)..
 
 # end of the example
   -->
+  <application class="*">
+    <decor>no</decor>
+  </application>
+
 </applications>
 
 </openbox_config>
