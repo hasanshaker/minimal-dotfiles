@@ -53,7 +53,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = arch
-modules-right = volume date
+modules-right = pulseaudio date
 
 label-active-font = 3
 
@@ -74,8 +74,8 @@ click-left = rmenu_g
 click-middle = rfull
 click-right = rmenu_wi_g
 
-[module/volume]
-type = internal/alsa
+[module/pulseaudio]
+type = internal/pulseaudio
 ;speaker-mixer = Speaker
 ;headphone-mixer = Headphone
 :headphone-id = 9
