@@ -1,0 +1,4 @@
+[Default Applications]
+application/x-directory=emacs-dired.desktop
+inode/directory=emacs-dired.desktop
+x-scheme-handler/tradedash=tradedash.desktop
