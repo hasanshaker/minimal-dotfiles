@@ -53,7 +53,7 @@ font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
 modules-left = arch
-modules-right = pulseaudio date
+modules-right = pulseaudio date powermenu
 
 label-active-font = 3
 
@@ -93,6 +93,35 @@ ramp-volume-3 = 
 ramp-volume-4 = 
 ramp-volume-5 = 
 ramp-volume-6 = 
+
+[module/powermenu]
+type = custom/menu
+
+expand-right = true
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${color.fg}
+label-close =  cancel
+label-close-foreground = ${color.fg}
+label-separator = |
+label-separator-foreground = ${color.fg-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = sudo reboot
+
+menu-2-0 = power off
+menu-2-0-exec = sudo poweroff
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
 
 [settings]
 screenchange-reload = true
