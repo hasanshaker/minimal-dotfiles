@@ -52,8 +52,8 @@ font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
 
-modules-left = arch
-modules-right = pulseaudio date powermenu
+modules-left = arch xwindow
+modules-right = xkeyboard pulseaudio date network-networkmanager powermenu
 
 label-active-font = 3
 
@@ -122,6 +122,31 @@ menu-2-0 = power off
 menu-2-0-exec = sudo poweroff
 menu-2-1 = cancel
 menu-2-1-exec = menu-open-0
+
+[module/network-networkmanager]
+type = custom/script
+exec = ~/.local/bin/polybar-network-networkmanager.sh
+tail = true
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = " "
+format-prefix-foreground = ${color.fg-alt}
+format-prefix-underline = ${color.acolor}
+
+label-layout = %layout%
+label-layout-underline = ${color.acolor}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${color.acolor}
+label-indicator-underline = ${color.acolor}
+
+[module/xwindow]
+type = internal/xwindow
+label = %title:0:30:...%
 
 [settings]
 screenchange-reload = true
