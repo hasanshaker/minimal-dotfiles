@@ -48,15 +48,14 @@ separator = |
 
 fixed-center = false
 
-font 0 = "SourceCodePro:pixelsize=12;0:style=Regular"
-font-1 = "NotoColorEmoji:pixelsize=12;0"
-font-2 = "NotoSans-Regular:size=9;0"
-font-3 = "Siji:pixelsize=11;1"
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
 
 modules-left = arch
 modules-right = volume date
 
-label-active-font = 2
+label-active-font = 3
 
 [module/date]
 type = internal/date
@@ -94,3 +93,11 @@ ramp-volume-3 = 
 ramp-volume-4 = 
 ramp-volume-5 = 
 ramp-volume-6 = 
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+;pseudo-transparency = false
