@@ -31,3 +31,6 @@ elif [[ $(command -v firefox 2>/dev/null) ]];then
 else
     export TERMINAL="elinks"
 fi
+
+# file manager
+[ -z $FILE ] && export FILE="emacsclient -c --eval '(dired %f)'"
