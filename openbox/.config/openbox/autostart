@@ -30,3 +30,6 @@ compton -b --config $HOME/.config/compton/compton.conf &
 
 # polybar
 ~/.local/bin/polybar-${DISTRO:-common}-top
+
+# emacs server
+emacs --daemon
