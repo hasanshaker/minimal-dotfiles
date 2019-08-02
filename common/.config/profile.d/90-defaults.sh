@@ -9,3 +9,14 @@
 
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
 [ -z "${GPG_TTY}" ] && export GPG_TTY="$(tty)"
+
+# Terminal apps
+# prioritize xterm above others
+if [[ $(command -v xterm 2>/dev/null) ]];then
+    export TERMINAL="xterm"
+elif [[ $(command -v urxvt 2>/dev/null) ]];then
+    export TERMINAL="urxvt"
+elif [[ $(command -v gnome-terminal 2>/dev/null) ]];then
+    export TERMINAL="gnome-terminal"
+fi
+
