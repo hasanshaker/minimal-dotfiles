@@ -33,4 +33,4 @@ else
 fi
 
 # file manager
-[ -z "$FILE" ] && export FILE="emacsclient -c --eval '(dired %f)'"
+[ -z "$FILE" ] && export FILE="diredfm"
