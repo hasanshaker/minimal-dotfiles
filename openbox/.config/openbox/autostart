@@ -29,7 +29,10 @@ compton -b --config $HOME/.config/compton/compton.conf &
 ~/.local/bin/setwallpaper &
 
 # polybar
-~/.local/bin/polybar-${DISTRO:-common}-top
+~/.local/bin/polybar-${DISTRO:-common}-top &
 
 # emacs server
-emacs --daemon
+emacs --daemon &
+
+# sxhkd
+sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc

@@ -3,47 +3,47 @@
 # Basic binds
 # terminal
 super + Return
-$TERMINAL
+      $TERMINAL
 
 # file manager
 super + r
-$FILE
+      $FILE
 
 # htop
 super + i
-$TERMINAL -e htop
+      $TERMINAL -e htop
 
 # pulsemixer
 super + shift + a
-$TERMINAL -e pulsemixer
+      $TERMINAL -e pulsemixer
 
 # browser
 super + w
-$BROWSER
+      $BROWSER
 
 # gimp
 super + g
-gimp
+      gimp
 
 # Et cetera...
 # dmenuunicode, from voidrice
 super + grave
-dmenuunicode
+      dmenuunicode
 
 # screenkey
 super + Scroll_Lock
-killall screenkey || screenkey
+      killall screenkey || screenkey
 
 # showclip script
 super + Insert
-showclip
+      showclip
 
 # restart and shutdown
 super + shift + x
-prompt "Shutdown computer?" "sudo -A shutdown -h now"
+      prompt "Shutdown computer?" "sudo -A shutdown -h now"
 super + shift + BackSpace
-prompt "Reboot computer?" "sudo -A shutdown -r now"
+      prompt "Reboot computer?" "sudo -A shutdown -r now"
 
 # Network Manager interface
 super + F12
-$TERMINAL -e sudo -A nmtui
+      $TERMINAL -e sudo -A nmtui
