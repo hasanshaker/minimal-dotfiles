@@ -12,20 +12,20 @@
 
 # Terminal apps
 # prioritize xterm above others
-if [[ $(command -v xterm 2>/dev/null) ]];then
+if [ $(command -v xterm 2>/dev/null) ];then
     export TERMINAL="xterm"
-elif [[ $(command -v urxvt 2>/dev/null) ]];then
+elif [ $(command -v urxvt 2>/dev/null) ];then
     export TERMINAL="urxvt"
-elif [[ $(command -v gnome-terminal 2>/dev/null) ]];then
+elif [ $(command -v gnome-terminal 2>/dev/null) ];then
     export TERMINAL="gnome-terminal"
 fi
 
 # Browser
-if [[ $(command -v brave 2>/dev/null) ]];then
+if [ $(command -v brave 2>/dev/null) ];then
     # brave browser
     # https://brave.com
     export BROWSER="brave"
-elif [[ $(command -v firefox 2>/dev/null) ]];then
+elif [ $(command -v firefox 2>/dev/null) ];then
     # firefox
     export TERMINAL="firefox"
 else
@@ -33,4 +33,4 @@ else
 fi
 
 # file manager
-[ -z $FILE ] && export FILE="emacsclient -c --eval '(dired %f)'"
+[ -z "$FILE" ] && export FILE="emacsclient -c --eval '(dired %f)'"
