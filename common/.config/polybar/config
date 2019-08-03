@@ -127,6 +127,7 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/.local/bin/polybar-network-networkmanager.sh
 tail = true
+click-left = $TERMINAL -e nmtui
 
 [module/xkeyboard]
 type = internal/xkeyboard
