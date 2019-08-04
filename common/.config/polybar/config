@@ -16,143 +16,136 @@
 ;
 ;==========================================================
 
-[color]
+; -------------------------------------------------------------------------------
+; COLORS
+; -------------------------------------------------------------------------------
+[colors]
 
-trans = #00000000
-white = #FFFFFF
-black = #000000
+glass  = #00000000
+light  = #eeeeeeee
+ash    = #88ffffff
+dark   = #5a000000
+darker = #88000000
 
-bg = #1F1F1F
-fg = #FFFFFF
-fg-alt = #A9ABB0
+; -------------------------------------------------------------------------------
+; BARS
+; -------------------------------------------------------------------------------
 
-acolor = #3949ab
-curgent = #e53935
-coccupied = #43a047
+[bar/preset]
+bottom  = false
+width = 0
+;height = 33
+radius = 5
+;border-top-size = 0
+;border-bottom-size = 10
+border-left-size = 10
+border-right-size = 10
+border-color = ${colors.glass}
+underline-size = 1
+underline-color = ${colors.light}
+module-margin-left = 0
+module-margin-right = 0
+font-0 = Source Code Pro:style=Regular:pixelsize=8;1
+font-1 = FontAwesome:size=8;1
 
-[bar/top]
-enable-ipc = true
-top = true
+;[bar/middle]
+;inherit = bar/preset
+;width = 700
+;offset-x = 0
+;background = ${colors.dark}
+;modules-middle= crypto
 
-background = ${color.bg}
-foreground = ${color.fg}
+[bar/xwindow]
+inherit = bar/preset
+width = 200
+offset-x = 0
+background = ${colors.dark}
+modules-left= xwindow
 
-line-size = 1
+[bar/sys]
+inherit = bar/preset
+width = 340
+offset-x = 1024
+background = ${colors.dark}
+modules-right = pulseaudio wireless-network time
 
-padding-left = 0
-padding-right = 0
-module-margin-left = 1
-module-margin-right = 1
+; -------------------------------------------------------------------------------
+; MODULES
+; -------------------------------------------------------------------------------
+[module/xwindow]
+type = internal/xwindow
 
-separator = |
+label = %title:0:22:...%
+label-padding = 0
+;label-foreground = ${colors.ash}
 
-fixed-center = false
-
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-
-modules-left = arch xwindow
-modules-right = xkeyboard pulseaudio date network-networkmanager powermenu
-
-label-active-font = 3
-
-[module/date]
+[module/time]
 type = internal/date
-date =  %%{F#99}%Y-%m-%d%%{F-}  %%{F#fff}%H:%M:%S%%{F-}
-date-alt =  %%{F#fff}%A, %d %B %Y  %%{F#fff}%H:%M%%{F#666}:%%{F#fba922}%S%%{F-}
-format-prefix = 
 
-[module/arch]
-type = custom/text
-content = 
-;alt-icon = 
-content-padding = 2
-content-background = ${color.acolor}
-content-foreground = ${color.fg}
-click-left = rmenu_g
-click-middle = rfull
-click-right = rmenu_wi_g
+interval = 1.0
+date = %a %d %b
+time = %l:%M %p
+label =  %date%  %time%
+
+format = <label>
+;format-foreground = ${colors.ash}
+;format-background = ${colors.darker}
+format-padding = 3
+
+[module/wireless-network]
+type = internal/network
+interface = wlp0s29u1u3
+;interval = 3.0
+unknown-as-up = true
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-connected-prefix = ""
+format-packetloss = <animation-packetloss> <label-connected>
+label-connected = %downspeed:7%
+label-disconnected = not connected
+
+animation-packetloss-0 = ⚠
+animation-packetloss-1 = 📶
+animation-packetloss-framerate = 500
+
+[module/wired-network]
+type = internal/network
+
+interface = enp3s0
+
+label-connected = " "
+label-disconnected = 
+
+format-connected =  <label-connected>
+format-connected-foreground = ${colors.ash}
+format-connected-padding = 4
+
+format-disconnected =  <label-disconnected>
+format-disconnected-padding = 4
 
 [module/pulseaudio]
 type = internal/pulseaudio
-;speaker-mixer = Speaker
-;headphone-mixer = Headphone
-:headphone-id = 9
+
+interval = 5
+use-ui-max = true
 
 format-volume = <ramp-volume> <label-volume>
-label-volume = %percentage%%
-label-muted =   muted
-label-muted-foreground = #66
-format-muted-prefix = " "
+format-volume-padding = 2
 
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-ramp-volume-3 = 
-ramp-volume-4 = 
-ramp-volume-5 = 
-ramp-volume-6 = 
+format-muted = <label-muted>
 
-[module/powermenu]
-type = custom/menu
+label-volume =  "%{F#777}%{F-}%percentage:3%%"
+label-muted = "   %{F#777}%{F-}  "
 
-expand-right = true
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${color.fg}
-label-close =  cancel
-label-close-foreground = ${color.fg}
-label-separator = |
-label-separator-foreground = ${color.fg-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-[module/network-networkmanager]
+[module/crypto]
 type = custom/script
-exec = ~/.local/bin/polybar-network-networkmanager.sh
-tail = true
-click-left = $TERMINAL -e nmtui
+interval = 300
+exec = ~/.config/polybar/crypto.py
 
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${color.fg-alt}
-format-prefix-underline = ${color.acolor}
-
-label-layout = %layout%
-label-layout-underline = ${color.acolor}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${color.acolor}
-label-indicator-underline = ${color.acolor}
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
-[settings]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
+[global/wm]
+margin-top = 0
