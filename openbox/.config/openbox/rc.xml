@@ -297,9 +297,9 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   -->
 
   <!-- reconfigure -->
-  <keybind key="W-F11">
+  <!--<keybind key="W-F11">
     <action name="Reconfigure"/>
-  </keybind>
+  </keybind>-->
 
   <!-- Keybindings for windows -->
   <keybind key="A-F4">

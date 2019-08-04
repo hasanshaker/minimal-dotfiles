@@ -44,6 +44,10 @@ super + shift + x
 super + shift + BackSpace
       prompt "Reboot computer?" "sudo -A shutdown -r now"
 
+# toggle polybar visibility
+super + F11
+      ~/.local/bin/poly-hide.sh
+
 # Network Manager interface
 super + F12
       $TERMINAL -e sudo -A nmtui
