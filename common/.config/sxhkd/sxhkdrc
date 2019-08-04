@@ -50,4 +50,4 @@ super + F11
 
 # Network Manager interface
 super + F12
-      $TERMINAL -e sudo -A nmtui
+      $TERMINAL -e nmtui
