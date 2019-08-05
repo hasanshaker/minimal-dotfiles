@@ -463,19 +463,9 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       <action name="ToggleMaximize"/>
     </keybind>
 
-    <!-- toggle fullscreen -->
+    <!-- toggle fullscreen 
     <keybind key="W-space">
       <action name="ToggleFullscreen"/>
-    </keybind>
-
-    <keybind key="W-n">
-      <action name="ResizeRelative">
-        <bottom>5</bottom>
-      </action>
-    </keybind>
-    <keybind key="W-p">
-      <action name="ResizeRelative">
-        <top>5</top>
       </action>
     </keybind>
   </keybind>
