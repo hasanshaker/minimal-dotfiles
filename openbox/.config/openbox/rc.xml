@@ -434,6 +434,8 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   </keybind>
 
   <keybind key="W-x">
+
+    <!-- grow window -->
     <keybind key="f">
       <action name="GrowToEdgeEast"/>
     </keybind>
