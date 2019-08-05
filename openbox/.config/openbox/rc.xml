@@ -349,11 +349,15 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   <keybind key="W-Tab">
     <action name="NextWindow">
       <allDesktops>yes</allDesktops>
+      <dialog>none</dialog>
+      <interactive>no</interactive>
     </action>
   </keybind>
   <keybind key="W-S-Tab">
     <action name="PreviousWindow">
       <allDesktops>yes</allDesktops>
+      <dialog>none</dialog>
+      <interactive>no</interactive>
     </action>
   </keybind>
 
