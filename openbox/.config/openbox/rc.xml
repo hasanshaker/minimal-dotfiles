@@ -482,18 +482,6 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       </action>
     </keybind>
   </keybind>
-  <keybind key="W-S-p">
-    <action name="ResizeRelative">
-      <top>5</top>
-      <right>10</right>
-    </action>
-  </keybind>
-  <keybind key="W-S-n">
-    <action name="ResizeRelative">
-      <top>-5</top>
-      <right>-10</right>
-    </action>
-  </keybind>
 
   <!-- emacs Keybindings for desktop switching -->
   <keybind key="W-b">
