@@ -502,12 +502,12 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   <keybind key="W-f">
     <action name="GoToDesktop"><to>right</to><wrap>no</wrap></action>
   </keybind>
-  <keybind key="W-p">
+<!--  <keybind key="W-p">
     <action name="GoToDesktop"><to>up</to><wrap>no</wrap></action>
   </keybind>
   <keybind key="W-n">
     <action name="GoToDesktop"><to>down</to><wrap>no</wrap></action>
-  </keybind>
+  </keybind> -->
 
   <keybind key="W-C-b">
     <action name="SendToDesktop"><to>left</to><wrap>no</wrap></action>
