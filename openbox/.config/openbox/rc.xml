@@ -466,6 +466,19 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
     <!-- toggle fullscreen 
     <keybind key="W-space">
       <action name="ToggleFullscreen"/>
+    </keybind> -->
+
+    <!-- cycle window within desktop -->
+    <keybind key="o">
+      <action name="NextWindow">
+          <allDesktops>no</allDesktops>
+          <dialog>none</dialog>
+          <interactive>no</interactive>
+        <finalactions>
+          <action name="Focus"/>
+          <action name="Raise"/>
+          <action name="Unshade"/>
+        </finalactions>
       </action>
     </keybind>
   </keybind>
