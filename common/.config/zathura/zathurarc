@@ -1,0 +1,27 @@
+# -*-conf-*-
+
+# Enable copy to clipboard
+# https://wiki.archlinux.org/index.php/Zathura
+set selection-clipboard clipboard
+
+# keybindings
+map [normal]     <F11> toggle_fullscreen
+map [fullscreen] <F11> toggle_fullscreen
+
+map [normal]     <F5> reload
+map [fullscreen] <F5> reload
+
+map [normal]     <C-n> scroll down
+map [fullscreen] <C-n> scroll down
+map [normal]     <C-p> scroll up
+map [fullscreen] <C-p> scroll up
+
+map [normal]     <PageUp>   navigate previous
+map [fullscreen] <PageUp>   navigate previous
+map [normal]     <PageDown> navigate next
+map [fullscreen] <PageDown> navigate next
+
+map [normal]     <C-b>   navigate previous
+map [fullscreen] <C-b>   navigate previous
+map [normal]     <C-f> navigate next
+map [fullscreen] <C-f> navigate next
