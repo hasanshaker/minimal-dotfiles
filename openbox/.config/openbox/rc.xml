@@ -420,6 +420,10 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       <action name="GrowToEdgeSouth"/>
     </keybind>
 
+    <keybind key="k">
+      <action name="Close"/>
+    </keybind>
+
     <!-- rofi drun -->
     <keybind key="W-f">
       <action name="Execute">
