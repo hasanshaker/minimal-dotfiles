@@ -51,3 +51,15 @@ super + F11
 # Network Manager interface
 super + F12
       $TERMINAL -e nmtui
+
+# Screen capturing
+Print
+        sh -c "maim -u -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshots/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+ctrl + Print
+        sh -c "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
+super + Print
+      ~/.local/bin/record-screen byzanz
+alt + Print
+      ~/.local/bin/record-screen gif
+shift + Print
+      ~/.local/bin/record-screen ogv

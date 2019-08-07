@@ -394,38 +394,7 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
       <command>kfmclient openProfile filemanagement</command>
       </action>
       </keybind>
-  -->
-  <!-- screen shot/record-->
-  <keybind key="Print">
-    <action name="Execute">
-      <command>maim -u -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshots/Screenshot-$(date -Iseconds | cut -d'+' -f1).png</command>
-    </action>
-  </keybind>
-
-  <keybind key="W+Print">
-    <action name="Execute">
-      <command>maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png</command>
-    </action>
-  </keybind>
-  
-  <keybind key="S+Print">
-    <action name="Execute">
-      <command>~/.local/bin/record-screen byzanz</command>
-    </action>
-  </keybind>
-
-  <keybind key="S+C+Print">
-    <action name="Execute">
-      <command>exec ~/.local/bin/record-screen gif</command>
-    </action>
-  </keybind>
-
-  <keybind key="S+W+Print">
-    <action name="Execute">
-      <command>exec ~/.local/bin/record-screen ogv</command>
-    </action>
-  </keybind>
-
+  -->  
   <!-- customization -->
   <keybind key="W-Menu">
     <action name="ShowMenu">
