@@ -74,4 +74,17 @@ if [ -f "$BASH_DIR/history.bash" ]; then
     . $BASH_DIR/history.bash
 fi
 
+# Disable the bell
+if [[ $iatest > 0 ]]; then bind "set bell-style visible"; fi
+
+# Allow ctrl-S for history navigation (with ctrl-R)
+stty -ixon
+
+# Ignore case on auto-completion
+# Note: bind used instead of sticking these in .inputrc
+if [[ $iatest > 0 ]]; then bind "set completion-ignore-case on"; fi
+
+# Show auto-completion list automatically, without double tab
+if [[ $iatest > 0 ]]; then bind "set show-all-if-ambiguous On"; fi
+
 # End ~/.bashrc
