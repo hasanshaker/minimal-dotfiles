@@ -22,23 +22,6 @@ BASH_DATA=$XDG_DATA_HOME/bash
 [ ! -d $BASH_DIR ] && mkdir -p $BASH_DIR
 [ ! -d $BASH_DATA ] && mkdir -p $BASH_DATA
 
-# don't put duplicate lines in the history. See bash(1) for more options
-# ... or force ignoredups and ignorespace
-HISTCONTROL=ignoredups:ignorespace
-
-# set the location of history file
-export HISTFILE=$BASH_DATA/bash_history
-
-if [ -f "$HOME/.bash_history " ]; then
-    if [ -f $HISTFILE ]; then
-        cat $HOME/.bash_history >> $HISTFILE
-    fi
-    rm $HOME/.bash_history
-fi
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
@@ -85,5 +68,10 @@ fi
 
 # color prompt, this is gentoo bashrc file
 [[ -f "$BASH_DIR/colors.bash" ]] && . $BASH_DIR/colors.bash
+
+# history
+if [ -f "$BASH_DIR/history.bash" ]; then
+    . $BASH_DIR/history.bash
+fi
 
 # End ~/.bashrc
