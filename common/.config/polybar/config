@@ -59,15 +59,23 @@ font-1 = FontAwesome:size=8;1
 inherit = bar/preset
 width = 200
 offset-x = 0
-background = ${colors.dark}
+background = ${colors.glass}
 modules-left= xwindow
 
 [bar/sys]
 inherit = bar/preset
-width = 340
-offset-x = 1024
-background = ${colors.dark}
+width = 380
+offset-x = 980
+background = ${colors.glass}
 modules-right = pulseaudio wireless-network time
+tray-position = left
+tray-detached = false
+tray-maxsize = 10
+tray-background = ${colors.glass}
+;tray-offset-x = 0
+;tray-offset-y = 0
+tray-padding = 1
+;tray-scale = 1.0
 
 ; -------------------------------------------------------------------------------
 ; MODULES
