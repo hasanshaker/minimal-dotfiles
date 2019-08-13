@@ -1,0 +1,29 @@
+\"-*-nroff-*-
+.de LI
+.LIST
+.SHIFT_LIST 10p
+..
+.PARA_SPACE 1m
+.TITLE "\s+(10Dotfile Cheatsheet\s0"
+.AUTHOR "\s+5alexforsale\s0"
+.DOCTYPE    DEFAULT
+.COPYSTYLE  FINAL
+.PRINTSTYLE TYPESET
+.PT_SIZE 10
+.START
+Use arrow keys to navigate this document.
+Pressing \f(CWs\fP will fit it to window width (\f(CWa\fP to revert).
+\f(CW+\fP and \f(CW-\fP zoom in and out.
+\f(CWSuper+x Space\fP to toggle fullscreen.
+\f(CWf\fP will highlight links to follow which are selectable by typing the number that appears plus \f(CWEnter\fP.
+\f(CWq\fP to quit.
+(These are general shortcuts of \f(CWzathura\fP, the pdf reader.)
+.LI
+.ITEM
+\f(CWMod+F1\fP will show this document at any time.
+.ITEM
+By \f(CWMod\fP I mean the Super Key, usually known as "the Windows Key."
+.LIST OFF
+
+.HEADING 1 "Keybindings"
+.HEADING 2 
