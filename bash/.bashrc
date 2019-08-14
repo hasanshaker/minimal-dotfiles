@@ -53,6 +53,8 @@ if [[ -z "$BASH_COMPLETION_VERSINFO" ]];then
         . /usr/share/bash_completion/bash_completion
     elif [ -f /usr/local/share/bash_completion/bash_completion ] && ! shopt -oq posix; then
         . /usr/local/share/bash_completion/bash_completion
+    elif [ -f /etc/bash/bashrc.d/bash_completion.sh ] && ! shopt -oq posix; then
+        . /etc/bash/bashrc.d/bash_completion.sh
     fi
 fi
 
