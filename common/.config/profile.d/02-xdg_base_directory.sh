@@ -26,7 +26,7 @@ fi
 
 if [ -z "$XDG_RUNTIME_DIR" ] || [ "$XDG_RUNTIME_DIR" != "/run/user/$(id -u)" ]; then
     XDG_RUNTIME_DIR="/run/user/$(id -u)"
-    mkdir -pv $XDG_RUNTIME_DIR
+    mkdir -p $XDG_RUNTIME_DIR
 fi
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
