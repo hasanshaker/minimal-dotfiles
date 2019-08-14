@@ -37,9 +37,9 @@ fi
 
 # Window Manager
 # set priority of wm's if more than 1 is available
-if [[ -n "$(command -v openbox-session)" ]];then
+if [ $(command -v openbox-session) ];then
     export _WM=openbox
-elif [[ -n "$(command -v i3)" ]];then
+elif [ $(command -v i3) ];then
     export _WM=i3
 fi
 
