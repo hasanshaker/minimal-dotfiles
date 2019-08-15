@@ -42,6 +42,8 @@ These bindings are /wm/-independent.
  | ~super + shift + x~         | Prompt shutdown computer                                             |
  | ~super + shift + BackSpace~ | Prompt reboot                                                        |
  | ~super + F1~                | Show this documentation                                              |
+ | ~super + F6~                | Start torrent daemon/open interface                                  |
+ | ~super + F7~                | toggle torrent daemon                                                                     |
  | ~super + F11~               | Toggle /polybar/ visibility                                          |
  | ~super + F12~               | Opens /nmtui/ inside terminal emulator (for /wifi/)                  |
  |-----------------------------+----------------------------------------------------------------------|

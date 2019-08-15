@@ -52,6 +52,13 @@ super + shift + x
 super + shift + BackSpace
       prompt "Reboot computer?" "sudo -A shutdown -r now"
 
+# Start torrent daemon/open interface
+super + F6
+	torwrap
+# toggle torrent daemon
+super + F7
+	td-toggle
+
 # toggle polybar visibility
 super + F11
       ~/.local/bin/poly-hide.sh
