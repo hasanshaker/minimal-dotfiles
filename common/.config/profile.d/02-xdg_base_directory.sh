@@ -34,7 +34,7 @@ if [[ -z "$XDG_RUNTIME_DIR" ]]; then
             fi
             ;;
         *)
-            XDG_RUNTIME_DIR="/run/user/$(id -u)"
+            export XDG_RUNTIME_DIR="/run/user/$(id -u)"
             if [[ ! -d $XDG_RUNTIME_DIR ]];then
                 mkdir -p $XDG_RUNTIME_DIR
                 chmod 0700 $XDG_RUNTIME_DIR
