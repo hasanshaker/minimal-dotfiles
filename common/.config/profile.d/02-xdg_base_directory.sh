@@ -24,9 +24,22 @@ if test -z "$XDG_DATA_HOME"; then
     XDG_DATA_HOME=$HOME/.local/share
 fi
 
-if [ -z "$XDG_RUNTIME_DIR" ] || [ "$XDG_RUNTIME_DIR" != "/run/user/$(id -u)" ]; then
-    XDG_RUNTIME_DIR="/run/user/$(id -u)"
-    mkdir -p $XDG_RUNTIME_DIR
+if [[ -z "$XDG_RUNTIME_DIR" ]]; then
+    case $DISTRO in
+        gentoo)
+            export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+            if [[ ! -d $XDG_RUNTIME_DIR ]];then
+                mkdir -p $XDG_RUNTIME_DIR
+                chmod 0700 $XDG_RUNTIME_DIR
+            fi
+            ;;
+        *)
+            XDG_RUNTIME_DIR="/run/user/$(id -u)"
+            if [[ ! -d $XDG_RUNTIME_DIR ]];then
+                mkdir -p $XDG_RUNTIME_DIR
+                chmod 0700 $XDG_RUNTIME_DIR
+            fi
+    esac
 fi
 
 if [ -z "$DBUS_SESSION_BUS_ADDRESS" ]; then
