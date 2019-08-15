@@ -25,6 +25,14 @@ super + w
 super + g
       gimp
 
+# visual editor (inside X)
+super + e
+      ${VISUAL}
+
+# terminal editor
+super + shift + e
+      ${TERMINAL} -e ${ALTERNATE_EDITOR}
+
 # Et cetera...
 # dmenuunicode, from voidrice
 super + grave
