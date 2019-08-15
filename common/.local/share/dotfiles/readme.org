@@ -14,24 +14,27 @@
 * Dotfile Cheatsheet
   Use arrow keys to navigate this document. Pressing ~=~ will fit it to window width. Use ~-~ and ~+~ to zoom in and out. Use ~Super+x space~ to toggle fullscreen or just simply ~F11~, ~Super~ key also known as ~Windows~ key. ~f~ will highlight links to follow which are selectable by typing the number that appears plus ~Enter~. Use ~q~ to quit.
 
-  Navigating through the document can be done with the usual arrow keys, ~PageUp~ and ~PageDown~ for navigating to previous or next pages.
+  Navigating through the document can be done with the usual arrow keys, ~PageUp~ and ~PageDown~ for navigating to previous or next pages. The usual /emacs/ navigation keybinds also works.
 ** Keybinding
 *** Global
 These bindings are /wm/-independent.
 **** Applications
- |---------------------+----------------------------------------------------|
- | Keybinding          | Description                                        |
- |---------------------+----------------------------------------------------|
- | ~super + Enter~     | Terminal Emulator                                  |
- | ~super + r~         | File Manager                                       |
- | ~super + i~         | Opens /htop/ inside terminal emulator              |
- | ~super + shift + a~ | Opens /pulsemixer/ inside terminal emulator        |
- | ~super + w~         | Opens ${BROWSER}[fn:browser]                       |
- | ~super + g~         | Opens Gimp                                         |
- | ~super + e~         | Opens ${VISUAL}[fn:visual]                          |
+ |---------------------+------------------------------------------------------------------|
+ | Keybinding          | Description                                                      |
+ |---------------------+------------------------------------------------------------------|
+ | ~super + Enter~     | Terminal Emulator                                                |
+ | ~super + r~         | File Manager                                                     |
+ | ~super + i~         | Opens /htop/ inside terminal emulator                            |
+ | ~super + shift + a~ | Opens /pulsemixer/ inside terminal emulator                      |
+ | ~super + w~         | Opens ${BROWSER}[fn:browser]                                     |
+ | ~super + g~         | Opens Gimp                                                       |
+ | ~super + e~         | Opens ${VISUAL}[fn:visual]                                       |
  | ~super + shift + e~ | Opens ${ALTERNATE_EDITOR}[fn:alternate] inside terminal emulator |
- |---------------------+----------------------------------------------------|
+ |---------------------+------------------------------------------------------------------|
 
+[fn:browser] The /${BROWSER}/ variable is set by ~/.profile
+[fn:visual] The editor of choice, the variable is set by ~/.profile
+[Fn:alternate] The terminal editor, the variable is set by ~/.profile
 **** Other Functions
  |-----------------------------+----------------------------------------------------------------------|
  | Keybinding                  | Description                                                          |
@@ -55,7 +58,3 @@ These bindings are /wm/-independent.
  | ~alt + Print~               | Screencast (/gif/)                                                   |
  | ~shift + Print~             | Screencast (/.ogv/)                                                  |
  |-----------------------------+----------------------------------------------------------------------|
-
-[fn:browser] The /${BROWSER}/ variable is set by ~/.profile
-[fn:visual] The editor of choice, the variable is set by ~/.profile
-[Fn:alternate] The terminal editor, the variable is set by ~/.profile
