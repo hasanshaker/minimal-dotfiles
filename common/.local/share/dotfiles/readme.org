@@ -60,5 +60,5 @@ These bindings are /wm/-independent.
 
 [fn:visual] The editor of choice, the variable is set by ~/.profile
 
-[Fn:alternate] The terminal editor, the variable is set by ~/.profile
+[fn:alternate] The terminal editor, the variable is set by ~/.profile
 
