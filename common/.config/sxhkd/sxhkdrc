@@ -73,5 +73,7 @@ shift + Print
       ~/.local/bin/record-screen ogv
 
 # help
+#super + F1
+#      sh -c "groff -mom ~/.local/share/dotfiles/readme.mom -Tpdf | zathura -"
 super + F1
-      sh -c "groff -mom ~/.local/share/dotfiles/readme.mom -Tpdf | zathura -"
+      sh -c "emacs -u $(id -un) --batch --eval '(load user-init-file)' ~/.local/share/dotfiles/readme.org -f org-latex-export-to-pdf | zathura ~/.local/share/dotfiles/readme.pdf"

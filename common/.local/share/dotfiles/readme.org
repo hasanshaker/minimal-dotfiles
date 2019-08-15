@@ -1,0 +1,55 @@
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:nil e:t email:nil f:t inline:t num:nil
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:t title:t toc:t todo:t |:t
+#+TITLE: Dotfiles Readme
+#+DATE: <2019-08-15 Thu>
+#+AUTHOR: Christian Alexander
+#+EMAIL: alexforsale@yahoo.com
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.2 (Org mode 9.1.9)
+* Dotfile Cheatsheet
+  Use arrow keys to navigate this document. Pressing ~=~ will fit it to window width. Use ~-~ and ~+~ to zoom in and out. Use ~Super+x space~ to toggle fullscreen, ~Super~ key also known as ~Windows~ key. ~f~ will highlight links to follow which are selectable by typing the number that appears plus ~Enter~. Use ~q~ to quit.
+** Keybinding
+*** Global
+These bindings are /wm/-independent.
+**** Applications
+ |---------------------+---------------------------------------------|
+ | Keybinding          | Description                                 |
+ |---------------------+---------------------------------------------|
+ | ~super + Enter~     | Terminal Emulator                           |
+ | ~super + r~         | File Manager                                |
+ | ~super + i~         | Opens /htop/ inside terminal emulator       |
+ | ~super + shift + a~ | Opens /pulsemixer/ inside terminal emulator |
+ | ~super + w~         | Opens ${BROWSER}[fn:browser]                |
+ | ~super + g~         | Opens Gimp                                  |
+ |---------------------+---------------------------------------------|
+
+**** Other Functions
+ |-----------------------------+----------------------------------------------------------------------|
+ | Keybinding                  | Description                                                          |
+ |-----------------------------+----------------------------------------------------------------------|
+ | ~super + grave~             | /dmenuunicode/ script, opens ~dmenu~ for emoji selection             |
+ | ~super + Scroll_Lock~       | Activate /screenkey/                                                 |
+ | ~super + Insert~            | /showclip/ script, shows /kill ring/ (what currently on copy buffer) |
+ | ~super + shift + x~         | Prompt shutdown computer                                             |
+ | ~super + shift + BackSpace~ | Prompt reboot                                                        |
+ | ~super + F1~                | Show this documentation                                              |
+ | ~super + F11~               | Toggle /polybar/ visibility                                          |
+ | ~super + F12~               | Opens /nmtui/ inside terminal emulator (for /wifi/)                  |
+ |-----------------------------+----------------------------------------------------------------------|
+**** Screen cast/record
+ |-----------------------------+----------------------------------------------------------------------|
+ | Keybinding                  | Description                                                          |
+ |-----------------------------+----------------------------------------------------------------------|
+ | ~Print~                     | Screenshot                                                           |
+ | ~ctrl + Print~              | Screenshot (selection)                                               |
+ | ~super + Print~             | Screencast (/byzanz/)                                                |
+ | ~alt + Print~               | Screencast (/gif/)                                                   |
+ | ~shift + Print~             | Screencast (/.ogv/)                                                  |
+ |-----------------------------+----------------------------------------------------------------------|
+
+[fn:browser] The /${BROWSER}/ variable is set by ~/.profile
