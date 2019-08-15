@@ -33,7 +33,9 @@ These bindings are /wm/-independent.
  |---------------------+------------------------------------------------------------------|
 
 [fn:browser] The /${BROWSER}/ variable is set by ~/.profile
+
 [fn:visual] The editor of choice, the variable is set by ~/.profile
+
 [Fn:alternate] The terminal editor, the variable is set by ~/.profile
 **** Other Functions
  |-----------------------------+----------------------------------------------------------------------|
