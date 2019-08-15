@@ -58,7 +58,12 @@ super + F6
 # toggle torrent daemon
 super + F7
 	td-toggle
-
+# Mount a USB drive or Android device
+super + F9
+	dmenumount
+# Unmount a USB drive or Android device
+super + F10
+	dmenuumount
 # toggle polybar visibility
 super + F11
       ~/.local/bin/poly-hide.sh
