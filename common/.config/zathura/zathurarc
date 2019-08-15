@@ -25,3 +25,8 @@ map [normal]     <C-b>   navigate previous
 map [fullscreen] <C-b>   navigate previous
 map [normal]     <C-f> navigate next
 map [fullscreen] <C-f> navigate next
+
+map [normal]     <A-v>   navigate previous
+map [fullscreen] <A-v>   navigate previous
+map [normal]     <C-v> navigate next
+map [fullscreen] <C-v> navigate next
