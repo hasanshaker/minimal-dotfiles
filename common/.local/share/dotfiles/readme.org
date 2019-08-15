@@ -32,11 +32,6 @@ These bindings are /wm/-independent.
  | ~super + shift + e~ | Opens ${ALTERNATE_EDITOR}[fn:alternate] inside terminal emulator |
  |---------------------+------------------------------------------------------------------|
 
-[fn:browser] The /${BROWSER}/ variable is set by ~/.profile
-
-[fn:visual] The editor of choice, the variable is set by ~/.profile
-
-[Fn:alternate] The terminal editor, the variable is set by ~/.profile
 **** Other Functions
  |-----------------------------+----------------------------------------------------------------------|
  | Keybinding                  | Description                                                          |
@@ -60,3 +55,10 @@ These bindings are /wm/-independent.
  | ~alt + Print~               | Screencast (/gif/)                                                   |
  | ~shift + Print~             | Screencast (/.ogv/)                                                  |
  |-----------------------------+----------------------------------------------------------------------|
+
+[fn:browser] The /${BROWSER}/ variable is set by ~/.profile
+
+[fn:visual] The editor of choice, the variable is set by ~/.profile
+
+[Fn:alternate] The terminal editor, the variable is set by ~/.profile
+
