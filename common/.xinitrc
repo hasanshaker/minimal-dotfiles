@@ -40,7 +40,8 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 [ -f ${HOME}/.local/bin/ssh-askpass ] &&
-    export SSH_ASKPASS=ssh-askpass
+    export SSH_ASKPASS=ssh-askpass &&
+    export SUDO_ASKPASS=${HOME}/.local/bin/ssh-askpass
 
 case ${_WM} in
     "i3")

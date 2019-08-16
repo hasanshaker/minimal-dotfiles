@@ -1,0 +1,8 @@
+x11-ssh-askpass*background:             _background
+x11-ssh-askpass*foreground:             _foreground1
+x11-ssh-askpass.Button*background:      _background2
+x11-ssh-askpass.Indicator*foreground:   _foreground1
+x11-ssh-askpass.Indicator*background:   _background3
+x11-ssh-askpass*topShadowColor:         _hl_bg1
+x11-ssh-askpass*bottomShadowColor:      _hl_bg2
+x11-ssh-askpass.*borderWidth:           0
