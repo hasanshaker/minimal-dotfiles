@@ -39,6 +39,9 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+[ -f ${HOME}/.local/bin/ssh-askpass ] &&
+    export SSH_ASKPASS=ssh-askpass
+
 case ${_WM} in
     "i3")
         # start i3-wm
