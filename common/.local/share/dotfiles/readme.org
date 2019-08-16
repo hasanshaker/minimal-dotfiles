@@ -187,7 +187,8 @@ These bindings are /wm/-independent.
   | [[https://aur.archlinux.org/packages/flexget-git][flexget-git]] [fn:4]                 | Automate downloading or processing content (torrents, podcasts, etc.) from different sources like RSS-feeds, html-pages, various sites and more. |
   | [[https://aur.archlinux.org/packages/python-transmissionrpc/][python-transmissionrpc]] [fn:4]      | Module to communicate with Transmission BT client via JSON-RPC                                                                                   |
   | [[https://aur.archlinux.org/packages/subliminal][subliminal]] [fn:4]                  | Python library and CLI tool for searching and downloading subtitles.                                                                             |
-  | [[https://www.archlinux.org/packages/community/any/python-telegram-bot][python-telegram-bot]]                | A pure Python interface for the Telegram Bot AP                                                                                                                                                 |
+  | [[https://www.archlinux.org/packages/community/any/python-telegram-bot][python-telegram-bot]]                | A pure Python interface for the Telegram Bot AP                                                                                                  |
+  | [[https://www.archlinux.org/packages/extra/x86_64/htop/][htop]]                               | Interactive process viewer                                                                                                                                                 |
 
 [fn:1] The /${BROWSER}/ variable is set by ~/.profile
 
