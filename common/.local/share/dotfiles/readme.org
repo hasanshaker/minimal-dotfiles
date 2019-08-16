@@ -41,6 +41,12 @@ These bindings are /wm/-independent.
  | ~super + Insert~            | /showclip/ script, shows /kill ring/ (what currently on copy buffer) |
  | ~super + shift + x~         | Prompt shutdown computer                                             |
  | ~super + shift + BackSpace~ | Prompt reboot                                                        |
+ |-----------------------------+----------------------------------------------------------------------|
+
+**** Function keys
+ |-----------------------------+----------------------------------------------------------------------|
+ | Keybinding                  | Description                                                          |
+ |-----------------------------+----------------------------------------------------------------------|
  | ~super + F1~                | Show this documentation                                              |
  | ~super + F6~                | Start torrent daemon/open interface ($TERMINAL)                      |
  | ~super + F7~                | toggle torrent daemon                                                |
