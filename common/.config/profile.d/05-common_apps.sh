@@ -64,6 +64,6 @@ fi
 
 # ssh-askpass
 # https://wiki.archlinux.org/index.php/SSH_keys#Calling_x11-ssh-askpass_with_ssh-add
-if [ -f /usr/lib/ssh/x11-ssh-askpass ];then
+if [ -f /usr/lib/ssh/x11-ssh-askpass ] && [ ! -L ~/.local/bin/ssh-askpass ];then
     ln -sv /usr/lib/ssh/x11-ssh-askpass ~/.local/bin/ssh-askpass
 fi
