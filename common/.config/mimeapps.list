@@ -3,3 +3,6 @@ application/x-directory=emacs-dired.desktop;
 inode/directory=emacs-dired.desktop;
 x-scheme-handler/tradedash=tradedash.desktop;
 x-scheme-handler/magnet=torrent.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/gif=img.desktop;

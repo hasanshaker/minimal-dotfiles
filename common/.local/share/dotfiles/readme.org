@@ -213,6 +213,7 @@ These bindings are /wm/-independent.
    | [[https://aur.archlinux.org/packages/task-spooler/][task-spooler]]                  | Queue up tasks from the shell for batch execution                                                                                                |
    | [[https://www.archlinux.org/packages/community/x86_64/mpv/][mpv]]                           | a free, open source, and cross-platform media player                                                                                             |
    | [[https://www.archlinux.org/packages/community/any/youtube-dl/][youtube-dl]]                    | A small command-line program to download videos from YouTube.com and a few more sites                                                            |
+   | [[https://wiki.archlinux.org/index.php/Sxiv][sxiv]]                          | Simple X Image Viewer                                                                                                                            |
 
 **** Archiving and Compressing
  #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
