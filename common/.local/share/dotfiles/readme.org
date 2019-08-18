@@ -74,94 +74,108 @@ These bindings are /wm/-independent.
 
 ** Packages
 
-*** arch linux
+*** archlinux
 
 **** X.org related
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                                                      |
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xwininfo/][xorg-xwininfo]]                      | Command-line utility to print information about windows on an X server                                                                           |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xprop/][xorg-xprop]]                         | Property displayer for X                                                                                                                         |
-   | [[https://www.archlinux.org/packages/extra/x86_64/x11-ssh-askpass/][x11-ssh-askpass]]                    | Lightweight passphrase dialog for SSH                                                                                                            |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xclip/][xclip]]                              | Command line interface to the X11 clipboard                                                                                                      |
-   | [[https://www.archlinux.org/packages/community/x86_64/xdialog/][xdialog]]                            | A drop-in replacement for the 'dialog' or 'cdialog' programs                                                                                     |
-   | [[https://www.archlinux.org/packages/community/x86_64/xdo/][xdo]]                                | Utility for performing actions on windows in X                                                                                                   |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-bdftopcf/][xorg-bdftopcf]]                      | Convert X font from Bitmap Distribution Format to Portable Compiled Format                                                                       |
-   | [[https://wiki.archlinux.org/index.php/Xorg][xorg-server]]                        | Xorg X server                                                                                                                                    |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xev/][xorg-xev]]                           | Print contents of X events                                                                                                                       |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xinit/][xorg-xinit]]                         | X.Org initialisation program                                                                                                                     |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xkill/][xorg-xkill]]                         | Kill a client by its X resource                                                                                                                  |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xprop/][xorg-xprop]]                         | Property displayer for X                                                                                                                         |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xset/][xorg-xset]]                          | User preference utility for X                                                                                                                    |
-   | [[https://www.archlinux.org/packages/community/x86_64/xwallpaper/][xwallpaper]]                         | Wallpaper setting utility for X                                                                                                                  |
-   | [[https://www.archlinux.org/packages/extra/any/python2-xdg/][python2-xdg]]                        | Python library to access freedesktop.org standards                                                                                               |
+   |-----------------+----------------------------------------------------------------------------|
+   | Package Name    | Description                                                                |
+   |-----------------+----------------------------------------------------------------------------|
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xwininfo/][xorg-xwininfo]]   | Command-line utility to print information about windows on an X server     |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xprop/][xorg-xprop]]      | Property displayer for X                                                   |
+   | [[https://www.archlinux.org/packages/extra/x86_64/x11-ssh-askpass/][x11-ssh-askpass]] | Lightweight passphrase dialog for SSH                                      |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xclip/][xclip]]           | Command line interface to the X11 clipboard                                |
+   | [[https://www.archlinux.org/packages/community/x86_64/xdialog/][xdialog]]         | A drop-in replacement for the 'dialog' or 'cdialog' programs               |
+   | [[https://www.archlinux.org/packages/community/x86_64/xdo/][xdo]]             | Utility for performing actions on windows in X                             |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-bdftopcf/][xorg-bdftopcf]]   | Convert X font from Bitmap Distribution Format to Portable Compiled Format |
+   | [[https://wiki.archlinux.org/index.php/Xorg][xorg-server]]     | Xorg X server                                                              |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xev/][xorg-xev]]        | Print contents of X events                                                 |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xinit/][xorg-xinit]]      | X.Org initialisation program                                               |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xkill/][xorg-xkill]]      | Kill a client by its X resource                                            |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xorg-xset/][xorg-xset]]       | User preference utility for X                                              |
+   | [[https://www.archlinux.org/packages/community/x86_64/xwallpaper/][xwallpaper]]      | Wallpaper setting utility for X                                            |
+   | [[https://www.archlinux.org/packages/extra/any/python2-xdg/][python2-xdg]]     | Python library to access freedesktop.org standards                         |
+   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2-perl/][gtk2-perl]]       | Perl bindings for GTK+ 2.x                                                 |
+   | [[https://wiki.archlinux.org/index.php/Sxhkd][sxhkd]]           | Simple X hotkey daemon                                                     |
 
 **** Windows manager and such
 
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                                                      |
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://wiki.archlinux.org/index.php/openbox][openbox]]                            | Highly configurable and lightweight X11 window manager                                                                                           |
-   | [[https://aur.archlinux.org/packages/obmenu-generator/][obmenu-generator]] [fn:4]            | A fast pipe/static menu generator for the Openbox Window Manager (with icons support).                                                           |
-   | [[https://wiki.archlinux.org/index.php/Dunst][dunst]]                              | Customizable and lightweight notification-daemon                                                                                                 |
-   | [[https://www.archlinux.org/packages/extra/x86_64/libnotify/][libnotify]]                          | Library for sending desktop notifications                                                                                                        |
-   | [[https://wiki.archlinux.org/index.php/Compton][compton]]                            | X compositor that may fix tearing issues                                                                                                         |
-   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2/][gtk2]]                               | GObject-based multi-platform GUI toolkit (legacy)                                                                                                |
-   | [[https://wiki.archlinux.org/index.php/Privoxy][privoxy]]                            | A web proxy with advanced filtering capabilities.                                                                                                |
-   | [[https://aur.archlinux.org/packages/transmission-remote-cli-git/][transmission-remote-cli-git]] [fn:4] | Curses interface for the daemon of the BitTorrent client Transmission                                                                            |
-   | [[https://wiki.archlinux.org/index.php/Transmission][transmission-cli]]                   | Fast, easy, and free BitTorrent client (CLI tools, daemon and web client)                                                                        |
-   | [[https://pypi.python.org/pypi/GeoIP/][python2-geoip]]                      | Python bindings for the GeoIP IP-to-country resolver library                                                                                     |
-   | [[https://pypi.python.org/pypi/adns-python][adns-python]]                        | Python bindings for adns                                                                                                                         |
+   |------------------------------------+-------------------------------------------------------------------------------------------------------------|
+   | Package Name                       | Description                                                                                                 |
+   |------------------------------------+-------------------------------------------------------------------------------------------------------------|
+   | [[https://wiki.archlinux.org/index.php/openbox][openbox]]                            | Highly configurable and lightweight X11 window manager                                                      |
+   | [[https://aur.archlinux.org/packages/obmenu-generator/][obmenu-generator]] [fn:4]            | A fast pipe/static menu generator for the Openbox Window Manager (with icons support).                      |
+   | [[https://wiki.archlinux.org/index.php/Dunst][dunst]]                              | Customizable and lightweight notification-daemon                                                            |
+   | [[https://www.archlinux.org/packages/extra/x86_64/libnotify/][libnotify]]                          | Library for sending desktop notifications                                                                   |
+   | [[https://wiki.archlinux.org/index.php/Compton][compton]]                            | X compositor that may fix tearing issues                                                                    |
+   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2/][gtk2]]                               | GObject-based multi-platform GUI toolkit (legacy)                                                           |
+   | [[https://www.archlinux.org/packages/extra/any/perl-file-desktopentry/][perl-file-desktopentry]]             | Object to handle .desktop files                                                                             |
+   | [[https://www.archlinux.org/packages/extra/any/perl-file-mimeinfo/][perl-file-mimeinfo]]                 | Determine file type, includes mimeopen and mimetype                                                         |
+   | [[https://www.archlinux.org/packages/community/x86_64/perl-net-dbus/][perl-net-dbus]]                      | Binding for DBus messaging protocol                                                                         |
+   | [[https://www.archlinux.org/packages/community/any/perl-x11-protocol/][perl-x11-protocol]]                  | Perl/CPAN Module X11::Protocol : Raw interface to X Window System servers                                   |
+   | [[https://aur.archlinux.org/packages/polybar-git/][polybar-git]] [fn:4]                 | A fast and easy-to-use status bar                                                                           |
+   | [[https://wiki.archlinux.org/index.php/Rofi][rofi]]                               | A window switcher, application launcher and dmenu replacement                                               |
+   | [[https://wiki.archlinux.org/index.php/GNU_Screen][screen]]                             | Full-screen window manager that multiplexes a physical terminal                                             |
+   | [[https://aur.archlinux.org/packages/screenkey/][screenkey]] [fn:4]                   | Screencast tool to show your keys inspired by Screenflick, based on key-mon. Active fork with new features. |
+   | [[https://wiki.archlinux.org/index.php/XDG_user_directories][xdg-user-dirs]]                      | Manage user directories like ~/Desktop and ~/Music                                                          |
 
 **** Network, Connection & Internet stuffs
 
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                                                      |
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://aur.archlinux.org/packages/brave-bin/][brave-bin]] [fn:4]                   | Web browser that blocks ads and trackers by default (binary release).                                                                            |
-   | [[https://www.archlinux.org/packages/extra/x86_64/pepper-flash/][pepper-flash]]                       | Adobe Flash Player PPAPI                                                                                                                         |
-   | [[https://www.archlinux.org/packages/core/x86_64/net-tools/][net-tools]]                          | Configuration tools for Linux networking                                                                                                         |
-   | [[https://wiki.archlinux.org/index.php/NetworkManager][networkmanager]]                     | Network connection manager and user applications                                                                                                 |
-   | [[https://www.archlinux.org/packages/community/any/create_ap/][create_ap]]                          | A shell script to create a NATed/Bridged Software Access Point                                                                                   |
-   | [[https://wiki.archlinux.org/index.php/Tor][tor]]                                | Anonymizing overlay network.                                                                                                                     |
-   | [[https://www.archlinux.org/packages/community/x86_64/torsocks/][torsocks]]                           | Wrapper to safely torify applications                                                                                                            |
-   | [[https://www.archlinux.org/packages/core/x86_64/wireless_tools/][wireless_tools]]                     | Tools allowing to manipulate the Wireless Extensions                                                                                             |
-   | [[https://wiki.archlinux.org/index.php/ELinks][elinks]]                             | An advanced and well-established feature-rich text mode web browser.                                                                             |
-   | [[https://wiki.archlinux.org/index.php/Discord][discord]]                            | All-in-one voice and text chat for gamers that's free and secure.                                                                                |
+   |------------------------------------+---------------------------------------------------------------------------|
+   | Package Name                       | Description                                                               |
+   |------------------------------------+---------------------------------------------------------------------------|
+   | [[https://aur.archlinux.org/packages/brave-bin/][brave-bin]] [fn:4]                   | Web browser that blocks ads and trackers by default (binary release).     |
+   | [[https://www.archlinux.org/packages/extra/x86_64/pepper-flash/][pepper-flash]]                       | Adobe Flash Player PPAPI                                                  |
+   | [[https://www.archlinux.org/packages/core/x86_64/net-tools/][net-tools]]                          | Configuration tools for Linux networking                                  |
+   | [[https://wiki.archlinux.org/index.php/NetworkManager][networkmanager]]                     | Network connection manager and user applications                          |
+   | [[https://www.archlinux.org/packages/community/any/create_ap/][create_ap]]                          | A shell script to create a NATed/Bridged Software Access Point            |
+   | [[https://wiki.archlinux.org/index.php/Tor][tor]]                                | Anonymizing overlay network.                                              |
+   | [[https://www.archlinux.org/packages/community/x86_64/torsocks/][torsocks]]                           | Wrapper to safely torify applications                                     |
+   | [[https://www.archlinux.org/packages/core/x86_64/wireless_tools/][wireless_tools]]                     | Tools allowing to manipulate the Wireless Extensions                      |
+   | [[https://wiki.archlinux.org/index.php/ELinks][elinks]]                             | An advanced and well-established feature-rich text mode web browser.      |
+   | [[https://wiki.archlinux.org/index.php/Discord][discord]]                            | All-in-one voice and text chat for gamers that's free and secure.         |
+   | [[https://wiki.archlinux.org/index.php/Telegram][telegram-desktop]]                   | Official Telegram Desktop client                                          |
+   | [[https://wiki.archlinux.org/index.php/Privoxy][privoxy]]                            | A web proxy with advanced filtering capabilities.                         |
+   | [[https://aur.archlinux.org/packages/transmission-remote-cli-git/][transmission-remote-cli-git]] [fn:4] | Curses interface for the daemon of the BitTorrent client Transmission     |
+   | [[https://wiki.archlinux.org/index.php/Transmission][transmission-cli]]                   | Fast, easy, and free BitTorrent client (CLI tools, daemon and web client) |
+   | [[https://pypi.python.org/pypi/GeoIP/][python2-geoip]]                      | Python bindings for the GeoIP IP-to-country resolver library              |
+   | [[https://pypi.python.org/pypi/adns-python][adns-python]]                        | Python bindings for adns                                                  |
 
 **** Document
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                                                      |
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://wiki.archlinux.org/index.php/TeX_Live][texlive-core]]                       | TeX Live core distribution                                                                                                                       |
-   | [[https://www.archlinux.org/packages/extra/any/texlive-latexextra/][texlive-latexextra]]                 | TeX Live - Large collection of add-on packages for LaTeX                                                                                         |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xterm/][xterm]]                              | X Terminal Emulator                                                                                                                              |
-   | [[https://wiki.archlinux.org/index.php/Zathura][zathura]]                            | Minimalistic document viewer                                                                                                                     |
-   | [[https://www.archlinux.org/packages/community/x86_64/zathura-cb/][zathura-cb]]                         | Adds comic book support to zathura                                                                                                               |
-   | [[https://www.archlinux.org/packages/community/x86_64/zathura-djvu/][zathura-djvu]]                       | DjVu support for Zathura                                                                                                                         |
-   | [[https://www.archlinux.org/packages/community/x86_64/zathura-pdf-poppler/][zathura-pdf-poppler]]                | Adds pdf support to zathura by using the poppler engine                                                                                          |
-   | [[https://www.archlinux.org/packages/community/x86_64/zathura-ps/][zathura-ps]]                         | Adds ps support to zathura by using the libspectre library                                                                                       |
-   | [[https://wiki.archlinux.org/index.php/Emacs][emacs]]                              | The extensible, customizable, self-documenting real-time display editor                                                                          |
-   | [[https://aur.archlinux.org/packages/emacs-pkgbuild-mode-git/][emacs-pkgbuild-mode-git]] [fn:4]     | A major mode for creating packages with emacs                                                                                                    |
-   | [[https://wiki.archlinux.org/index.php/Dropbox][dropbox]]                            | A free service that lets you bring your photos, docs, and videos anywhere and share them easily.                                                 |
+   |--------------------------------+--------------------------------------------------------------------------------------------------|
+   | Package Name                   | Description                                                                                      |
+   |--------------------------------+--------------------------------------------------------------------------------------------------|
+   | [[https://wiki.archlinux.org/index.php/TeX_Live][texlive-core]]                   | TeX Live core distribution                                                                       |
+   | [[https://www.archlinux.org/packages/extra/any/texlive-latexextra/][texlive-latexextra]]             | TeX Live - Large collection of add-on packages for LaTeX                                         |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xterm/][xterm]]                          | X Terminal Emulator                                                                              |
+   | [[https://wiki.archlinux.org/index.php/Zathura][zathura]]                        | Minimalistic document viewer                                                                     |
+   | [[https://www.archlinux.org/packages/community/x86_64/zathura-cb/][zathura-cb]]                     | Adds comic book support to zathura                                                               |
+   | [[https://www.archlinux.org/packages/community/x86_64/zathura-djvu/][zathura-djvu]]                   | DjVu support for Zathura                                                                         |
+   | [[https://www.archlinux.org/packages/community/x86_64/zathura-pdf-poppler/][zathura-pdf-poppler]]            | Adds pdf support to zathura by using the poppler engine                                          |
+   | [[https://www.archlinux.org/packages/community/x86_64/zathura-ps/][zathura-ps]]                     | Adds ps support to zathura by using the libspectre library                                       |
+   | [[https://wiki.archlinux.org/index.php/Emacs][emacs]]                          | The extensible, customizable, self-documenting real-time display editor                          |
+   | [[https://aur.archlinux.org/packages/emacs-pkgbuild-mode-git/][emacs-pkgbuild-mode-git]] [fn:4] | A major mode for creating packages with emacs                                                    |
+   | [[https://wiki.archlinux.org/index.php/Dropbox][dropbox]]                        | A free service that lets you bring your photos, docs, and videos anywhere and share them easily. |
+   | [[https://wiki.archlinux.org/index.php/Syncthing][syncthing]]                      | Open Source Continuous Replication / Cluster Synchronization Thing                               |
 
 **** Fonts
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                                                      |
-   |------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://www.archlinux.org/packages/community/any/awesome-terminal-fonts/][awesome-terminal-fonts]]             | fonts/icons for powerlines                                                                                                                       |
-   | [[https://www.archlinux.org/packages/community/any/ttf-opensans/][ttf-opensans]]                       | Sans-serif typeface commissioned by Google                                                                                                       |
-   | [[https://aur.archlinux.org/packages/ttf-symbola/][ttf-symbola]] [fn:4]                 | Font for unicode symbols (part of Unicode Fonts for Ancient Scripts).                                                                            |
-   | [[https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/][noto-fonts-cjk]]                     | Google Noto CJK fonts                                                                                                                            |
-   | [[https://www.archlinux.org/packages/extra/any/noto-fonts-emoji/][noto-fonts-emoji]]                   | Google Noto emoji fonts                                                                                                                          |
-   | [[https://www.archlinux.org/packages/extra/any/bdf-unifont/][bdf-unifont]]                        | GNU Unifont Glyphs                                                                                                                               |
-   | [[https://www.archlinux.org/packages/community/any/otf-font-awesome/][otf-font-awesome]]                   | Iconic font designed for Bootstrap                                                                                                               |
+   |------------------------+-----------------------------------------------------------------------|
+   | Package Name           | Description                                                           |
+   |------------------------+-----------------------------------------------------------------------|
+   | [[https://www.archlinux.org/packages/community/any/awesome-terminal-fonts/][awesome-terminal-fonts]] | fonts/icons for powerlines                                            |
+   | [[https://www.archlinux.org/packages/community/any/ttf-opensans/][ttf-opensans]]           | Sans-serif typeface commissioned by Google                            |
+   | [[https://aur.archlinux.org/packages/ttf-symbola/][ttf-symbola]] [fn:4]     | Font for unicode symbols (part of Unicode Fonts for Ancient Scripts). |
+   | [[https://www.archlinux.org/packages/extra/any/noto-fonts-cjk/][noto-fonts-cjk]]         | Google Noto CJK fonts                                                 |
+   | [[https://www.archlinux.org/packages/extra/any/noto-fonts-emoji/][noto-fonts-emoji]]       | Google Noto emoji fonts                                               |
+   | [[https://www.archlinux.org/packages/extra/any/bdf-unifont/][bdf-unifont]]            | GNU Unifont Glyphs                                                    |
+   | [[https://www.archlinux.org/packages/community/any/otf-font-awesome/][otf-font-awesome]]       | Iconic font designed for Bootstrap                                    |
+   | [[https://aur.archlinux.org/packages/siji-git/][siji-git]]               | Iconic bitmap font based on stlarch with additional glyphs            |
 
+**** System
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
    |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
    | Package Name                  | Description                                                                                                                                      |
@@ -172,45 +186,37 @@ These bindings are /wm/-independent.
    | [[https://www.archlinux.org/packages/extra/any/archlinux-menus/][archlinux-menus]]               | Arch Linux specific XDG-compliant menu                                                                                                           |
    | [[http://wiki.archlinux.org/index.php/XdgMenu][archlinux-xdg-menu]]            | automatic generate WM menu from xdg files                                                                                                        |
    | [[https://www.archlinux.org/packages/extra/any/bash-completion/][bash-completion]]               | Programmable completion for the bash shell                                                                                                       |
+   | [[https://wiki.archlinux.org/index.php/Git][git]]                           | the fast distributed version control system                                                                                                      |
+   | [[https://wiki.archlinux.org/index.php/Haveged][haveged]]                       | Entropy harvesting daemon using CPU timings                                                                                                      |
+   | [[https://wiki.archlinux.org/index.php/NTFS-3G][ntfs-3g]]                       | NTFS filesystem driver and utilities                                                                                                             |
+   | [[https://www.archlinux.org/packages/community/any/realtime-privileges/][realtime-privileges]]           | Realtime privileges for users                                                                                                                    |
+   | [[https://www.archlinux.org/packages/community/any/stow/][stow]]                          | Manage installation of multiple softwares in the same directory tree                                                                             |
+   | [[https://www.archlinux.org/packages/extra/x86_64/htop/][htop]]                          | Interactive process viewer                                                                                                                       |
+   | [[https://aur.archlinux.org/packages/task-spooler/][task-spooler]]                  | Queue up tasks from the shell for batch execution                                                                                                |
+   | [[https://aur.archlinux.org/packages/simple-mtpfs/][simple-mtpfs]]                  | A FUSE filesystem that supports reading/writing from MTP devices                                                                                 |
+
+**** Multimedia
+  #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
+   |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
+   | Package Name                  | Description                                                                                                                                      |
+   |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
    | [[https://www.archlinux.org/packages/community/x86_64/byzanz/][byzanz]]                        | Record what's happening on your desktop                                                                                                          |
    | [[https://www.archlinux.org/packages/extra/x86_64/celt/][celt]]                          | Low-latency audio communication codec                                                                                                            |
-   | [[https://wiki.archlinux.org/index.php/Haveged][haveged]]                       | Entropy harvesting daemon using CPU timings                                                                                                      |
    | [[https://wiki.archlinux.org/index.php/GIMP][gimp]]                          | GNU Image Manipulation Program                                                                                                                   |
-   | [[https://wiki.archlinux.org/index.php/Git][git]]                           | the fast distributed version control system                                                                                                      |
-   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2-perl/][gtk2-perl]]                     | Perl bindings for GTK+ 2.x                                                                                                                       |
    | [[https://www.archlinux.org/packages/extra/x86_64/jack/][jack]]                          | A low-latency audio server                                                                                                                       |
    | [[https://www.archlinux.org/packages/extra/x86_64/libao/][libao]]                         | Cross-platform audio output library and plugins                                                                                                  |
    | [[https://www.archlinux.org/packages/extra/x86_64/libsamplerate/][libsamplerate]]                 | Secret Rabbit Code - aka Sample Rate Converter for audio                                                                                         |
    | [[https://www.archlinux.org/packages/community/x86_64/maim/][maim]]                          | Utility to take a screenshot using imlib2                                                                                                        |
-   | [[https://wiki.archlinux.org/index.php/NTFS-3G][ntfs-3g]]                       | NTFS filesystem driver and utilities                                                                                                             |
    | [[https://www.archlinux.org/packages/extra/x86_64/pavucontrol/][pavucontrol]]                   | PulseAudio Volume Control                                                                                                                        |
-   | [[https://www.archlinux.org/packages/extra/any/perl-file-desktopentry/][perl-file-desktopentry]]        | Object to handle .desktop files                                                                                                                  |
-   | [[https://www.archlinux.org/packages/extra/any/perl-file-mimeinfo/][perl-file-mimeinfo]]            | Determine file type, includes mimeopen and mimetype                                                                                              |
-   | [[https://www.archlinux.org/packages/community/x86_64/perl-net-dbus/][perl-net-dbus]]                 | Binding for DBus messaging protocol                                                                                                              |
-   | [[https://www.archlinux.org/packages/community/any/perl-x11-protocol/][perl-x11-protocol]]             | Perl/CPAN Module X11::Protocol : Raw interface to X Window System servers                                                                        |
-   | [[https://aur.archlinux.org/packages/polybar-git/][polybar-git]] [fn:4]            | A fast and easy-to-use status bar                                                                                                                |
    | [[https://wiki.archlinux.org/index.php/PulseAudio][pulseaudio]]                    | A featureful, general-purpose sound server                                                                                                       |
    | [[https://www.archlinux.org/packages/extra/any/pulseaudio-alsa/][pulseaudio-alsa]]               | ALSA Configuration for PulseAudio                                                                                                                |
    | [[https://www.archlinux.org/packages/community/any/pulsemixer/][pulsemixer]]                    | CLI and curses mixer for pulseaudio                                                                                                              |
-   | [[https://www.archlinux.org/packages/community/any/realtime-privileges/][realtime-privileges]]           | Realtime privileges for users                                                                                                                    |
-   | [[https://wiki.archlinux.org/index.php/Rofi][rofi]]                          | A window switcher, application launcher and dmenu replacement                                                                                    |
-   | [[https://wiki.archlinux.org/index.php/GNU_Screen][screen]]                        | Full-screen window manager that multiplexes a physical terminal                                                                                  |
-   | [[https://aur.archlinux.org/packages/screenkey/][screenkey]] [fn:4]              | Screencast tool to show your keys inspired by Screenflick, based on key-mon. Active fork with new features.                                      |
-   | [[https://aur.archlinux.org/packages/siji-git/][siji-git]]                      | Iconic bitmap font based on stlarch with additional glyphs                                                                                       |
-   | [[https://aur.archlinux.org/packages/simple-mtpfs/][simple-mtpfs]]                  | A FUSE filesystem that supports reading/writing from MTP devices                                                                                 |
    | [[https://www.archlinux.org/packages/extra/x86_64/speex/][speex]]                         | A free codec for free speech                                                                                                                     |
-   | [[https://www.archlinux.org/packages/community/any/stow/][stow]]                          | Manage installation of multiple softwares in the same directory tree                                                                             |
-   | [[https://wiki.archlinux.org/index.php/Sxhkd][sxhkd]]                         | Simple X hotkey daemon                                                                                                                           |
-   | [[https://wiki.archlinux.org/index.php/Syncthing][syncthing]]                     | Open Source Continuous Replication / Cluster Synchronization Thing                                                                               |
-   | [[https://wiki.archlinux.org/index.php/Telegram][telegram-desktop]]              | Official Telegram Desktop client                                                                                                                 |
    | [[https://www.archlinux.org/packages/community/any/urlscan/][urlscan]]                       | Mutt and terminal url selector                                                                                                                   |
-   | [[https://wiki.archlinux.org/index.php/XDG_user_directories][xdg-user-dirs]]                 | Manage user directories like ~/Desktop and ~/Music                                                                                               |
    | [[https://aur.archlinux.org/packages/flexget-git][flexget-git]] [fn:4]            | Automate downloading or processing content (torrents, podcasts, etc.) from different sources like RSS-feeds, html-pages, various sites and more. |
    | [[https://aur.archlinux.org/packages/python-transmissionrpc/][python-transmissionrpc]] [fn:4] | Module to communicate with Transmission BT client via JSON-RPC                                                                                   |
    | [[https://aur.archlinux.org/packages/subliminal][subliminal]] [fn:4]             | Python library and CLI tool for searching and downloading subtitles.                                                                             |
    | [[https://www.archlinux.org/packages/community/any/python-telegram-bot][python-telegram-bot]]           | A pure Python interface for the Telegram Bot AP                                                                                                  |
-   | [[https://www.archlinux.org/packages/extra/x86_64/htop/][htop]]                          | Interactive process viewer                                                                                                                       |
-   | [[https://aur.archlinux.org/packages/task-spooler/][task-spooler]]                  | Queue up tasks from the shell for batch execution                                                                                                |
    | [[https://www.archlinux.org/packages/community/x86_64/mpv/][mpv]]                           | a free, open source, and cross-platform media player                                                                                             |
    | [[https://www.archlinux.org/packages/community/any/youtube-dl/][youtube-dl]]                    | A small command-line program to download videos from YouTube.com and a few more sites                                                            |
    | [[https://wiki.archlinux.org/index.php/Sxiv][sxiv]]                          | Simple X Image Viewer                                                                                                                            |
