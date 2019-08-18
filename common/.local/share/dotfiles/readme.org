@@ -71,6 +71,73 @@ These bindings are /wm/-independent.
  | ~alt + Print~               | Screencast (/gif/)                                                   |
  | ~shift + Print~             | Screencast (/.ogv/)                                                  |
  |-----------------------------+----------------------------------------------------------------------|
+**** Media
+#+ATTR_LATEX: :environment longtable :align |l|l|
+ |-----------------------------------+------------------------------------|
+ | Keybinding                        | Description                        |
+ |-----------------------------------+------------------------------------|
+ | ~super + m~                       | Opens music player inside terminal |
+ | ~super + p~, ~super + shift p~    | Toggle / pause music               |
+ | ~super + comma~, ~super + period~ | Next / previous track              |
+ | ~super + shift + less~            | Replay track                       |
+ | ~super + equal~, ~super + plus~   | Increase volume                    |
+ | ~super + -~ , ~super + shift + -~ | Decrease volume                    |
+ | ~super + ]~, ~super + shift ]~    | Seek forward                       |
+ | ~super + [~, ~super + shift [~    | Seek backward                      |
+ |-----------------------------------+------------------------------------|
+**** Music Player Keybindings
+#+ATTR_LATEX: :environment longtable :align |l|l|
+ |-------------------------+--------------------------------------|
+ | Keybinding              | Description                          |
+ |-------------------------+--------------------------------------|
+ | ~F1~                    | Show help                            |
+ | ~q~                     | Close player                         |
+ | ~1~                     | Show playlist                        |
+ | ~2~                     | Show browser                         |
+ | ~3~                     | Show search engine                   |
+ | ~4~                     | Show media library                   |
+ | ~5~                     | Show playlist editor                 |
+ | ~6~                     | Show tag editor                      |
+ | ~7~                     | Show outputs                         |
+ | ~@~                     | Show server info                     |
+ | ~+~                     | Show clock                           |
+ | ~=~ , ~Right~           | Volume up                            |
+ | ~-~ , ~Left~            | Volume down                          |
+ | ~[~                     | Move cursor up one album             |
+ | ~]~                     | Move cursor down one album           |
+ | ~{~                     | Move cursor up one artist            |
+ | ~}~                     | Move cursor down one artist          |
+ | ~Alt + <~               | Move to beginning                    |
+ | ~Alt + >~               | Move to end                          |
+ | ~Ctrl + n~              | Move down                            |
+ | ~Ctrl + p~              | Move up                              |
+ | ~Ctrl + b~              | Move back / left                     |
+ | ~Ctrl + f~              | Move forward / right                 |
+ | ~Alt + v~               | Page up                              |
+ | ~Ctrl + v~              | Page down                            |
+ | ~p~                     | Pause                                |
+ | ~s~                     | Stop                                 |
+ | ~>~                     | Next track                           |
+ | ~<~                     | Previous track                       |
+ | ~Backspace~, ~Ctrl + h~ | Replay current song                  |
+ | ~f~                     | Seek forward                         |
+ | ~b~                     | Seek backward                        |
+ | ~Ctrl + Space~          | Select range                         |
+ | ~v~                     | Reverse selection                    |
+ | ~d~ , ~Delete~          | Remove selection                     |
+ | ~r~                     | Toggle repeat mode                   |
+ | ~z~                     | Toggle random mode                   |
+ | ~y~                     | Toggle single mode                   |
+ | ~R~                     | Toggle consume mode                  |
+ | ~Y~                     | Toggle replaygain mode               |
+ | ~#~                     | Toggle bitrate visibility            |
+ | ~x~                     | Toggle crossfade mode                |
+ | ~X~                     | Set crossfade                        |
+ | ~U~                     | Update music database                |
+ | ~.~ , ~l~               | Show/hide lyrics                     |
+ | ~L~                     | Toggle lyric fetcher                 |
+ | ~Alt + l~               | Toggle fetching lyrics in background |
+ |-------------------------+--------------------------------------|
 
 ** Packages
 
@@ -220,6 +287,9 @@ These bindings are /wm/-independent.
    | [[https://www.archlinux.org/packages/community/x86_64/mpv/][mpv]]                           | a free, open source, and cross-platform media player                                                                                             |
    | [[https://www.archlinux.org/packages/community/any/youtube-dl/][youtube-dl]]                    | A small command-line program to download videos from YouTube.com and a few more sites                                                            |
    | [[https://wiki.archlinux.org/index.php/Sxiv][sxiv]]                          | Simple X Image Viewer                                                                                                                            |
+   | [[https://www.archlinux.org/packages/extra/x86_64/mpc/][mpc]]                           | Minimalist command line interface to MPD                                                                                                         |
+   | [[https://www.archlinux.org/packages/extra/x86_64/mpd/][mpd]]                           | Flexible, powerful, server-side application for playing music                                                                                    |
+   | [[https://www.archlinux.org/packages/community/x86_64/ncmpcpp/][ncmpcpp]]                       | Almost exact clone of ncmpc with some new features                                                                                               |
 
 **** Archiving and Compressing
  #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|

@@ -67,3 +67,11 @@ fi
 if [ -f /usr/lib/ssh/x11-ssh-askpass ] && [ ! -L ~/.local/bin/ssh-askpass ];then
     ln -sv /usr/lib/ssh/x11-ssh-askpass ~/.local/bin/ssh-askpass
 fi
+
+# Necessary directories
+if [ ! -d ~/.config/mpd/playlists ];then
+    mkdir -p ~/.config/mpd/playlists
+fi
+if [ ! -d ~/Music/.lyrics ];then
+    mkdir -p ~/Music/.lyrics
+fi
