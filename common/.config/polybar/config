@@ -33,7 +33,7 @@ darker = #88000000
 
 [bar/preset]
 bottom  = false
-width = 0
+;width = 0
 ;height = 33
 radius = 5
 ;border-top-size = 0
@@ -50,23 +50,25 @@ font-1 = FontAwesome:size=8;1
 
 ;[bar/middle]
 ;inherit = bar/preset
-;width = 700
-;offset-x = 100
+;width = 100
+;offset-x = 500
 ;background = ${colors.glass}
-;modules-middle= mpd
+;modules-center= mpd
 
-[bar/xwindow]
-inherit = bar/preset
-width = 300
-offset-x = 0
-background = ${colors.glass}
-modules-left= xwindow mpd
+;[bar/xwindow]
+;inherit = bar/preset
+;width = 300
+;offset-x = 0
+;background = ${colors.glass}
+;modules-left= xwindow
 
-[bar/sys]
+[bar/top]
 inherit = bar/preset
-width = 380
-offset-x = 980
+;width = 380
+;offset-x = 980
 background = ${colors.glass}
+modules-left= xwindow
+modules-center= mpd
 modules-right = pulseaudio wireless-network time
 tray-position = left
 tray-detached = false
@@ -152,16 +154,15 @@ ramp-volume-2 = 
 
 [module/mpd]
 type = internal/mpd
-format-online = <icon-prev> <icon-stop> <toggle> <label-song> <icon-next>
 
-icon-play = ⏵
-icon-pause = ⏸
+icon-play = 
+icon-pause = 
 icon-stop = ⏹
-icon-prev = ⏮
-icon-next = ⏭
-icon-seekb = ⏪
-icon-seekf = ⏩
-icon-random = 🔀
+icon-prev = 
+icon-next = 
+icon-seekb = 
+icon-seekf = 
+icon-random = 
 icon-repeat = 🔁
 icon-repeatone = 🔂
 icon-single = 🔂
@@ -169,6 +170,15 @@ icon-consume = ✀
 
 label-song-maxlen = 100
 label-song-ellipsis = true
+label-offline = 🎜 mpd is offline
+
+format-online = <toggle> <toggle-stop> <label-song> <icon-random> <icon-repeat> <bar-progress>
+format-offline = <label-offline>
+
+bar-progress-width = 45
+bar-progress-indicator = |
+bar-progress-fill = ─
+bar-progress-empty = ─
 
 [global/wm]
 margin-top = 0
