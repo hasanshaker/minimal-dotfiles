@@ -75,6 +75,9 @@ fi
 if [ ! -d ~/Music/.lyrics ];then
     mkdir -p ~/Music/.lyrics
 fi
+if [ ! -d ~/Pictures/Screenshots ];then
+    mkdir -p ~/Pictures/Screenshots
+fi
 
 # mpd's systemd unit file
 # check if the global unit file exist
