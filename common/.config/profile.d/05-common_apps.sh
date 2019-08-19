@@ -75,3 +75,20 @@ fi
 if [ ! -d ~/Music/.lyrics ];then
     mkdir -p ~/Music/.lyrics
 fi
+
+# mpd's systemd unit file
+# check if the global unit file exist
+if [ -f /usr/lib/systemd/user/mpd.service ];then
+    MPD_SYSTEM_UNIT_FILE=/usr/lib/systemd/user/mpd.service
+elif [ -f /lib/systemd/user/mpd.service ];then
+    MPD_SYSTEM_UNIT_FILE=/lib/systemd/user/mpd.service
+fi
+mkdir -p $HOME/.config/systemd/user/default.target.wants
+MPD_USER_UNIT_FILE=$HOME/.config/systemd/user/default.target.wants/mpd.service
+if [ ${MPD_SYSTEM_UNIT_FILE} ];then
+    if [ ! -L  ${MPD_USER_UNIT_FILE} ];then
+        ln -s $MPD_SYSTEM_UNIT_FILE $MPD_USER_UNIT_FILE
+    fi
+fi
+unset MPD_SYSTEM_UNIT_FILE MPD_USER_UNIT_FILE
+
