@@ -49,17 +49,17 @@ These bindings are /wm/-independent.
 
 **** Function keys
 #+ATTR_LATEX: :environment longtable :align |l|l|
- |-----------------------------+----------------------------------------------------------------------|
- | Keybinding                  | Description                                                          |
- |-----------------------------+----------------------------------------------------------------------|
- | ~super + F1~                | Show this documentation                                              |
- | ~super + F6~                | Start torrent daemon/open interface ($TERMINAL)                      |
- | ~super + F7~                | toggle torrent daemon                                                |
- | ~super + F9~                | Mount a USB drive or Android device                                  |
- | ~super + F10~               | Unmount a USB drive or Android device                                |
- | ~super + F11~               | Toggle /polybar/ visibility                                          |
- | ~super + F12~               | Opens /nmtui/ inside terminal emulator (for /wifi/)                  |
- |-----------------------------+----------------------------------------------------------------------|
+ |---------------+--------------------------------------------------------------------------|
+ | Keybinding    | Description                                                              |
+ |---------------+--------------------------------------------------------------------------|
+ | ~super + F1~  | Show this documentation                                                  |
+ | ~super + F6~  | Start torrent daemon/open interface ($TERMINAL)                          |
+ | ~super + F7~  | toggle torrent daemon                                                    |
+ | ~super + F9~  | Mount a USB drive or Android device                                      |
+ | ~super + F10~ | Unmount a USB drive or Android device                                    |
+ | ~super + F11~ | Toggle /polybar/ visibility                                              |
+ | ~super + F12~ | Opens /nmtui/ inside terminal emulator (for /wifi/). Press ~ESC~ to quit |
+ |---------------+--------------------------------------------------------------------------|
 **** Screen cast/record
 #+ATTR_LATEX: :environment longtable :align |l|l|
  |-----------------------------+----------------------------------------------------------------------|
@@ -164,28 +164,30 @@ These bindings are /wm/-independent.
    | [[https://www.archlinux.org/packages/extra/any/python2-xdg/][python2-xdg]]     | Python library to access freedesktop.org standards                         |
    | [[https://www.archlinux.org/packages/extra/x86_64/gtk2-perl/][gtk2-perl]]       | Perl bindings for GTK+ 2.x                                                 |
    | [[https://wiki.archlinux.org/index.php/Sxhkd][sxhkd]]           | Simple X hotkey daemon                                                     |
+   |-----------------+----------------------------------------------------------------------------|
 
 **** Windows manager and such
 
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |------------------------------------+-------------------------------------------------------------------------------------------------------------|
-   | Package Name                       | Description                                                                                                 |
-   |------------------------------------+-------------------------------------------------------------------------------------------------------------|
-   | [[https://wiki.archlinux.org/index.php/openbox][openbox]]                            | Highly configurable and lightweight X11 window manager                                                      |
-   | [[https://aur.archlinux.org/packages/obmenu-generator/][obmenu-generator]] [fn:4]            | A fast pipe/static menu generator for the Openbox Window Manager (with icons support).                      |
-   | [[https://wiki.archlinux.org/index.php/Dunst][dunst]]                              | Customizable and lightweight notification-daemon                                                            |
-   | [[https://www.archlinux.org/packages/extra/x86_64/libnotify/][libnotify]]                          | Library for sending desktop notifications                                                                   |
-   | [[https://wiki.archlinux.org/index.php/Compton][compton]]                            | X compositor that may fix tearing issues                                                                    |
-   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2/][gtk2]]                               | GObject-based multi-platform GUI toolkit (legacy)                                                           |
-   | [[https://www.archlinux.org/packages/extra/any/perl-file-desktopentry/][perl-file-desktopentry]]             | Object to handle .desktop files                                                                             |
-   | [[https://www.archlinux.org/packages/extra/any/perl-file-mimeinfo/][perl-file-mimeinfo]]                 | Determine file type, includes mimeopen and mimetype                                                         |
-   | [[https://www.archlinux.org/packages/community/x86_64/perl-net-dbus/][perl-net-dbus]]                      | Binding for DBus messaging protocol                                                                         |
-   | [[https://www.archlinux.org/packages/community/any/perl-x11-protocol/][perl-x11-protocol]]                  | Perl/CPAN Module X11::Protocol : Raw interface to X Window System servers                                   |
-   | [[https://aur.archlinux.org/packages/polybar-git/][polybar-git]] [fn:4]                 | A fast and easy-to-use status bar                                                                           |
-   | [[https://wiki.archlinux.org/index.php/Rofi][rofi]]                               | A window switcher, application launcher and dmenu replacement                                               |
-   | [[https://wiki.archlinux.org/index.php/GNU_Screen][screen]]                             | Full-screen window manager that multiplexes a physical terminal                                             |
-   | [[https://aur.archlinux.org/packages/screenkey/][screenkey]] [fn:4]                   | Screencast tool to show your keys inspired by Screenflick, based on key-mon. Active fork with new features. |
-   | [[https://wiki.archlinux.org/index.php/XDG_user_directories][xdg-user-dirs]]                      | Manage user directories like ~/Desktop and ~/Music                                                          |
+   |-------------------------+-------------------------------------------------------------------------------------------------------------|
+   | Package Name            | Description                                                                                                 |
+   |-------------------------+-------------------------------------------------------------------------------------------------------------|
+   | [[https://wiki.archlinux.org/index.php/openbox][openbox]]                 | Highly configurable and lightweight X11 window manager                                                      |
+   | [[https://aur.archlinux.org/packages/obmenu-generator/][obmenu-generator]] [fn:4] | A fast pipe/static menu generator for the Openbox Window Manager (with icons support).                      |
+   | [[https://wiki.archlinux.org/index.php/Dunst][dunst]]                   | Customizable and lightweight notification-daemon                                                            |
+   | [[https://www.archlinux.org/packages/extra/x86_64/libnotify/][libnotify]]               | Library for sending desktop notifications                                                                   |
+   | [[https://wiki.archlinux.org/index.php/Compton][compton]]                 | X compositor that may fix tearing issues                                                                    |
+   | [[https://www.archlinux.org/packages/extra/x86_64/gtk2/][gtk2]]                    | GObject-based multi-platform GUI toolkit (legacy)                                                           |
+   | [[https://www.archlinux.org/packages/extra/any/perl-file-desktopentry/][perl-file-desktopentry]]  | Object to handle .desktop files                                                                             |
+   | [[https://www.archlinux.org/packages/extra/any/perl-file-mimeinfo/][perl-file-mimeinfo]]      | Determine file type, includes mimeopen and mimetype                                                         |
+   | [[https://www.archlinux.org/packages/community/x86_64/perl-net-dbus/][perl-net-dbus]]           | Binding for DBus messaging protocol                                                                         |
+   | [[https://www.archlinux.org/packages/community/any/perl-x11-protocol/][perl-x11-protocol]]       | Perl/CPAN Module X11::Protocol : Raw interface to X Window System servers                                   |
+   | [[https://aur.archlinux.org/packages/polybar-git/][polybar-git]] [fn:4]      | A fast and easy-to-use status bar                                                                           |
+   | [[https://wiki.archlinux.org/index.php/Rofi][rofi]]                    | A window switcher, application launcher and dmenu replacement                                               |
+   | [[https://wiki.archlinux.org/index.php/GNU_Screen][screen]]                  | Full-screen window manager that multiplexes a physical terminal                                             |
+   | [[https://aur.archlinux.org/packages/screenkey/][screenkey]] [fn:4]        | Screencast tool to show your keys inspired by Screenflick, based on key-mon. Active fork with new features. |
+   | [[https://wiki.archlinux.org/index.php/XDG_user_directories][xdg-user-dirs]]           | Manage user directories like ~/Desktop and ~/Music                                                          |
+   |-------------------------+-------------------------------------------------------------------------------------------------------------|
 
 **** Network, Connection & Internet stuffs
 
@@ -209,6 +211,7 @@ These bindings are /wm/-independent.
    | [[https://wiki.archlinux.org/index.php/Transmission][transmission-cli]]                   | Fast, easy, and free BitTorrent client (CLI tools, daemon and web client) |
    | [[https://pypi.python.org/pypi/GeoIP/][python2-geoip]]                      | Python bindings for the GeoIP IP-to-country resolver library              |
    | [[https://pypi.python.org/pypi/adns-python][adns-python]]                        | Python bindings for adns                                                  |
+   |------------------------------------+---------------------------------------------------------------------------|
 
 **** Document
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
@@ -241,6 +244,7 @@ These bindings are /wm/-independent.
    | [[https://www.archlinux.org/packages/extra/any/bdf-unifont/][bdf-unifont]]            | GNU Unifont Glyphs                                                    |
    | [[https://www.archlinux.org/packages/community/any/otf-font-awesome/][otf-font-awesome]]       | Iconic font designed for Bootstrap                                    |
    | [[https://aur.archlinux.org/packages/siji-git/][siji-git]]               | Iconic bitmap font based on stlarch with additional glyphs            |
+   |------------------------+-----------------------------------------------------------------------|
 
 **** System
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
@@ -290,6 +294,7 @@ These bindings are /wm/-independent.
    | [[https://www.archlinux.org/packages/extra/x86_64/mpc/][mpc]]                           | Minimalist command line interface to MPD                                                                                                         |
    | [[https://www.archlinux.org/packages/extra/x86_64/mpd/][mpd]]                           | Flexible, powerful, server-side application for playing music                                                                                    |
    | [[https://www.archlinux.org/packages/community/x86_64/ncmpcpp/][ncmpcpp]]                       | Almost exact clone of ncmpc with some new features                                                                                               |
+   |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
 
 **** Archiving and Compressing
  #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
@@ -339,6 +344,7 @@ These bindings are /wm/-independent.
    | [[https://packages.gentoo.org/packages/dev-python/pyxdg][dev-python/pyxdg]]         |                                    | Python library to access freedesktop.org standards                         |
    | [[https://packages.gentoo.org/packages/dev-perl/Gtk2][dev-perl/Gtk2]]            |                                    | Perl bindings for GTK+ 2.x                                                 |
    | [[https://packages.gentoo.org/packages/x11-misc/sxhkd][x11-misc/sxhkd]]           |                                    | Simple X hotkey daemon                                                     |
+   |--------------------------+------------------------------------+----------------------------------------------------------------------------|
 
 **** Windows manager and such
 
@@ -387,3 +393,4 @@ These bindings are /wm/-independent.
    | [[https://wiki.archlinux.org/index.php/Transmission][transmission-cli]]                   |               | Fast, easy, and free BitTorrent client (CLI tools, daemon and web client) |
    | [[https://pypi.python.org/pypi/GeoIP/][python2-geoip]]                      |               | Python bindings for the GeoIP IP-to-country resolver library              |
    | [[https://pypi.python.org/pypi/adns-python][adns-python]]                        |               | Python bindings for adns                                                  |
+   |------------------------------------+---------------+---------------------------------------------------------------------------|
