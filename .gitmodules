@@ -2,3 +2,7 @@
 	path = wallpapers
 	url = git@gitlab.com:alexforsale/wallpapers.git
 	branch = master
+[submodule "flexget/.config/flexget"]
+	path = flexget/.config/flexget
+	url = git@github.com:alexforsale/flexget.git
+	branch = master
