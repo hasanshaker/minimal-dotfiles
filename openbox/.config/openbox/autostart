@@ -38,4 +38,4 @@ emacs --daemon &
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc
 
 # transmission-daemon
-td-toggle &
+transmission-daemon &
