@@ -92,3 +92,17 @@ if [ ${MPD_SYSTEM_UNIT_FILE} ];then
 fi
 unset MPD_SYSTEM_UNIT_FILE MPD_USER_UNIT_FILE
 
+# flexget systemd unit file
+if [ -f /usr/lib/systemd/user/flexget.service ];then
+    FLEXGET_SYSTEM_UNIT_FILE=/usr/lib/systemd/user/flexget.service
+elif [ -f /lib/systemd/user/flexget.service ];then
+    FLEXGET_SYSTEM_UNIT_FILE=/lib/systemd/user/flexget.service
+fi
+mkdir -p $HOME/.config/systemd/user/default.target.wants
+FLEXGET_USER_UNIT_FILE=$HOME/.config/systemd/user/default.target.wants/flexget.service
+if [ ${FLEXGET_SYSTEM_UNIT_FILE} ];then
+    if [ ! -L  ${FLEXGET_USER_UNIT_FILE} ];then
+        ln -s $FLEXGET_SYSTEM_UNIT_FILE $FLEXGET_USER_UNIT_FILE
+    fi
+fi
+unset FLEXGET_SYSTEM_UNIT_FILE FLEXGET_USER_UNIT_FILE
