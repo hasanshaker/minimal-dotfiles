@@ -1,9 +1,14 @@
 # -*- conf -*-
 
 # Basic binds
-# terminal
+
+# Terminal
 super + Return
       $TERMINAL
+
+# terminal with screen
+super + shift + Return
+      $TERMINAL -e screen -m
 
 # file manager
 super + r
