@@ -139,6 +139,43 @@ These bindings are /wm/-independent.
  | ~Alt + l~               | Toggle fetching lyrics in background |
  |-------------------------+--------------------------------------|
 
+*** Openbox
+Most keybinds in /openbox/ configuration file is for window navigation and such.
+#+ATTR_LATEX: :environment longtable :align |l|l|
+ |-------------------------------------------+----------------------------------------|
+ | Keybinding                                | Description                            |
+ |-------------------------------------------+----------------------------------------|
+ | ~Ctrl + Alt + Left~                       | Switch to previous desktop             |
+ | ~Ctrl + Alt + Right~                      | Switch to next desktop                 |
+ | ~Shift + Alt + Left~                      | Send active window to previous desktop |
+ | ~Shift + Alt + Right~                     | Send active window to next desktop     |
+ | ~super + 1 to 0~                          | Go to desktop 1 to 10                  |
+ | ~Alt + F4~                                | Close active window                    |
+ | ~Alt + Space~                             | Show menu for active window           |
+ | ~super + Menu~                            | Show openbox menu                      |
+ |-------------------------------------------+----------------------------------------|
+ | ~Alt + Tab~ ~super + Tab~                 | Next window                            |
+ | ~Alt + Shift + Tab~ ~super + Shift + Tab~ | Previous window                        |
+ |-------------------------------------------+----------------------------------------|
+
+**** Chain keybind
+
+#+ATTR_LATEX: :environment longtable :align |l|l|
+ |-------------------------+----------------------------------------|
+ | Keybinding              | Description                            |
+ |-------------------------+----------------------------------------|
+ | ~super + b~             | Switch to previous desktop             |
+ | ~super + f~             | Switch to next desktop                 |
+ | ~super + Ctrl + b~      | Send active window to previous desktop |
+ | ~super + Ctrl + f~      | Send active window to next desktop     |
+ | ~super + x~ ~f~         | Grow window to the right               |
+ | ~super + x~ ~b~         | Grow window to the left                |
+ | ~super + x~ ~p~         | Grow window upward                     |
+ | ~super + x~ ~n~         | Grow window downward                   |
+ | ~super + x~ ~Space~     | Toggle max/minimize window             |
+ |-------------------------+----------------------------------------|
+ | ~super + x~ ~k~         | Close active window                    |
+ | ~super + x~ ~super + f~ | Opens /rofi/                           |
 ** Packages
 
 *** archlinux
