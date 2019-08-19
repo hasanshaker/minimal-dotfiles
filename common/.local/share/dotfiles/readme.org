@@ -29,7 +29,7 @@ These bindings are /wm/-independent.
  | ~super + r~         | File Manager                                            |
  | ~super + i~         | Opens /htop/ inside terminal emulator                   |
  | ~super + shift + a~ | Opens /pulsemixer/ inside terminal emulator             |
- | ~super + w~         | Opens ${BROWSER}[fn:1]                                  |
+ | ~super + w~         | Opens $BROWSER[fn:1]                                    |
  | ~super + g~         | Opens Gimp                                              |
  | ~super + e~         | Opens $VISUAL[fn:2]                                     |
  | ~super + shift + e~ | Opens $ALTERNATE_EDITOR [fn:3] inside terminal emulator |
