@@ -566,13 +566,6 @@ def_key "alt-v"
 #push_characters "kkkkkkkkkkkkkkk"
 def_key "ctrl-v"
     page_down
-#push_characters "jjjjjjjjjjjjjjj"
-def_key "u"
-    page_up
-#push_characters "kkkkkkkkkkkkkkk"
-def_key "d"
-    page_down
-#push_characters "jjjjjjjjjjjjjjj"
 def_key "ctrl-b"
     previous_column
 def_key "ctrl-f"
