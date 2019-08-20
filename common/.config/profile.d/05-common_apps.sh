@@ -109,3 +109,17 @@ if [ ${FLEXGET_SYSTEM_UNIT_FILE} ];then
     fi
 fi
 unset FLEXGET_SYSTEM_UNIT_FILE FLEXGET_USER_UNIT_FILE
+
+# dirmngr systemd unit file
+if [ -f /usr/lib/systemd/user/dirmngr.socket ];then
+    DIRMNGR_SYSTEM_UNIT_FILE=/usr/lib/systemd/user/dirmngr.socket
+elif [ -f /lib/systemd/user/dirmngr.socket ];then
+    DIRMNGR_SYSTEM_UNIT_FILE=/lib/systemd/user/dirmngr.socket
+fi
+DIRMNGR_USER_UNIT_FILE=$HOME/.config/systemd/user/sockets.target.wants/dirmngr.socket
+if [ ${DIRMNGR_SYSTEM_UNIT_FILE} ];then
+    if [ ! -L  ${DIRMNGR_USER_UNIT_FILE} ];then
+        ln -s $DIRMNGR_SYSTEM_UNIT_FILE $DIRMNGR_USER_UNIT_FILE
+    fi
+fi
+unset DIRMNGR_SYSTEM_UNIT_FILE DIRMNGR_USER_UNIT_FILE
