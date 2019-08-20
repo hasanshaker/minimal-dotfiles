@@ -151,7 +151,7 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
  | ~Shift + Alt + Right~                     | Send active window to next desktop     |
  | ~super + 1 to 0~                          | Go to desktop 1 to 10                  |
  | ~Alt + F4~                                | Close active window                    |
- | ~Alt + Space~                             | Show menu for active window           |
+ | ~Alt + Space~                             | Show menu for active window            |
  | ~super + Menu~                            | Show openbox menu                      |
  |-------------------------------------------+----------------------------------------|
  | ~Alt + Tab~ ~super + Tab~                 | Next window                            |
@@ -176,6 +176,7 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
  |-------------------------+----------------------------------------|
  | ~super + x~ ~k~         | Close active window                    |
  | ~super + x~ ~super + f~ | Opens /rofi/                           |
+ |-------------------------+----------------------------------------|
 ** Packages
 
 *** archlinux
