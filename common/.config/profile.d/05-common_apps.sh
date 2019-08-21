@@ -117,6 +117,7 @@ elif [ -f /lib/systemd/user/dirmngr.socket ];then
     DIRMNGR_SYSTEM_UNIT_FILE=/lib/systemd/user/dirmngr.socket
 fi
 DIRMNGR_USER_UNIT_FILE=$HOME/.config/systemd/user/sockets.target.wants/dirmngr.socket
+mkdir -p $HOME/.config/systemd/user/sockets.target.wants
 if [ ${DIRMNGR_SYSTEM_UNIT_FILE} ];then
     if [ ! -L  ${DIRMNGR_USER_UNIT_FILE} ];then
         ln -s $DIRMNGR_SYSTEM_UNIT_FILE $DIRMNGR_USER_UNIT_FILE
