@@ -529,6 +529,7 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
    | [[https://packages.gentoo.org/packages/dev-vcs/git][dev-vcs/git]]                    | blksha1 curl gpg iconv nls pcre pcre-jit perl python threads webdav emacs gnome-keyring highlight  mediawiki subversion tk | stupid content tracker: distributed VCS designed for speed and efficiency   |
    | [[https://packages.gentoo.org/packages/app-portage/layman][app-portage/layman]]             | git bazaar cvs gpg mercurial sqlite squashfs subversion sync-plugin-portage                                                | Tool to manage Gentoo overlays                                              |
    | [[https://packages.gentoo.org/packages/dev-libs/newt][dev-libs/newt]]                  | nls gpm tcl                                                                                                                | Redhat's Newt windowing toolkit development files                           |
+   | [[https://packages.gentoo.org/packages/app-admin/sudo][app-admin/sudo]]                 | offensive ldap                                                                                                             |                                                                             |
    |--------------------------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
 
 **** Archiving and Compressing
