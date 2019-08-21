@@ -1,1 +1,2 @@
 # [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
+[ $(command -v transmission-daemon) ] && transmission-daemon &
