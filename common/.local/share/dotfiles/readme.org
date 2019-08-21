@@ -361,6 +361,15 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
 [fn:4] From [[https://aur.archlinux.org/packages/yay/][AUR repository]].
 
 *** Gentoo
+
+**** Kernel Configuration
+
+- ~CONFIG_CHECKPOINT_RESTORE=y~
+- ~CONFIG_FANOTIFY=y~
+- ~CONFIG_CRYPTO_USER_API_HASH=y~
+- ~CONFIG_CGROUP_BPF=y~
+- ~CONFIG_SQUASHFS=y~
+- ~CONFIG_CIFS=y~
 **** X.org related
   #+ATTR_LATEX: :environment longtable :align |l|p{5cm}|p{8cm}|
    |--------------------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------|
