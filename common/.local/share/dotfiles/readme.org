@@ -362,6 +362,10 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
 
 *** Gentoo
 
+**** Useful Stuffs
+- ~systemctl enable getty@tty{2,3,4,5,6}.service~
+  stick with a more "classical" behavior (i.e, consoles placed from tty1 to tty6 and graphical sessions using the remaining TTYs).
+  [[https://wiki.gentoo.org/wiki/Systemd][link]]
 **** Kernel Configuration
 
 - ~CONFIG_CHECKPOINT_RESTORE=y~
@@ -530,6 +534,9 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
    | [[https://packages.gentoo.org/packages/app-portage/layman][app-portage/layman]]             | git bazaar cvs gpg mercurial sqlite squashfs subversion sync-plugin-portage                                                | Tool to manage Gentoo overlays                                              |
    | [[https://packages.gentoo.org/packages/dev-libs/newt][dev-libs/newt]]                  | nls gpm tcl                                                                                                                | Redhat's Newt windowing toolkit development files                           |
    | [[https://packages.gentoo.org/packages/app-admin/sudo][app-admin/sudo]]                 | offensive ldap                                                                                                             |                                                                             |
+   | [[https://wiki.gentoo.org/wiki/Dracut][sys-kernel/dracut]]              |                                                                                                                            |                                                                             |
+   | [[https://packages.gentoo.org/packages/sys-apps/biosdevname][sys-apps/biosdevname]]           |                                                                                                                            |                                                                             |
+   | [[https://packages.gentoo.org/packages/sys-boot/plymouth][sys-boot/plymouth]]              |                                                                                                                            |                                                                             |
    |--------------------------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
 
 **** Archiving and Compressing
