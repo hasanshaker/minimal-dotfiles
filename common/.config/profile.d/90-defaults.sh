@@ -10,6 +10,11 @@
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
 [ -z "${GPG_TTY}" ] && export GPG_TTY="$(tty)"
 
+# https://wiki.gentoo.org/wiki/GnuPG#Automatically_starting_the_GPG_agent
+if [[ -n "$SSH_CONNECTION" ]] ;then
+    export PINENTRY_USER_DATA="USE_CURSES=1"
+fi
+
 # Terminal apps
 # prioritize xterm above others
 if [ $(command -v xterm 2>/dev/null) ];then
