@@ -1,2 +1,17 @@
+#!/bin/sh
 # [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
 [ $(command -v transmission-daemon) ] && transmission-daemon &
+
+case $DISTRO in
+    gentoo)
+        [ -f /usr/bin/x11-ssh-askpass ] &&
+            export SSH_ASKPASS=x11-ssh-askpass &&
+            export SUDO_ASKPASS=x11-ssh-askpass
+        ;;
+    arch)
+        [ -f ${HOME}/.local/bin/ssh-askpass ] &&
+            export SSH_ASKPASS=ssh-askpass &&
+            export SUDO_ASKPASS=${HOME}/.local/bin/ssh-askpass
+        ;;
+esac
+
