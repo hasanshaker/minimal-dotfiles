@@ -29,7 +29,7 @@ fi
 if [ $(command -v brave-bin 2>/dev/null) ];then
     # brave browser
     # https://brave.com
-    export BROWSER="brave"
+    export BROWSER="brave-bin"
 elif [ $(command -v firefox 2>/dev/null) ];then
     # firefox
     export BROWSER="firefox"
