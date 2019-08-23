@@ -26,15 +26,15 @@ elif [ $(command -v gnome-terminal 2>/dev/null) ];then
 fi
 
 # Browser
-if [ $(command -v brave 2>/dev/null) ];then
+if [ $(command -v brave-bin 2>/dev/null) ];then
     # brave browser
     # https://brave.com
     export BROWSER="brave"
 elif [ $(command -v firefox 2>/dev/null) ];then
     # firefox
-    export TERMINAL="firefox"
+    export BROWSER="firefox"
 else
-    export TERMINAL="elinks"
+    export BROWSER="elinks"
 fi
 
 # file manager
