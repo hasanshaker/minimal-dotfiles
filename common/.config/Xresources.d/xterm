@@ -2,10 +2,10 @@
 xterm*termName: xterm-256color
 xterm*geometry: 80x24
 xterm*saveLines: 4096
-xterm*scrollBar: true
+xterm*scrollBar: False
 xterm*.LoginShell: True
-xterm*rightScrollBar: true
-xterm*scrollTtyOutput: false
+xterm*rightScrollBar: False
+xterm*scrollTtyOutput: False
 
 ! Copy and paste with clipboard
 xterm.selectToClipboard: true
