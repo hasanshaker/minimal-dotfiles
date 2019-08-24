@@ -403,6 +403,7 @@ I use [[https://packages.gentoo.org/packages/sys-kernel/vanilla-sources][vanilla
    | [[https://packages.gentoo.org/packages/media-libs/mesa][media-libs/mesa]]           | classic dri3 egl gallium gbm gles2 llvm wayland lm_sensors unwind                                   | OpenGL-like graphic library for Linux                                      |
    | [[https://packages.gentoo.org/packages/x11-apps/xrandr][x11-apps/xrandr]]           |                                                                                                     | primitive command line interface to RandR extension                        |
    | [[https://packages.gentoo.org/packages/x11-themes/gentoo-artwork][x11-themes/gentoo-artwork]] | grub icons pixmaps offensive                                                                        | A collection of miscellaneous Gentoo Linux logos and artwork               |
+   | [[https://packages.gentoo.org/packages/x11-apps/xdpyinfo][x11-apps/xdpyinfo]]         |                                                                                                     | Display information utility for X                                          |
    |---------------------------+-----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------|
 
 **** Windows manager and such
