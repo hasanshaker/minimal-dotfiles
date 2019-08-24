@@ -40,7 +40,7 @@ These bindings are /wm/-independent.
  |-----------------------------+----------------------------------------------------------------------|
  | Keybinding                  | Description                                                          |
  |-----------------------------+----------------------------------------------------------------------|
- | ~super + grave~             | /dmenuunicode/ script, opens menu for emoji selection             |
+ | ~super + grave~             | /dmenuunicode/ script, opens menu for emoji selection                |
  | ~super + Scroll_Lock~       | Activate /screenkey/                                                 |
  | ~super + Insert~            | /showclip/ script, shows /kill ring/ (what currently on copy buffer) |
  | ~super + shift + x~         | Prompt shutdown computer                                             |
@@ -72,6 +72,7 @@ These bindings are /wm/-independent.
  | ~shift + Print~             | Screencast (/.ogv/)                                                  |
  |-----------------------------+----------------------------------------------------------------------|
 **** Media
+[[file:docs/images/Screenshot-ncmpcpp-2019-08-24.png]]
 #+ATTR_LATEX: :environment longtable :align |l|l|
  |-----------------------------------+------------------------------------|
  | Keybinding                        | Description                        |
