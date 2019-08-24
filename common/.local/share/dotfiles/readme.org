@@ -258,7 +258,6 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
    |--------------------------------+--------------------------------------------------------------------------------------------------|
    | [[https://wiki.archlinux.org/index.php/TeX_Live][texlive-core]]                   | TeX Live core distribution                                                                       |
    | [[https://www.archlinux.org/packages/extra/any/texlive-latexextra/][texlive-latexextra]]             | TeX Live - Large collection of add-on packages for LaTeX                                         |
-   | [[https://www.archlinux.org/packages/extra/x86_64/xterm/][xterm]]                          | X Terminal Emulator                                                                              |
    | [[https://wiki.archlinux.org/index.php/Zathura][zathura]]                        | Minimalistic document viewer                                                                     |
    | [[https://www.archlinux.org/packages/community/x86_64/zathura-cb/][zathura-cb]]                     | Adds comic book support to zathura                                                               |
    | [[https://www.archlinux.org/packages/community/x86_64/zathura-djvu/][zathura-djvu]]                   | DjVu support for Zathura                                                                         |
@@ -286,23 +285,25 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
 
 **** System
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
-   |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | Package Name                  | Description                                                                                                                                      |
-   |-------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------|
-   | [[https://aur.archlinux.org/packages/yay/][yay]] [fn:4]                    | Yet another yogurt. Pacman wrapper and AUR helper written in go. (archlinux specific)                                                            |
-   | [[https://www.archlinux.org/packages/extra/x86_64/libgnome-keyring/][libgnome-keyring]]              | GNOME keyring client library                                                                                                                     |
-   | [[https://www.archlinux.org/packages/extra/x86_64/gnome-keyring/][gnome-keyring]]                 | Stores passwords and encryption keys                                                                                                             |
-   | [[https://www.archlinux.org/packages/extra/any/archlinux-menus/][archlinux-menus]]               | Arch Linux specific XDG-compliant menu                                                                                                           |
-   | [[http://wiki.archlinux.org/index.php/XdgMenu][archlinux-xdg-menu]]            | automatic generate WM menu from xdg files                                                                                                        |
-   | [[https://www.archlinux.org/packages/extra/any/bash-completion/][bash-completion]]               | Programmable completion for the bash shell                                                                                                       |
-   | [[https://wiki.archlinux.org/index.php/Git][git]]                           | the fast distributed version control system                                                                                                      |
-   | [[https://wiki.archlinux.org/index.php/Haveged][haveged]]                       | Entropy harvesting daemon using CPU timings                                                                                                      |
-   | [[https://wiki.archlinux.org/index.php/NTFS-3G][ntfs-3g]]                       | NTFS filesystem driver and utilities                                                                                                             |
-   | [[https://www.archlinux.org/packages/community/any/realtime-privileges/][realtime-privileges]]           | Realtime privileges for users                                                                                                                    |
-   | [[https://www.archlinux.org/packages/community/any/stow/][stow]]                          | Manage installation of multiple softwares in the same directory tree                                                                             |
-   | [[https://www.archlinux.org/packages/extra/x86_64/htop/][htop]]                          | Interactive process viewer                                                                                                                       |
-   | [[https://aur.archlinux.org/packages/task-spooler/][task-spooler]]                  | Queue up tasks from the shell for batch execution                                                                                                |
-   | [[https://aur.archlinux.org/packages/simple-mtpfs/][simple-mtpfs]]                  | A FUSE filesystem that supports reading/writing from MTP devices                                                                                 |
+   |---------------------+---------------------------------------------------------------------------------------|
+   | Package Name        | Description                                                                           |
+   |---------------------+---------------------------------------------------------------------------------------|
+   | [[https://aur.archlinux.org/packages/yay/][yay]] [fn:4]          | Yet another yogurt. Pacman wrapper and AUR helper written in go. (archlinux specific) |
+   | [[https://www.archlinux.org/packages/extra/x86_64/libgnome-keyring/][libgnome-keyring]]    | GNOME keyring client library                                                          |
+   | [[https://www.archlinux.org/packages/extra/x86_64/gnome-keyring/][gnome-keyring]]       | Stores passwords and encryption keys                                                  |
+   | [[https://www.archlinux.org/packages/extra/any/archlinux-menus/][archlinux-menus]]     | Arch Linux specific XDG-compliant menu                                                |
+   | [[http://wiki.archlinux.org/index.php/XdgMenu][archlinux-xdg-menu]]  | automatic generate WM menu from xdg files                                             |
+   | [[https://www.archlinux.org/packages/extra/any/bash-completion/][bash-completion]]     | Programmable completion for the bash shell                                            |
+   | [[https://wiki.archlinux.org/index.php/Git][git]]                 | the fast distributed version control system                                           |
+   | [[https://wiki.archlinux.org/index.php/Haveged][haveged]]             | Entropy harvesting daemon using CPU timings                                           |
+   | [[https://wiki.archlinux.org/index.php/NTFS-3G][ntfs-3g]]             | NTFS filesystem driver and utilities                                                  |
+   | [[https://www.archlinux.org/packages/community/any/realtime-privileges/][realtime-privileges]] | Realtime privileges for users                                                         |
+   | [[https://www.archlinux.org/packages/community/any/stow/][stow]]                | Manage installation of multiple softwares in the same directory tree                  |
+   | [[https://www.archlinux.org/packages/extra/x86_64/htop/][htop]]                | Interactive process viewer                                                            |
+   | [[https://aur.archlinux.org/packages/task-spooler/][task-spooler]]        | Queue up tasks from the shell for batch execution                                     |
+   | [[https://aur.archlinux.org/packages/simple-mtpfs/][simple-mtpfs]]        | A FUSE filesystem that supports reading/writing from MTP devices                      |
+   | [[https://www.archlinux.org/packages/extra/x86_64/xterm/][xterm]]               | X Terminal Emulator                                                                   |
+   |---------------------+---------------------------------------------------------------------------------------|
 
 **** Multimedia
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
@@ -452,7 +453,6 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
    |--------------------------------+--------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------|
    | [[https://packages.gentoo.org/packages/app-text/texlive-core][app-text/texlive-core]]          | X luajittex tk xetex                                                                                                     | TeX Live core distribution                                                                       |
    | [[https://packages.gentoo.org/packages/dev-texlive/texlive-latexextra][dev-texlive/texlive-latexextra]] |                                                                                                                          | TeX Live - Large collection of add-on packages for LaTeX                                         |
-   | [[https://packages.gentoo.org/packages/x11-terms/xterm][x11-terms/xterm]]                | openpty unicode Xaw3d -toolbar truetype xinerama                                                                         | X Terminal Emulator                                                                              |
    | [[https://packages.gentoo.org/packages/app-text/zathura][app-text/zathura]]               |                                                                                                                          | Minimalistic document viewer                                                                     |
    | [[https://packages.gentoo.org/packages/app-text/zathura-cb][app-text/zathura-cb]]            |                                                                                                                          | Adds comic book support to zathura                                                               |
    | [[https://packages.gentoo.org/packages/app-text/zathura-djvu][app-text/zathura-djvu]]          |                                                                                                                          | DjVu support for Zathura                                                                         |
@@ -537,6 +537,7 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
    | [[https://wiki.gentoo.org/wiki/Dracut][sys-kernel/dracut]]              |                                                                                                                            |                                                                             |
    | [[https://packages.gentoo.org/packages/sys-apps/biosdevname][sys-apps/biosdevname]]           |                                                                                                                            |                                                                             |
    | [[https://packages.gentoo.org/packages/sys-boot/plymouth][sys-boot/plymouth]]              |                                                                                                                            |                                                                             |
+   | [[https://packages.gentoo.org/packages/x11-terms/xterm][x11-terms/xterm]]                | openpty unicode Xaw3d -toolbar truetype xinerama                                                                         | X Terminal Emulator                                                                              |
    |--------------------------------+----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------|
 
 **** Archiving and Compressing
