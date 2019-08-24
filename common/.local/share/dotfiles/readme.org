@@ -516,6 +516,17 @@ I use [[https://packages.gentoo.org/packages/sys-kernel/vanilla-sources][vanilla
    | [[https://www.archlinux.org/packages/extra/any/bdf-unifont/][bdf-unifont]]             |           | GNU Unifont Glyphs                                                    |
    | [[https://gpo.zugaina.org/media-fonts/siji][media-fonts/siji]]        |           | [[https://gpo.zugaina.org/Overlays/ricerlay][ricerlay]] overlay                                                      |
    |-------------------------+-----------+-----------------------------------------------------------------------|
+***** awesome-terminal-fonts
+Since there's no package for gentoo, manual installation is needed.
+#+BEGIN_SRC shell
+pushd /tmp
+wget https://github.com/gabrielelana/awesome-terminal-fonts/archive/v1.1.0.tar.gz
+tar xf v1.1.0.tar.gz
+mkdir -pv ~/.local/share/fonts
+cp -v awesome-terminal-fonts-1.1.0/fonts/* ~/.local/share/fonts/
+fc-cache
+popd
+#+END_SRC
 
 **** System
   #+ATTR_LATEX: :environment longtable :align |l|p{5cm}|p{8cm}|
