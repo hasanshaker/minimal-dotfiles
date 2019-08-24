@@ -181,6 +181,10 @@ Most keybinds in /openbox/ configuration file is for window navigation and such.
 
 *** archlinux
 
+#+ATTR_LATEX: :width 15cm :center nil
+[[file:docs/images/Screenshot-arch-2019-08-24.png]]
+
+Just your standard arch installation.
 **** X.org related
   #+ATTR_LATEX: :environment longtable :align |l|l|p{8cm}|
    |-----------------+----------------------------------------------------------------------------|
