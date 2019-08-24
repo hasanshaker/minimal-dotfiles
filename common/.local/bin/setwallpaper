@@ -1,14 +1,28 @@
 #!/bin/sh
 # Sets the background. If given an argument, will set file as background.
+_resolution="$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')"
+
 if [ -n "$1" ];then
     cp "$1" ~/.config/setwall.png && notify-send -i "$HOME/.config/setwall.png" "Wallpaper changed."
     xwallpaper --zoom ~/.config/wall.png
 elif [ ! -f ~/.config/setwall.png ];then
-    if [ -n "$DISTRO" ];then
-        wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
-    else
-        wp=$(shuf -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
-    fi
-    xwallpaper --zoom $wp
+    case $DISTRO in
+        gentoo)
+            if [ -d /usr/share/pixmaps/gentoo ];then
+                if [ -d /usr/share/pixmaps/gentoo/$_resolution ];then
+                    wp=$(shuf -ezn 1 /usr/share/pixmaps/gentoo/$_resolution/* | xargs -0)
+                else
+                    # pick 1280x1024
+                    wp=$(shuf -ezn 1 /usr/share/pixmaps/gentoo/1280x1024/* | xargs -0)
+                fi
+            else
+                wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+            fi
+            ;;
+        *)
+            wp=$(shuf -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
+            ;;
+    esac
+    xwallpaper --stretch $wp
 fi
 
