@@ -19,6 +19,13 @@ elif [ ! -f ~/.config/setwall.png ];then
                 wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
             fi
             ;;
+        arch)
+            if [ -d /usr/share/backgrounds/archlinux ];then
+                wp=$(shuf -ezn 1 /usr/share/backgrounds/archlinux/*.jpg | xargs -0)
+            else
+                wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+            fi
+            ;;
         *)
             wp=$(shuf -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
             ;;
