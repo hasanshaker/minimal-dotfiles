@@ -57,7 +57,9 @@ fi
 [ -z $XDG_PICTURES_DIR ] && export XDG_PICTURES_DIR="$HOME/Pictures"
 [ -z $XDG_VIDEOS_DIR ] && export XDG_VIDEOS_DIR="$HOME/Videos"
 
-for dir in XDG_{DESKTOP,DOWNLOAD,TEMPLATES,PUBLICSHARE,DOCUMENT,MUSIC,PICTURES,VIDEOS}_DIR;do
+for dir in $XDG_DESKTOP_DIR $XDG_DOWNLOAD_DIR $XDG_TEMPLATES_DIR \
+                            $XDG_PUBLICSHARE_DIR $XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR \
+                            $XDG_PICTURES_DIR $XDG_VIDEOS_DIR;do
     [ ! -d $dir ] && mkdir -p $dir
 done
 unset dir
