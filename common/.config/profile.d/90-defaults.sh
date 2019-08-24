@@ -15,6 +15,21 @@ if [[ -n "$SSH_CONNECTION" ]] ;then
     export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
 
+# keychain
+# https://wiki.gentoo.org/wiki/Keychain
+case $DISTRO in
+    gentoo)
+        if [ $(which keychain) ];then
+            [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
+            keychain ~/.ssh/id_rsa
+            [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
+                . ~/.keychain/${HOSTNAME}-sh
+            [ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
+                . ~/.keychain/${HOSTNAME}-sh-gpg
+        fi
+        ;;
+esac
+
 # Terminal apps
 # prioritize xterm above others
 if [ $(command -v xterm 2>/dev/null) ];then
