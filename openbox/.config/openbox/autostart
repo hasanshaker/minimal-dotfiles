@@ -36,3 +36,13 @@ emacs --daemon &
 
 # sxhkd
 sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc
+
+# polkit
+case $DISTRO in
+    gentoo)
+        sleep 1 && /usr/libexec/polkit-gnome-authentication-agent-1 &
+        ;;
+    arch)
+        sleep 1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+        ;;
+esac
