@@ -60,7 +60,9 @@ fi
 for dir in $XDG_DESKTOP_DIR $XDG_DOWNLOAD_DIR $XDG_TEMPLATES_DIR \
                             $XDG_PUBLICSHARE_DIR $XDG_DOCUMENTS_DIR $XDG_MUSIC_DIR \
                             $XDG_PICTURES_DIR $XDG_VIDEOS_DIR;do
-    [ ! -d $dir ] && mkdir -p $dir
+    if [ ! -d $dir ] || [ ! -L $dir ];then
+        mkdir -p $dir
+    fi
 done
 unset dir
 
