@@ -10,3 +10,7 @@
 	path = emacs.d/.emacs.d
 	url = git@github.com:alexforsale/.emacs.d.git
 	branch = master
+[submodule "vim"]
+	path = vim
+	url = git@github.com:alexforsale/vimrc.git
+	branch = master
