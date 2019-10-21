@@ -482,6 +482,14 @@ xmlns:xi="http://www.w3.org/2001/XInclude">
   <keybind key="W-C-n">
     <action name="SendToDesktop"><to>down</to><wrap>no</wrap></action>
   </keybind>
+
+  <!-- kill window -->
+  <keybind key="W-S-Q">
+    <action name="Execute">
+      <command>xkill -button 1</command>
+    </action>
+  </keybind>
+
 </keyboard>
 
 <mouse>
