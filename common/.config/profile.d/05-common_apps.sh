@@ -52,10 +52,15 @@ if test -n "$(command -v ccache)"; then
     fi
 fi
 
-if [ -d "$HOME/.node" ];then
-    PATH=$(ruby -e 'print Gem.user_dir')/bin:$HOME/.node_modules/bin:$PATH
-    export npm_config_prefix=$HOME/.node_modules
-    export GEM_HOME=$HOME/.gem
+# ruby
+if [ $(command -v ruby 2>/dev/null) ];then
+    export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+fi
+
+# node
+if [ $(command -v npm 2>/dev/null) ];then
+    export PATH="$HOME/.node_modules/bin:$PATH"
+    export npm_config_prefix=~/.node_modules
 fi
 
 if [ -d "$HOME/.cargo/bin" ];then
