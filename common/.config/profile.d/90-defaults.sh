@@ -66,5 +66,7 @@ if [ $(command -v openbox-session) ];then
     export _WM=openbox
 elif [ $(command -v i3) ];then
     export _WM=i3
+elif [ $(command -v mate-session) ];then
+    export _WM=mate
 fi
 

@@ -63,4 +63,7 @@ case ${_WM} in
     "openbox")
         exec openbox-session
         ;;
+    "mate")
+        exec mate-session
+        ;;
 esac
