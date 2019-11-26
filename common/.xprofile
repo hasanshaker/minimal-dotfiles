@@ -1,6 +1,5 @@
 #!/bin/sh
 # [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
-[ $(command -v transmission-daemon) ] && transmission-daemon &
 
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
