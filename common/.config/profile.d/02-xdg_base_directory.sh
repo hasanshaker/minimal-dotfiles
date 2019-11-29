@@ -26,15 +26,15 @@ fi
 
 if [[ -z "$XDG_RUNTIME_DIR" ]]; then
     case $DISTRO in
-        gentoo)
-            export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
+        "gentoo")
+            XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
             if [[ ! -d $XDG_RUNTIME_DIR ]];then
                 mkdir -p $XDG_RUNTIME_DIR
                 chmod 0700 $XDG_RUNTIME_DIR
             fi
             ;;
-        *)
-            export XDG_RUNTIME_DIR="/run/user/$(id -u)"
+        "arch")
+            XDG_RUNTIME_DIR="/run/user/$(id -u)"
             if [[ ! -d $XDG_RUNTIME_DIR ]];then
                 mkdir -p $XDG_RUNTIME_DIR
                 chmod 0700 $XDG_RUNTIME_DIR
