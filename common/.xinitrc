@@ -39,6 +39,9 @@ fi
 [ -f /etc/xprofile ] && . /etc/xprofile
 [ -f ~/.xprofile ] && . ~/.xprofile
 
+openrc_ck(){
+    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session $@
+}
 case ${_WM} in
     "i3")
         # start i3-wm
@@ -50,6 +53,8 @@ case ${_WM} in
             "FreeBSD")
                 exec i3
                 ;;
+            "gentoo")
+                openrc_ck i3
         esac
         ;;
     "gnome")
