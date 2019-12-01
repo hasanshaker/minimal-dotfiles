@@ -3,7 +3,7 @@
 # these variables can be override 
 
 # editors
-[ -z "${ALTERNATE_EDITORS}" ] && export ALTERNATE_EDITOR="emacsclient -t"
+[ -z "${ALTERNATE_EDITOR}" ] && export ALTERNATE_EDITOR="emacsclient -t"
 [ -z "${EDITOR}" ] && export EDITOR="emacsclient -c"
 [ -z "${VISUAL}" ] && export VISUAL="emacsclient -c"
 
@@ -19,38 +19,38 @@ fi
 # https://wiki.gentoo.org/wiki/Keychain
 case $DISTRO in
     gentoo)
-        if [ $(which keychain) ];then
-            [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
+        if [ "$(command -v keychain)" ];then
+            [ -z "${HOSTNAME}" ] && HOSTNAME=$(uname -n)
             keychain --quiet --agents "gpg,ssh"
-            [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
-                . ~/.keychain/${HOSTNAME}-sh
-            [ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
-                . ~/.keychain/${HOSTNAME}-sh-gpg
+            [ -f "${HOME}"/.keychain/"${HOSTNAME}"-sh ] && \
+                . "${HOME}"/.keychain/"${HOSTNAME}"-sh
+            [ -f "${HOME}"/.keychain/"${HOSTNAME}"-sh-gpg ] && \
+                . "${HOME}"/.keychain/"${HOSTNAME}"-sh-gpg
         fi
         ;;
 esac
 
 # Terminal apps
 # prioritize xterm above others
-if [ $(command -v xterm 2>/dev/null) ];then
+if [ "$(command -v xterm 2>/dev/null)" ];then
     export TERMINAL="xterm"
-elif [ $(command -v urxvt 2>/dev/null) ];then
+elif [ "$(command -v urxvt 2>/dev/null)" ];then
     export TERMINAL="urxvt"
-elif [ $(command -v gnome-terminal 2>/dev/null) ];then
+elif [ "$(command -v gnome-terminal 2>/dev/null)" ];then
     export TERMINAL="gnome-terminal"
 fi
 
 # Browser
-if [ $(command -v brave-bin 2>/dev/null) ];then
+if [ "$(command -v brave-bin 2>/dev/null)" ];then
     # brave browser
     # https://brave.com
     export BROWSER="brave-bin"
 elif
-    [ $(command -v brave 2>/dev/null) ];then
+    [ "$(command -v brave 2>/dev/null)" ];then
     # brave browser
     # https://brave.com
     export BROWSER="brave"
-elif [ $(command -v firefox 2>/dev/null) ];then
+elif [ "$(command -v firefox 2>/dev/null)" ];then
     # firefox
     export BROWSER="firefox"
 else
@@ -62,11 +62,11 @@ fi
 
 # Window Manager
 # set priority of wm's if more than 1 is available
-if [ $(command -v openbox-session) ];then
+if [ "$(command -v openbox-session)" ];then
     export _WM=openbox
-elif [ $(command -v i3) ];then
+elif [ "$(command -v i3)" ];then
     export _WM=i3
-elif [ $(command -v mate-session) ];then
+elif [ "$(command -v mate-session)" ];then
     export _WM=mate
 fi
 

@@ -1,6 +1,6 @@
 # ~/.config/profile.d/01-functions.sh
 
-# dari /etc/profile lfs
+# from /etc/profile lfs
 
 # Functions to help us manage paths.  Second argument is the name of the
 # path variable to be modified (default: PATH)
@@ -23,7 +23,7 @@ fi
 
 if [ -z "$(typeset -f pathprepend)" ] ; then
     pathprepend () {
-        pathremove $1 $2
+        pathremove "$1" "$2"
         local PATHVARIABLE=${2:-PATH}
         export $PATHVARIABLE="$1${!PATHVARIABLE:+:${!PATHVARIABLE}}"
     }
@@ -32,7 +32,7 @@ fi
 
 if [ -z "$(typeset -f pathappend)" ] ; then
     pathappend () {
-        pathremove $1 $2
+        pathremove "$1" "$2"
         local PATHVARIABLE=${2:-PATH}
         export $PATHVARIABLE="${!PATHVARIABLE:+${!PATHVARIABLE}:}$1"
     }

@@ -6,17 +6,17 @@
 
 # this goes first in case others needs it.
 if [ -d "$HOME/bin" ] ; then
-    export PATH=$HOME/bin:$PATH
+    export PATH="$HOME"/bin:"$PATH"
 fi
 if [ -d "$HOME/.local/bin" ];then
-    export PATH=$HOME/.local/bin:$PATH
+    export PATH="$HOME"/.local/bin:"$PATH"
 fi
 
 # Loads user profiles if exists. Should be in ~/.profile.d
-# but let's not pollute ~/ anymore.
+# but let's not pollute ~ anymore.
 
 if test -d "$HOME/.config/profile.d"; then
-    for profile in $HOME/.config/profile.d/*.sh; do
+    for profile in "$HOME"/.config/profile.d/*.sh; do
         source "$profile"
     done
     unset profile

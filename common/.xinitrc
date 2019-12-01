@@ -40,15 +40,16 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 openrc_ck(){
-    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session $@
+    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session "$@"
 }
-case ${_WM} in
+
+case "${_WM}" in
     "i3")
         # start i3-wm
-        case $DISTRO in
+        case "$DISTRO" in
             "arch")
-                mkdir -p $XDG_DATA_HOME/i3
-                exec i3 -V >> $XDG_DATA_HOME/i3/i3-`date +%F_%H-%M-%S`
+                mkdir -p "$XDG_DATA_HOME"/i3
+                exec i3 -V >> "$XDG_DATA_HOME"/i3/i3-"$(date +%F_%H-%M-%S)"
                 ;;
             "FreeBSD")
                 exec i3
@@ -58,7 +59,7 @@ case ${_WM} in
         esac
         ;;
     "gnome")
-        case $DISTRO in
+        case "$DISTRO" in
             "arch")
                 export GDK_BACKEND=x11
                 exec gnome-session

@@ -1,19 +1,19 @@
 #!/bin/sh
 # [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
 
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
 export SSH_AUTH_SOCK
 
-case $DISTRO in
+case "$DISTRO" in
     gentoo)
         [ -f /usr/bin/x11-ssh-askpass ] &&
             export SSH_ASKPASS=/usr/bin/x11-ssh-askpass &&
             export SUDO_ASKPASS=/usr/bin/x11-ssh-askpass
         ;;
     arch)
-        [ -f ${HOME}/.local/bin/ssh-askpass ] &&
+        [ -f "${HOME}"/.local/bin/ssh-askpass ] &&
             export SSH_ASKPASS=ssh-askpass &&
-            export SUDO_ASKPASS=${HOME}/.local/bin/ssh-askpass
+            export SUDO_ASKPASS="${HOME}"/.local/bin/ssh-askpass
         ;;
 esac
 
