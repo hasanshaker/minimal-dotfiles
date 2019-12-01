@@ -21,7 +21,7 @@ case $DISTRO in
     gentoo)
         if [ $(which keychain) ];then
             [ -z "$HOSTNAME" ] && HOSTNAME=`uname -n`
-            keychain ~/.ssh/id_rsa
+            keychain --quiet --agents "gpg,ssh"
             [ -f $HOME/.keychain/$HOSTNAME-sh ] && \
                 . ~/.keychain/${HOSTNAME}-sh
             [ -f $HOME/.keychain/$HOSTNAME-sh-gpg ] && \
