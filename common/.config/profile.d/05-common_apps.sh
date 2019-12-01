@@ -47,8 +47,8 @@ fi
 
 # ccache
 if test -n "$(command -v ccache)"; then
-    if test -d "/usr/lib/ccache"; then
-        pathprepend /usr/lib/ccache
+    if test -d "/usr/lib/ccache/bin"; then
+        pathprepend /usr/lib/ccache/bin
     fi
 fi
 
