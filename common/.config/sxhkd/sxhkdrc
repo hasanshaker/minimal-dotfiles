@@ -15,31 +15,31 @@ super + q
       $FILE
 
 # htop
-super + i
+super + shift + u
       $TERMINAL -e htop
 
 # pulsemixer
-super + shift + a
-      $TERMINAL -e pulsemixer
+super + shift + i
+      $TERMINAL -e pavucontrol
 
 # browser
-super + w
+super + shift + o
       $BROWSER
 
 # music player
-super + m
-	$TERMINAL -e ncmpcpp
+super + shift + m
+      $TERMINAL -e ncmpcpp
 
 # gimp
-super + g
+super + shift + g
       gimp
 
 # visual editor (inside X)
-super + e
+super + shift + h
       ${VISUAL}
 
 # terminal editor
-super + shift + e
+super + shift + n
       ${TERMINAL} -e ${ALTERNATE_EDITOR}
 
 # Et cetera...
@@ -49,7 +49,7 @@ super + grave
 
 # screenkey
 super + Scroll_Lock
-      killall screenkey || screenkey
+      killall -e screenkey || python2 $(command -v screenkey)
 
 # showclip script
 super + Insert
@@ -63,7 +63,7 @@ super + shift + BackSpace
 
 # Start torrent daemon/open interface
 super + F6
-	torwrap
+n	torwrap
 # toggle torrent daemon
 super + F7
 	td-toggle
@@ -74,8 +74,8 @@ super + F9
 super + F10
 	dmenuumount
 # toggle polybar visibility
-super + F11
-      ~/.local/bin/poly-hide.sh
+#super + F11
+#      ~/.local/bin/poly-hide.sh
 
 # Network Manager interface
 super + F12

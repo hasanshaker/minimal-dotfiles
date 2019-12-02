@@ -27,13 +27,13 @@ These bindings are /wm/-independent.
  |-----------------------+---------------------------------------------------------|
  | ~super + Enter~       | Terminal Emulator                                       |
  | ~super + shift Enter~ | /screen/ inside Terminal Emulator                       |
- | ~super + r~           | File Manager                                            |
- | ~super + i~           | Opens /htop/ inside terminal emulator                   |
- | ~super + shift + a~   | Opens /pulsemixer/ inside terminal emulator             |
- | ~super + w~           | Opens $BROWSER[fn:1]                                    |
- | ~super + g~           | Opens Gimp                                              |
- | ~super + e~           | Opens $VISUAL[fn:2]                                     |
- | ~super + shift + e~   | Opens $ALTERNATE_EDITOR [fn:3] inside terminal emulator |
+ | ~super + q~           | File Manager                                            |
+ | ~super + shift+ u~    | Opens /htop/ inside terminal emulator                   |
+ | ~super + shift + a~   | Opens /pavucontrol/ inside terminal emulator            |
+ | ~super + shift + o~   | Opens $BROWSER[fn:1]                                    |
+ | ~super + shift + g~   | Opens Gimp                                              |
+ | ~super + shift + h~   | Opens $VISUAL[fn:2]                                     |
+ | ~super + shift + n~   | Opens $ALTERNATE_EDITOR [fn:3] inside terminal emulator |
  |-----------------------+---------------------------------------------------------|
 
 **** Other Functions
@@ -42,7 +42,7 @@ These bindings are /wm/-independent.
  | Keybinding                  | Description                                                          |
  |-----------------------------+----------------------------------------------------------------------|
  | ~super + grave~             | /dmenuunicode/ script, opens menu for emoji selection                |
- | ~super + Scroll_Lock~       | Activate /screenkey/                                                 |
+ | ~super + Scroll_Lock~       | Toggle /screenkey/                                           |
  | ~super + Insert~            | /showclip/ script, shows /kill ring/ (what currently on copy buffer) |
  | ~super + shift + x~         | Prompt shutdown computer                                             |
  | ~super + shift + BackSpace~ | Prompt reboot                                                        |
@@ -78,7 +78,7 @@ These bindings are /wm/-independent.
  |-----------------------------------+------------------------------------|
  | Keybinding                        | Description                        |
  |-----------------------------------+------------------------------------|
- | ~super + m~                       | Opens music player inside terminal |
+ | ~super + shift + m~               | Opens music player inside terminal |
  | ~super + p~, ~super + shift p~    | Toggle / pause music               |
  | ~super + comma~, ~super + period~ | Next / previous track              |
  | ~super + shift + less~            | Replay track                       |
