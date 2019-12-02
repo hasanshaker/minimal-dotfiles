@@ -11,7 +11,7 @@ super + shift + Return
       $TERMINAL -e screen -m
 
 # file manager
-super + r
+super + q
       $FILE
 
 # htop
