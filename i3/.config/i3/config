@@ -209,3 +209,6 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+# https://wiki.archlinux.org/index.php/Compton
+exec --no-startup-id compton -b --config ${HOME}/.config/compton/compton.conf
