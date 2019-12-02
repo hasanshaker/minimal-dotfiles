@@ -212,3 +212,9 @@ bar {
 
 # https://wiki.archlinux.org/index.php/Compton
 exec --no-startup-id compton -b --config ${HOME}/.config/compton/compton.conf
+
+# volumeicon
+exec --no-startup-id /usr/bin/volumeicon &
+
+# network-manager-applet
+exec --no-startup-id nm-applet &
