@@ -218,3 +218,7 @@ exec --no-startup-id /usr/bin/volumeicon
 
 # network-manager-applet
 exec --no-startup-id nm-applet
+
+# unclutter
+exec --no-startup-id unclutter
+
