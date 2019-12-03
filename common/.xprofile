@@ -1,8 +1,9 @@
 #!/bin/sh
-# [ -n "$(command -v compton)"  ] && compton -b --config $HOME/.config/compton/compton.conf
 
-eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
-export SSH_AUTH_SOCK
+if [ $(command -v gnome-keyring-daemon 2>/dev/null) ];then
+    eval "$(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)"
+    export SSH_AUTH_SOCK
+fi
 
 case "$DISTRO" in
     gentoo)
