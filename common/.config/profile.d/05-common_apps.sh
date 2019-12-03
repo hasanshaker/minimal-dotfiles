@@ -50,6 +50,12 @@ if test -n "$(command -v ccache)"; then
     if test -d "/usr/lib/ccache/bin"; then
         pathprepend /usr/lib/ccache/bin
     fi
+    case "${DISTRO}" in
+        "gentoo")
+            [ -d /var/cache/ccache ] &&
+                export CCACHE_DIR="/var/cache/ccache"
+            ;;
+    esac
 fi
 
 # ruby
