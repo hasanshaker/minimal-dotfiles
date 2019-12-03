@@ -4,8 +4,8 @@
 [ -z "$2" ] && num="2" || num="$2"
 
 case "$1" in
-	u*) pulsemixer --change-volume +"$num" ;;
-	d*) pulsemixer --change-volume -"$num" ;;
+	u*) amixer -D pulse sset Master "$num"+ ;;
+	d*) amixer -D pulse sset Master "$num"- ;;
 	m*) pulsemixer --toggle-mute ;;
 	truemute) pulsemixer --mute ;;
 	play) mpc play ;;

@@ -104,10 +104,10 @@ super + shift + less
 	lmc replay
 # Increase volume
 super + {equal,plus}
-	lmc up {5,15}
+	lmc up {5\%,15\%}
 # Decrease volume
 super {_,shift +} + minus
-	lmc down {5,15}
+	lmc down {5\%,15\%}
 # Seek foward in song
 super + {_,shift +} bracketright
 	lmc forward {10,120}
