@@ -53,6 +53,8 @@ elif
 elif [ "$(command -v firefox 2>/dev/null)" ];then
     # firefox
     export BROWSER="firefox"
+elif [ "$(command -v chromium 2>/dev/null)" ];then
+    export BROWSER="chromium"
 else
     export BROWSER="elinks"
 fi
