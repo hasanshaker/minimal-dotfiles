@@ -222,3 +222,11 @@ exec --no-startup-id nm-applet
 # unclutter
 exec --no-startup-id unclutter
 
+# from voidrice
+# #---Dropdown Windows---# #
+# General dropdown window traits. The order can matter.
+for_window [instance="dropdown_*"] floating enable
+for_window [instance="dropdown_*"] move scratchpad
+for_window [instance="dropdown_*"] sticky enable
+for_window [instance="dropdown_*"] scratchpad show
+for_window [instance="dropdown_*"] move position center
