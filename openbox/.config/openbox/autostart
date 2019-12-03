@@ -16,33 +16,8 @@
 #
 #xfce-mcs-manager &
 
-# Apply urxvt settings
-xrdb -merge ~/.Xresources &
-
-# rofi
-rofi -modi "window,drun,run" &
-
-# compton
-compton -b --config $HOME/.config/compton/compton.conf &
-
-# wallpaper
-~/.local/bin/setwallpaper &
-
 # polybar
 ~/.local/bin/polybar-${DISTRO:-common}-top &
 
-# emacs server
-emacs --daemon &
-
-# sxhkd
-sxhkd -c $XDG_CONFIG_HOME/sxhkd/sxhkdrc
-
-# polkit
-case $DISTRO in
-    gentoo)
-        sleep 1 && /usr/libexec/polkit-gnome-authentication-agent-1 &
-        ;;
-    arch)
-        sleep 1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-        ;;
-esac
+# compton
+[ -n "$(command -v compton)" ] && compton -b --config ${HOME}/.config/compton/compton.conf
