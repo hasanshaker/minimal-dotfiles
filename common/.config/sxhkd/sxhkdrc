@@ -49,7 +49,7 @@ super + grave
 
 # screenkey
 super + Scroll_Lock
-      killall -e screenkey || python2 $(command -v screenkey)
+      pkill -f screenkey || python2 $(command -v screenkey)
 
 # showclip script
 super + Insert
