@@ -72,3 +72,13 @@ elif [ "$(command -v mate-session)" ];then
     export _WM=mate
 fi
 
+export WLAN_IFACE="$(ifconfig|awk '/^wl*/{print $1}'|sed 's/\://')"
+
+ETH1="$(ifconfig|awk '/^enp*/{print $1}'|sed 's/\://')"
+ETH2="$(ifconfig|awk '/^eth*/{print $1}'|sed 's/\://')"
+if [ -n "${ETH1}" ];then
+    export ETH_IFACE="${ETH1}"
+elif [ -n "${ETH2}" ];then
+    export ETH_IFACE="${ETH2}"
+fi
+unset ETH1 ETH2

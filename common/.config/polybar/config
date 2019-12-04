@@ -105,7 +105,7 @@ format-padding = 3
 [module/wireless-network]
 type = internal/network
 ; TODO: don't hardcode interface
-interface = wlp0s26u1u1
+interface = ${env:WLAN_IFACE:wlan0}
 ;interval = 3.0
 unknown-as-up = true
 
@@ -123,7 +123,7 @@ animation-packetloss-framerate = 500
 [module/wired-network]
 type = internal/network
 
-interface = enp3s0
+interface = ${env:ETH_IFACE:eth0}
 
 label-connected = " "
 label-disconnected = 
