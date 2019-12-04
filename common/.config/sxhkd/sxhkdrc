@@ -118,17 +118,17 @@ super + {_,shift +} bracketleft
 XF86AudioMute
 	lmc mute
 XF86AudioLowerVolume
-	lmc down 5
+	lmc down 5\%
 shift+XF86AudioLowerVolume
-	lmc down 10
+	lmc down 10\%
 control+XF86AudioLowerVolume
-	lmc down 1
+	lmc down 1\%
 XF86AudioRaiseVolume
-	lmc up 5
+	lmc up 5\%
 shift+XF86AudioRaiseVolume
-	lmc up 10
+	lmc up 10\%
 control+XF86AudioRaiseVolume
-	lmc up 1
+	lmc up 1\%
 XF86AudioNext
 	lmc next
 XF86AudioPlay
