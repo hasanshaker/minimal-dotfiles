@@ -70,6 +70,8 @@ elif [ "$(command -v i3)" ];then
     export _WM=i3
 elif [ "$(command -v mate-session)" ];then
     export _WM=mate
+elif [ "$(command -v awesome)" ];then
+    export _WM=awesome
 fi
 
 export WLAN_IFACE="$(ifconfig|awk '/^wl*/{print $1}'|sed 's/\://')"
