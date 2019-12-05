@@ -67,7 +67,14 @@ case "${_WM}" in
         esac
         ;;
     "openbox")
-        exec openbox-session
+        case "${DISTRO}" in
+            "gentoo")
+                openrc_ck openbox-session
+                ;;
+            "arch")
+                exec openbox-session
+                ;;
+        esac
         ;;
     "mate")
         exec mate-session
