@@ -40,7 +40,11 @@ fi
 [ -f ~/.xprofile ] && . ~/.xprofile
 
 openrc_ck(){
-    exec ck-launch-session dbus-launch --sh-syntax --exit-with-session "$@"
+    if [ "$(command -v openrc 2>/dev/null)" ];then
+        exec ck-launch-session dbus-launch --sh-syntax --exit-with-session "$@"
+    else
+        exec "$@"
+    fi
 }
 
 case "${_WM}" in
