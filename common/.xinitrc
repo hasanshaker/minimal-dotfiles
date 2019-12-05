@@ -46,10 +46,10 @@ openrc_ck(){
 case "${_WM}" in
     "i3")
         # start i3-wm
-        case "$DISTRO" in
+        case "${DISTRO}" in
             "arch")
-                mkdir -p "$XDG_DATA_HOME"/i3
-                exec i3 -V >> "$XDG_DATA_HOME"/i3/i3-"$(date +%F_%H-%M-%S)"
+                mkdir -p "${XDG_DATA_HOME}"/i3
+                exec i3 -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
                 ;;
             "FreeBSD")
                 exec i3
