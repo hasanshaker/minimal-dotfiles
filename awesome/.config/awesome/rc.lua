@@ -39,6 +39,9 @@ do
 end
 -- }}}
 
+-- autorun, https://wiki.archlinux.org/index.php/Awesome
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
