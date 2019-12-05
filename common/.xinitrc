@@ -83,4 +83,14 @@ case "${_WM}" in
     "mate")
         exec mate-session
         ;;
+    "awesome")
+        case "${DISTRO}" in
+            "gentoo")
+                openrc_ck awesome
+                ;;
+            "arch")
+                exec awesome
+                ;;
+        esac
+        ;;
 esac
