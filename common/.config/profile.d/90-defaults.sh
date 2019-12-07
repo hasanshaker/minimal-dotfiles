@@ -15,6 +15,18 @@ if [ -n "$SSH_CONNECTION" ] ;then
     export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
 
+# gpg-agent FreeBSD
+case "${DISTRO}" in
+    FreeBSD)
+        exec /usr/local/bin/gpg-agent --enable-ssh-support --daemon \
+             --write-env-file "${HOME}/.gpg-agent-info" "$@"
+        if [ -f "${HOME}/.gpg-agent-info" ];then
+            . "${HOME}/.gpg-agent-info"
+            export GPG_AGENT_INFO SSH_AUTH_SOCK
+        fi
+        ;;
+esac
+
 # keychain
 # https://wiki.gentoo.org/wiki/Keychain
 case $DISTRO in
