@@ -2,34 +2,78 @@
 # Sets the background. If given an argument, will set file as background.
 _resolution="$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')"
 
+case "${DISTRO}" in
+    arch|gentoo|debian)
+        SHUF="$(command -v shuf)"
+        ;;
+    FreeBSD)
+	SHUF="$(command -v gshuf)"
+	;;
+esac
+
+if [ "$(command -v xwallpaper)" ]; then
+    WALL_APP=xwallpaper
+elif [ "$(command -v nitrogen)" ]; then
+    WALL_APP=nitrogen
+elif [ "$(command -v feh)" ]; then
+    WALL_APP=feh
+fi
+
 if [ -n "$1" ];then
     cp "$1" ~/.config/setwall.png && notify-send -i "$HOME/.config/setwall.png" "Wallpaper changed."
-    xwallpaper --zoom ~/.config/wall.png
+        case ${WALL_APP} in
+            xwallpaper)
+                xwallpaper --zoom ~/.config/wall.png
+            ;;
+            nitrogen)
+                nitrogen --set-zoom-fill ~/.config/wall.png
+            ;;
+            feh)
+                feh --bg-fill ~/.config/wall.png
+            ;;
+       esac
 elif [ ! -f ~/.config/setwall.png ];then
     case $DISTRO in
         gentoo)
             if [ -d /usr/share/pixmaps/gentoo ];then
                 if [ -d /usr/share/pixmaps/gentoo/$_resolution ];then
-                    wp=$(shuf -ezn 1 /usr/share/pixmaps/gentoo/$_resolution/* | xargs -0)
+                    wp=$(${SHUF} -ezn 1 /usr/share/pixmaps/gentoo/$_resolution/* | xargs -0)
                 else
                     # pick 1280x1024
-                    wp=$(shuf -ezn 1 /usr/share/pixmaps/gentoo/1280x1024/* | xargs -0)
+                    wp=$(${SHUF} -ezn 1 /usr/share/pixmaps/gentoo/1280x1024/* | xargs -0)
                 fi
             else
-                wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+                wp=$(${SHUF} -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
             fi
             ;;
         arch)
             if [ -d /usr/share/backgrounds/archlinux ];then
-                wp=$(shuf -ezn 1 /usr/share/backgrounds/archlinux/*.jpg | xargs -0)
+                wp=$(${SHUF} -ezn 1 /usr/share/backgrounds/archlinux/*.jpg | xargs -0)
             else
-                wp=$(shuf -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+                wp=$(${SHUF} -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
+            fi
+            ;;
+	FreeBSD)
+            if [ -d /usr/local/share/wallpapers/freebsd-8k-wallpapers ]; then
+                wp=$(${SHUF} -ezn 1 /usr/local/share/wallpapers/freebsd-8k-wallpapers/* | xargs -0)
+            else
+                wp=$(${SHUF} -ezn 1 ~/.local/share/wallpapers/$DISTRO/* | xargs -0)
             fi
             ;;
         *)
-            wp=$(shuf -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
+            wp=$(${SHUF} -ezn 1 ~/.local/share/wallpapers/common/* | xargs -0)
             ;;
     esac
-    xwallpaper --stretch $wp
+    case ${WALL_APP} in
+        xwallpaper)
+            xwallpaper --stretch $wp
+        ;;
+        nitrogen)
+            nitrogen --set-zoom-fill $wp
+        ;;
+        feh)
+            feh --bg-fill $wp
+        ;;
+   esac
 fi
 
