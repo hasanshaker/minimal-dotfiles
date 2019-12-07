@@ -1,9 +1,9 @@
 #!/bin/sh
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
+userresources="${HOME}/.Xresources"
+usermodmap="${HOME}/.Xmodmap"
 
 # $DISTRO is set by "~/.profile"
-if [ "$DISTRO" = "ubuntu" ]; then
+if [ "${DISTRO}" = "ubuntu" ]; then
     sysresources=/etc/X11/xinit/Xresources
     sysmodmap=/etc/X11/xinit/Xmodmap
 else
@@ -12,26 +12,26 @@ else
 fi
 
 # merge in defaults and keymaps
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
+if [ -f "${sysresources}" ]; then
+    xrdb -merge "${sysresources}"
 fi
 
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
+if [ -f "${sysmodmap}" ]; then
+    xmodmap "${sysmodmap}"
 fi
 
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
+if [ -f "${userresources}" ]; then
+    xrdb -merge "${userresources}"
 fi
 
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
+if [ -f "${usermodmap}" ]; then
+    xmodmap "${usermodmap}"
 fi
 
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-        [ -x "$f" ] && . "$f"
+        [ -x "${f}" ] && . "${f}"
     done
     unset f
 fi
@@ -47,48 +47,54 @@ openrc_ck(){
     fi
 }
 
+if [ "${DISTRO}" == "FreeBSD" ];then
+    # need to source ~/.profile again to make sure all
+    # XDG_* are defined
+    . ~/.profile
+fi
+
 case "${_WM}" in
-    "i3")
+    i3)
         # start i3-wm
         case "${DISTRO}" in
-            "arch")
+            arch)
                 mkdir -p "${XDG_DATA_HOME}"/i3
                 exec i3 -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
                 ;;
-            "FreeBSD")
+            FreeBSD)
                 exec i3
                 ;;
-            "gentoo")
+            gentoo)
                 openrc_ck i3
         esac
         ;;
-    "gnome")
+    gnome)
         case "$DISTRO" in
-            "arch")
+            arch)
                 export GDK_BACKEND=x11
                 exec gnome-session
                 ;;
         esac
         ;;
-    "openbox")
+    openbox)
         case "${DISTRO}" in
-            "gentoo")
+            gentoo)
                 openrc_ck openbox-session
                 ;;
-            "arch")
+            arch)
                 exec openbox-session
                 ;;
         esac
         ;;
-    "mate")
+    mate)
         exec mate-session
         ;;
-    "awesome")
+    awesome)
         case "${DISTRO}" in
-            "gentoo")
+            gentoo)
                 openrc_ck awesome
                 ;;
-            "arch")
+            arch)
                 exec awesome
                 ;;
         esac

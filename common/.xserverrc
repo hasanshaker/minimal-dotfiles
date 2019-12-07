@@ -1,14 +1,14 @@
 #!/bin/sh
 
 # $DISTRO defined at .profile
-case "$DISTRO" in
-    "arch"|"gentoo")
-        exec /usr/bin/Xorg -nolisten tcp -keeptty "$@" vt$XDG_VTNR
+case "${DISTRO}" in
+    arch|gentoo)
+        exec /usr/bin/Xorg -nolisten tcp -keeptty "$@" vt${XDG_VTNR}
         ;;
-    "FreeBSD")
-        exec /usr/local/bin/Xorg #-nolisten tcp "$@"
+    FreeBSD)
+        exec $(command -v Xorg) #-nolisten tcp "$@"
         ;;
-    *)
+    debian)
         exec /usr/bin/Xorg -nolisten tcp "$@"
         ;;
 esac

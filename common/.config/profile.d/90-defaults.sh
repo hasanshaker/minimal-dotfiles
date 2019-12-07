@@ -1,6 +1,6 @@
 # ~/.config/profile.d/90-defaults.sh
 # set default environment variables if not already exists,
-# these variables can be override 
+# these variables can be override
 
 # editors
 [ -z "${ALTERNATE_EDITOR}" ] && export ALTERNATE_EDITOR="emacsclient -t"
@@ -11,7 +11,7 @@
 [ -z "${GPG_TTY}" ] && export GPG_TTY="$(tty)"
 
 # https://wiki.gentoo.org/wiki/GnuPG#Automatically_starting_the_GPG_agent
-if [[ -n "$SSH_CONNECTION" ]] ;then
+if [ -n "$SSH_CONNECTION" ] ;then
     export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
 
@@ -20,12 +20,12 @@ fi
 case $DISTRO in
     gentoo)
         if [ "$(command -v keychain)" ];then
-            [ -z "${HOSTNAME}" ] && HOSTNAME=$(uname -n)
+            [ -z "${HOSTNAME}" ] && HOSTNAME="$(uname -n)"
             keychain --quiet --agents "gpg,ssh"
-            [ -f "${HOME}"/.keychain/"${HOSTNAME}"-sh ] && \
-                . "${HOME}"/.keychain/"${HOSTNAME}"-sh
-            [ -f "${HOME}"/.keychain/"${HOSTNAME}"-sh-gpg ] && \
-                . "${HOME}"/.keychain/"${HOSTNAME}"-sh-gpg
+            [ -f "${HOME}/.keychain/${HOSTNAME}-sh" ] && \
+                . "${HOME}/.keychain/${HOSTNAME}-sh"
+            [ -f "${HOME}/.keychain/${HOSTNAME}-sh-gpg" ] && \
+                . "${HOME}/.keychain/${HOSTNAME}-sh-gpg"
         fi
         ;;
 esac
@@ -64,13 +64,13 @@ fi
 
 # Window Manager
 # set priority of wm's if more than 1 is available
-if [ "$(command -v openbox-session)" ];then
+if [ "$(command -v openbox-session 2>/dev/null)" ];then
     export _WM=openbox
-elif [ "$(command -v i3)" ];then
+elif [ "$(command -v i3 2>/dev/null)" ];then
     export _WM=i3
-elif [ "$(command -v mate-session)" ];then
+elif [ "$(command -v mate-session 2>/dev/null)" ];then
     export _WM=mate
-elif [ "$(command -v awesome)" ];then
+elif [ "$(command -v awesome 2>/dev/null)" ];then
     export _WM=awesome
 fi
 
