@@ -19,7 +19,9 @@ fi
 case "${DISTRO}" in
     FreeBSD)
         if [ ! "$(pgrep -x gpg-agent)" ];then
-            /usr/local/bin/gpg-agent --enable-ssh-support --daemon "$@"
+            /usr/local/bin/gpg-agent --enable-ssh-support \
+                                     --pinentry-program /usr/local/bin/pinentry \
+                                     --daemon "$@"
             if [ -f "${HOME}/.gpg-agent-info" ];then
                 . "${HOME}/.gpg-agent-info"
                 export GPG_AGENT_INFO SSH_AUTH_SOCK
