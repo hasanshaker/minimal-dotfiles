@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.profile
 # Environment and startup programs.
 

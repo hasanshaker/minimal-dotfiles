@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/profile.d/90-defaults.sh
 # set default environment variables if not already exists,
 # these variables can be override

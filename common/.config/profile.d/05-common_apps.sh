@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/profile.d/05-common_apps.sh
 # Variables for common *nix apps
 

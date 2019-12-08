@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/profile.d/03-distro.sh
 # set distro environment
 

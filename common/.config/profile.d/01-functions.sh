@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/profile.d/01-functions.sh
 
 # from /etc/profile lfs

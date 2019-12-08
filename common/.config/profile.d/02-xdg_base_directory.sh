@@ -1,3 +1,4 @@
+#!/bin/sh
 # ~/.config/profile.d/02-xdg_base_directory.sh
 # XDG Base Directory specification
 # https://wiki.archlinux.org/index.php/XDG_BASE_Directory_support
