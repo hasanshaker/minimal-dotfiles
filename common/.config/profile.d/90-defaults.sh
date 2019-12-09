@@ -5,7 +5,7 @@
 
 # editors
 [ -z "${ALTERNATE_EDITOR}" ] && export ALTERNATE_EDITOR="emacsclient -t"
-[ -z "${EDITOR}" ] && export EDITOR="emacsclient -c"
+[ -z "${EDITOR}" ] && export EDITOR="emacsclient --alternate-editor= -t"
 [ -z "${VISUAL}" ] && export VISUAL="emacsclient -c"
 
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
