@@ -52,4 +52,4 @@ xrdb -merge ~/.Xresources &
 emacs --daemon &
 
 # sxhkd
-sxhkd -c ${XDG_CONFIG_HOME}/sxhkd/sxhkdrc &
+sxhkd -c "${XDG_CONFIG_HOME}/sxhkd/sxhkdrc-${_WM}" &
