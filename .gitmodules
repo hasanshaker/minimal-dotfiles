@@ -2,15 +2,3 @@
 	path = wallpapers
 	url = git@gitlab.com:alexforsale/wallpapers.git
 	branch = master
-[submodule "flexget/.config/flexget"]
-	path = flexget/.config/flexget
-	url = git@github.com:alexforsale/flexget.git
-	branch = master
-[submodule "emacs.d/.emacs.d"]
-	path = emacs.d/.emacs.d
-	url = git@github.com:alexforsale/.emacs.d.git
-	branch = master
-[submodule "vim"]
-	path = vim
-	url = git@github.com:alexforsale/vimrc.git
-	branch = master
