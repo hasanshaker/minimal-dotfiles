@@ -33,18 +33,14 @@ esac
 
 # keychain
 # https://wiki.gentoo.org/wiki/Keychain
-case $DISTRO in
-    gentoo)
-        if [ "$(command -v keychain)" ];then
-            [ -z "${HOSTNAME}" ] && HOSTNAME="$(uname -n)"
-            keychain --quiet --agents "gpg,ssh"
-            [ -f "${HOME}/.keychain/${HOSTNAME}-sh" ] && \
-                . "${HOME}/.keychain/${HOSTNAME}-sh"
-            [ -f "${HOME}/.keychain/${HOSTNAME}-sh-gpg" ] && \
-                . "${HOME}/.keychain/${HOSTNAME}-sh-gpg"
-        fi
-        ;;
-esac
+if [ "$(command -v keychain)" ];then
+    [ -z "${HOSTNAME}" ] && HOSTNAME="$(uname -n)"
+    keychain --quiet --agents "gpg,ssh"
+    [ -f "${HOME}/.keychain/${HOSTNAME}-sh" ] && \
+        . "${HOME}/.keychain/${HOSTNAME}-sh"
+    [ -f "${HOME}/.keychain/${HOSTNAME}-sh-gpg" ] && \
+        . "${HOME}/.keychain/${HOSTNAME}-sh-gpg"
+fi
 
 # Terminal apps
 # prioritize xterm above others
