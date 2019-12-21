@@ -1,0 +1,145 @@
+# -*- conf -*-
+
+# Basic binds
+
+# Terminal
+super + Return
+      $TERMINAL
+
+# terminal with screen
+super + shift + Return
+      $TERMINAL -e screen -m
+
+# file manager
+super + q
+      $FILE
+
+# htop
+super + shift + u
+      $TERMINAL -e htop
+
+# pulsemixer
+super + shift + i
+      pavucontrol
+
+# browser
+super + shift + o
+      $BROWSER
+
+# music player
+super + shift + m
+      $TERMINAL -e ncmpcpp
+
+# gimp
+super + shift + g
+      gimp
+
+# visual editor (inside X)
+super + shift + h
+      ${VISUAL}
+
+# terminal editor
+super + shift + n
+      ${TERMINAL} -e ${ALTERNATE_EDITOR}
+
+# Et cetera...
+# dmenuunicode, from voidrice
+super + grave
+      dmenuunicode
+
+# screenkey
+super + Scroll_Lock
+      pkill -f screenkey || python2 $(command -v screenkey)
+
+# showclip script
+super + Insert
+      showclip
+
+# restart and shutdown
+super + shift + x
+      prompt "Shutdown computer?" "sudo -A shutdown -h now"
+super + shift + BackSpace
+      prompt "Reboot computer?" "sudo -A shutdown -r now"
+
+# Start torrent daemon/open interface
+super + F6
+n	torwrap
+# toggle torrent daemon
+super + F7
+	td-toggle
+# Mount a USB drive or Android device
+super + F9
+	dmenumount
+# Unmount a USB drive or Android device
+super + F10
+	dmenuumount
+# toggle polybar visibility
+#super + F11
+#      ~/.local/bin/poly-hide.sh
+
+# Network Manager interface
+super + F12
+      $TERMINAL -e nmtui
+
+# Screen capturing
+Print
+        sh -c "maim -u -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshots/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
+ctrl + Print
+        sh -c "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
+super + Print
+      ~/.local/bin/record-screen byzanz
+alt + Print
+      ~/.local/bin/record-screen gif
+shift + Print
+      ~/.local/bin/record-screen ogv
+
+# Pause audio
+super + {_,shift +} p
+	lmc {toggle,pause}
+# Changes to next/previous tracks
+super + {comma,period}
+	lmc {prev,next}
+# Restart track
+super + shift + less
+	lmc replay
+# Increase volume
+super + {equal,plus}
+	lmc up {5\%,15\%}
+# Decrease volume
+super {_,shift +} + minus
+	lmc down {5\%,15\%}
+# Seek foward in song
+super + {_,shift +} bracketright
+	lmc forward {10,120}
+# Seek backward in song
+super + {_,shift +} bracketleft
+	lmc back {10,120}
+
+XF86AudioMute
+	lmc mute
+XF86AudioLowerVolume
+	lmc down 5\%
+shift+XF86AudioLowerVolume
+	lmc down 10\%
+control+XF86AudioLowerVolume
+	lmc down 1\%
+XF86AudioRaiseVolume
+	lmc up 5\%
+shift+XF86AudioRaiseVolume
+	lmc up 10\%
+control+XF86AudioRaiseVolume
+	lmc up 1\%
+XF86AudioNext
+	lmc next
+XF86AudioPlay
+	lmc toggle
+XF86AudioPrev
+	lmc prev
+XF86AudioStop
+	lmc toggle
+
+# help
+#super + F1
+#      sh -c "groff -mom ~/.local/share/dotfiles/readme.mom -Tpdf | zathura -"
+super + F1
+      sh -c "emacs -u $(id -un) --batch --eval '(load user-init-file)' ~/.dotfiles/common/.local/share/dotfiles/readme.org -f org-latex-export-to-pdf | zathura ~/.dotfiles/common/.local/share/dotfiles/readme.pdf"
