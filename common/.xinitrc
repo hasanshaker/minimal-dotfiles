@@ -62,10 +62,11 @@ case "${_WM}" in
                 exec i3 -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
                 ;;
             FreeBSD)
-                exec i3
+                exec i3 -c ~/.config/i3/config-freebsd
                 ;;
             gentoo)
                 openrc_ck i3
+                ;;
         esac
         ;;
     gnome)
