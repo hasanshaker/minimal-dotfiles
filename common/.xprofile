@@ -16,6 +16,11 @@ case "$DISTRO" in
             export SSH_ASKPASS=ssh-askpass &&
             export SUDO_ASKPASS="${HOME}"/.local/bin/ssh-askpass
         ;;
+    FreeBSD)
+        [ -f /usr/local/bin/x11-ssh-askpass  ] &&
+            export SSH_ASKPASS=/usr/local/bin/x11-ssh-askpass &&
+            export SUDO_ASKPASS=/usr/local/bin/x11-ssh-askpass
+        ;;
 esac
 
 # polkit
@@ -28,6 +33,11 @@ case $DISTRO in
     arch)
         if [ ! $(pgrep -x polkit-gnome-authentication-agent-1) ];then
             sleep 1 && /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+        fi
+        ;;
+    FreeBSD)
+        if [ ! $(pgrep -x polkit-gnome-authentication-agent-1) ];then
+            sleep 1 && /usr/local/libexec/polkit-gnome-authentication-agent-1 &
         fi
         ;;
 esac
