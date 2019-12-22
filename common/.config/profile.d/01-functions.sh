@@ -7,7 +7,7 @@
 # path variable to be modified (default: PATH)
 
 if [ "${SHELL}" != "/bin/sh" ];then
-    if [ ! "$(type pathremove)" ] ; then
+    if [ ! "$(type pathremove &>/dev/null)" ] ; then
         pathremove () {
             local IFS=':'
             local NEWPATH
@@ -23,7 +23,7 @@ if [ "${SHELL}" != "/bin/sh" ];then
         [ -n "$BASH" ] && export -f pathremove
     fi
 
-    if [ ! "$(type pathprepend)" ] ; then
+    if [ ! "$(type pathprepend &>/dev/null)" ] ; then
         pathprepend () {
             pathremove "${1}" "${2}"
             local PATHVARIABLE=${2:-PATH}
@@ -32,7 +32,7 @@ if [ "${SHELL}" != "/bin/sh" ];then
         [ -n "$BASH" ] && export -f pathprepend
     fi
 
-    if [ ! "$(type pathappend)" ] ; then
+    if [ ! "$(type pathappend &>/dev/null)" ] ; then
         pathappend () {
             pathremove "${1}" "${2}"
             local PATHVARIABLE=${2:-PATH}
