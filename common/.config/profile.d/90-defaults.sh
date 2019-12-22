@@ -75,16 +75,24 @@ fi
 [ -z "$FILE" ] && export FILE="diredfm"
 
 # Window Manager
-# set priority of wm's if more than 1 is available
-if [ "$(command -v openbox-session 2>/dev/null)" ];then
-    export _WM=openbox
-elif [ "$(command -v i3 2>/dev/null)" ];then
-    export _WM=i3
-elif [ "$(command -v mate-session 2>/dev/null)" ];then
-    export _WM=mate
-elif [ "$(command -v awesome 2>/dev/null)" ];then
-    export _WM=awesome
-fi
+# set priority of wm's if more than 1 is available, 'games' user
+# set to mate
+case ${USER} in
+    games)
+        export _WM=mate
+        ;;
+    *)
+        if [ "$(command -v openbox-session 2>/dev/null)" ];then
+            export _WM=openbox
+        elif [ "$(command -v i3 2>/dev/null)" ];then
+            export _WM=i3
+        elif [ "$(command -v mate-session 2>/dev/null)" ];then
+            export _WM=mate
+        elif [ "$(command -v awesome 2>/dev/null)" ];then
+            export _WM=awesome
+        fi
+        ;;
+esac
 
 export WLAN_IFACE="$(ifconfig|awk '/^wl*/{print $1}'|sed 's/\://')"
 

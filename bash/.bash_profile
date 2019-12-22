@@ -13,4 +13,12 @@
 [ -f $HOME/.profile ]       && source $HOME/.profile
 [ -f $HOME/.bashrc ]        && source $HOME/.bashrc
 
+case ${USER} in
+    games)
+        if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+            exec startx
+        fi
+        ;;
+esac
+
 # End ~/.bash_profile
