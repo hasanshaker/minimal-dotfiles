@@ -63,7 +63,7 @@ super + shift + BackSpace
 
 # Start torrent daemon/open interface
 super + F6
-n	torwrap
+	torwrap
 # toggle torrent daemon
 super + F7
 	td-toggle
