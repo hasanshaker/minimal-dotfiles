@@ -5,18 +5,15 @@
 # set DISTRO and DISTROVER
 if ( -f /etc/os-release ) then
     # freedesktop.org and systemd
-    source /etc/os-release
-    setenv DISTRO "${ID}"
-    setenv DISTROVER "${VERSION_ID}"
+    setenv DISTRO `gawk '/^ID/{print substr($0,index($0,"=")+1)}' /etc/os-release`
+    setenv DISTROVER `gawk '/^VERSION_ID/{print substr($0,index($0,"=")+1)}' /etc/os-release`
 else if ( `command -v lsb_release >/dev/null` ) then
     # linuxbase.org
     setenv DISTRO "`lsb_release -si`"
     setenv DISTROVER "`lsb_release -sr`"
 else if ( -f /etc/lsb-release ) then
-    # For some versions of Debian/Ubuntu without lsb_release command
-    source /etc/lsb-release
-    setenv DISTRO "${DISTRIB_ID}"
-    setenv DISTROVER "${DISTRIB_RELEASE}"
+    setenv DISTRO `gawk '/^DISTRIB_ID/{print substr($0,index($0,"=")+1)}' /etc/lsb-release`
+    setenv DISTROVER `gawk '/^DISTRIB_RELEASE/{print substr($0,index($0,"=")+1)}' /etc/lsb-release`
 else if ( -f /etc/debian_version ) then
     # Older Debian/Ubuntu/etc.
     setenv DISTRO Debian

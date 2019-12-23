@@ -47,7 +47,7 @@ if ( `where nano` != "" ) then
 endif
 
 # ccache
-if ( `where -v ccache` != "" ) then
+if ( `where ccache` != "" ) then
     if ( -d "/usr/lib/ccache/bin" ) then
         if ( "${SHELL}" != "/bin/sh" ) then
           pathprepend /usr/lib/ccache/bin
@@ -85,8 +85,8 @@ endif
 
 # ssh-askpass
 # https://wiki.archlinux.org/index.php/SSH_keys#Calling_x11-ssh-askpass_with_ssh-add
-if ( -f /usr/lib/ssh/x11-ssh-askpass && ! -L ~/.local/bin/ssh-askpass ) then
-    ln -sv /usr/lib/ssh/x11-ssh-askpass ~/.local/bin/ssh-askpass
+if ( -f /usr/lib/ssh/x11-ssh-askpass ) then
+    ln -sf /usr/lib/ssh/x11-ssh-askpass ~/.local/bin/ssh-askpass
 endif
 
 # Necessary directories
