@@ -44,10 +44,3 @@ if [ -n "${BASH_VERSION}" ]; then
         . "${HOME}/.bashrc"
     fi
 fi
-
-# if running zsh
-if [ -n "${ZSH_VERSION}" ];then
-    if [ -f "${HOME}/.zshrc" ];then
-        . "${HOME}/.zshrc"
-    fi
-fi
