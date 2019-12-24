@@ -714,6 +714,18 @@ function inplaceMkDirs () {
 
 zle -N inplaceMkDirs
 
+# completion system
+COMPDUMPFILE=${COMPDUMPFILE:-${ZDOTDIR:-${HOME}}/.zcompdump}
+if zrcautoload compinit ; then
+    typeset -a tmp
+    zstyle -a ':grml:completion:compinit' arguments tmp
+    compinit -d ${COMPDUMPFILE} "${tmp[@]}" || print 'Notice: no compinit available :('
+    unset tmp
+else
+    print 'Notice: no compinit available :('
+    function compdef { }
+fi
+
 #v1# set number of lines to display per page
 HELP_LINES_PER_PAGE=20
 #v1# set location of help-zle cache file
@@ -1116,9 +1128,17 @@ for rh in run-help{,-git,-ip,-openssl,-p4,-sudo,-svk,-svn}; do
     zrcautoload $rh
 done; unset rh
 
+function grml_theme_has_token () {
+    if (( ARGC != 1 )); then
+        printf 'usage: grml_theme_has_token <name>\n'
+        return 1
+    fi
+    (( ${+grml_prompt_token_default[$1]} ))
+}
+
 # command not found handling
 
-(( ${COMMAND_NOT_FOUND} == 1 )) &&
+if (( ${COMMAND_NOT_FOUND} == 1 )); then
 function command_not_found_handler () {
     emulate -L zsh
     if [[ -x ${GRML_ZSH_CNF_HANDLER} ]] ; then
@@ -1126,6 +1146,9 @@ function command_not_found_handler () {
     fi
     return 1
 }
+fi
+
+source ~/.config/zsh/04-prompt.zsh
 
 function grml_theme_add_token () {
     emulate -L zsh
@@ -1707,6 +1730,8 @@ graphic chipset."
         }
     fi
 }
+
+source ~/.config/zsh/07-completions.zsh
 
 # now run the functions
 isgrml && checkhome
