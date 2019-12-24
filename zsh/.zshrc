@@ -3,7 +3,7 @@
 # This file is read after .zprofile file is read.
 
 () {
-    for config_file ($ZDOTDIR/*.zsh) source $config_file
+    for config_file ($ZSH/*.zsh) source $config_file
 }
 
 # Initialize colors.

@@ -33,7 +33,8 @@ fi
 # The directory to search for shell startup files (.zshrc, etc).
 # If ZDOTDIR is unset, HOME is used instead.
 #
-ZDOTDIR=$HOME/.config/zsh
+#ZDOTDIR=$HOME/.config/zsh
+ZSH=$HOME/.config/zsh
 
 # Keep only the first occurrence of each duplicated value.
 typeset -U path
