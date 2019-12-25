@@ -1,15 +1,60 @@
 #!/usr/bin/env zsh
 # ~/.config/zsh/03-history.zsh
 
-# History configuration
-HISTFILE=${ZDOTDIR}/.zsh_history
-HISTSIZE=10000
-SAVEHIST=1000000
-LISTMAX=50
+HISTFILE=${HISTFILE:-${ZDOTDIR:-${HOME}}/.zsh_history}
+isgrmlcd && HISTSIZE=500  || HISTSIZE=5000
+isgrmlcd && SAVEHIST=1000 || SAVEHIST=10000 # useful for setopt append_history
 
-if [ $UID = 0 ]; then
-    unset HISTFILE
-    SAVEHIST=0
+DIRSTACKSIZE=${DIRSTACKSIZE:-20}
+DIRSTACKFILE=${DIRSTACKFILE:-${ZDOTDIR:-${HOME}}/.zdirs}
+
+if zstyle -T ':grml:chpwd:dirstack' enable; then
+    typeset -gaU GRML_PERSISTENT_DIRSTACK
+    function grml_dirstack_filter () {
+        local -a exclude
+        local filter entry
+        if zstyle -s ':grml:chpwd:dirstack' filter filter; then
+            $filter $1 && return 0
+        fi
+        if zstyle -a ':grml:chpwd:dirstack' exclude exclude; then
+            for entry in "${exclude[@]}"; do
+                [[ $1 == ${~entry} ]] && return 0
+            done
+        fi
+        return 1
+    }
+
+    function chpwd () {
+        (( ZSH_SUBSHELL )) && return
+        (( $DIRSTACKSIZE <= 0 )) && return
+        [[ -z $DIRSTACKFILE ]] && return
+        grml_dirstack_filter $PWD && return
+        GRML_PERSISTENT_DIRSTACK=(
+            $PWD "${(@)GRML_PERSISTENT_DIRSTACK[1,$DIRSTACKSIZE]}"
+        )
+        builtin print -l ${GRML_PERSISTENT_DIRSTACK} >! ${DIRSTACKFILE}
+    }
+
+    if [[ -f ${DIRSTACKFILE} ]]; then
+        # Enabling NULL_GLOB via (N) weeds out any non-existing
+        # directories from the saved dir-stack file.
+        dirstack=( ${(f)"$(< $DIRSTACKFILE)"}(N) )
+        # "cd -" won't work after login by just setting $OLDPWD, so
+        [[ -d $dirstack[1] ]] && cd -q $dirstack[1] && cd -q $OLDPWD
+    fi
+
+    if zstyle -t ':grml:chpwd:dirstack' filter-on-load; then
+        for i in "${dirstack[@]}"; do
+            if ! grml_dirstack_filter "$i"; then
+                GRML_PERSISTENT_DIRSTACK=(
+                    "${GRML_PERSISTENT_DIRSTACK[@]}"
+                    $i
+                )
+            fi
+        done
+    else
+        GRML_PERSISTENT_DIRSTACK=( "${dirstack[@]}" )
+    fi
 fi
 
 # Do not enter command lines into the history list if they are duplicates of the previous event.
