@@ -307,8 +307,8 @@ for file in $__fish_config_dir/conf.d/*.fish $__fish_sysconf_dir/conf.d/*.fish $
 end
 
 # load user settings in ~/.local/share/fish/local.d
-if test -d "{$HOME}/.local/share/fish/local.d"
-    for profile in "{$HOME}/.local/share/fish/local.d/*.fish"
-        source "{$profile}"
+if [ -d "$HOME/.local/share/fish/local.d" ]
+    for profile in $HOME/.local/share/fish/local.d/*.fish
+        source "$profile"
     end
 end
