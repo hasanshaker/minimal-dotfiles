@@ -46,7 +46,7 @@ end
 # ccache
 if command --search --quiet ccache
     if [ -d "/usr/lib/ccache/bin" ]
-        set PATH /usr/lib/ccache/bin "$PATH"
+        set --global --export PATH /usr/lib/ccache/bin "$PATH"
     end
     switch $DISTRO
         case gentoo
@@ -58,17 +58,17 @@ end
 
 # ruby
 if command --search --quiet ruby
-    set PATH "(ruby -e 'print Gem.user_dir')/bin" "$PATH"
+    set --global --export PATH "(ruby -e 'print Gem.user_dir')/bin" "$PATH"
 end
 
 # node
 if command --search --quiet npm
-    set PATH "$HOME/.node_modules/bin" "$PATH"
+    set --global --export PATH "$HOME/.node_modules/bin" "$PATH"
     set --global --export npm_config_prefix ~/.node_modules
 end
 
 if [ -d "$HOME/.cargo/bin" ]
-    set PATH "$HOME/.cargo/bin" "$PATH"
+    set --global --export PATH "$HOME/.cargo/bin" "$PATH"
 end
 
 # https://wiki.postmarketos.org/wiki/Installing_pmbootstrap
@@ -136,4 +136,14 @@ if command --search --quiet systemd
                 ln -s "$DIRMNGR_SYSTEM_UNIT_FILE" "$DIRMNGR_USER_UNIT_FILE"
             end
         end
+end
+
+# extrapaths
+if [ -d "$HOME/.local/bin" ]
+    set --global --export PATH "$HOME/.local/bin/" "$PATH"
+end
+
+# doom emacs bin
+if [ -d "HOME/.emacs.d/bin" ]
+    set --global --export PATH "$HOME/.emacs.d/bin/" "$PATH"
 end
