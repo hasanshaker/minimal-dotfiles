@@ -144,7 +144,7 @@ if [ -d "$HOME/.local/bin" ]
 end
 
 # doom emacs bin
-if [ -d "HOME/.emacs.d/bin" ]
+if [ -d "$HOME/.emacs.d/bin" ]
     set --global --export PATH "$HOME/.emacs.d/bin/" "$PATH"
 end
 
