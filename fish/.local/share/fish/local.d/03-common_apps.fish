@@ -147,3 +147,36 @@ end
 if [ -d "HOME/.emacs.d/bin" ]
     set --global --export PATH "$HOME/.emacs.d/bin/" "$PATH"
 end
+
+# perlbin
+if [ -d /usr/bin/site_perl ]
+    set --global --export PATH "$PATH" /usr/bin/site_perl
+else if [ -d /usr/local/bin/site_perl ]
+    set --global --export PATH "$PATH" /usr/local/bin/site_perl
+end
+
+if [ -d /usr/bin/vendor_perl ]
+    set --global --export PATH "$PATH" /usr/bin/vendor_perl
+else if [ -d /usr/local/bin/vendor_perl ]
+    set --global --export PATH "$PATH" /usr/local/bin/vendor_perl
+end
+
+if [ -d /usr/bin/core_perl ]
+    set --global --export PATH "$PATH" /usr/bin/core_perl
+else if [ -d /usr/local/bin/core_perl ]
+    set --global --export PATH "$PATH" /usr/local/bin/core_perl
+end
+
+if [ -d /usr/lib/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/lib/perl5/site_perl/bin
+else if [ -d /usr/local/lib/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/local/lib/perl5/site_perl/bin
+else if [ -d /usr/libexec/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/libexec/perl5/site_perl/bin
+else if [ -d /usr/local/libexec/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/local/libexec/perl5/site_perl/bin
+else if [ -d /usr/lib64/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/lib64/perl5/site_perl/bin
+else if [ -d /usr/local/lib64/perl5/site_perl/bin ]
+    set --global --export PATH "$PATH" /usr/local/lib64/perl5/site_perl/bin
+end
