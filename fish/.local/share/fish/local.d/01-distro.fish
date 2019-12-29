@@ -21,3 +21,10 @@ else
     set --export --global DISTRO (uname -s)
     set --export --global DISTROVER (uname -r)
 end
+
+if [ -f /etc/modules/init/fish ]
+    source /etc/modules/init/fish
+    if [ -f /etc/modules/init/fish_completion ]
+        source /etc/modules/init/fish_completion
+    end
+end
