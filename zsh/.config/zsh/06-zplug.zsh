@@ -43,6 +43,13 @@ zplug 'zsh-users/zsh-completions', depth:1 # more completions
 # bunch of git aliases, see https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 zplug 'plugins/git', from:oh-my-zsh
 
+# Automatically fetches all changes from all remotes while you are
+# working in git-initialized directory.
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-auto-fetch
+zplug 'plugins/git-auto-fetch', from:oh-my-zsh
+export GIT_AUTO_FETCH_INTERVAL=1200 #in seconds
+
+
 # completion for the Rust build tool cargo.
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cargo
 zplug 'plugins/cargo', from:oh-my-zsh
