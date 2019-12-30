@@ -8,7 +8,6 @@
 #    $ZDOTDIR/.zprofile
 #    $ZDOTDIR/.zshrc
 #    $ZDOTDIRA/.zlogin
-#
 #  interactive zsh
 #    $ZDOTDIR/.zshenv
 #    $ZDOTDIR/.zshrc
@@ -35,6 +34,16 @@ fi
 #
 #ZDOTDIR=$HOME/.config/zsh
 ZSH=$HOME/.config/zsh
+
+# ZPLUG_HOME
+# https://github.com/zplug/zplug
+# sane zplug installation defaults
+if [[ -z "$ZPLUG_HOME" ]]; then
+  ZPLUG_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/zplug"
+fi
+if [[ -z "$ZPLUG_CACHE_DIR" ]]; then
+  ZPLUG_CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/zplug"
+fi
 
 # Keep only the first occurrence of each duplicated value.
 typeset -U path
@@ -77,17 +86,8 @@ export HOSTNAME=${HOSTNAME:-$(hostname)}
 
 # make sure /usr/bin/id is available
 if [[ -x /usr/bin/id ]] ; then
-    [[ -z "$USER" ]]          && export USER=$(/usr/bin/id -un)
+    [[ -z "$USER" ]] && export USER=$(/usr/bin/id -un)
     [[ $LOGNAME == LOGIN ]] && LOGNAME=$(/usr/bin/id -un)
-fi
-
-# workaround for live-cd mode as $HOME is not set via rungetty
-if [[ -f /etc/grml_cd ]] ; then
-    if (( EUID == 0 )); then
-        export HOME=/root
-    else
-        export HOME=/home/$USER
-    fi
 fi
 
 # less (:=pager) options:
@@ -101,9 +101,3 @@ fi
 unset lp
 
 export READNULLCMD=${PAGER:-/usr/bin/pager}
-
-# allow zeroconf for distcc
-export DISTCC_HOSTS="+zeroconf"
-
-# MAKEDEV should be usable on udev as well by default:
-export WRITE_ON_UDEV=yes

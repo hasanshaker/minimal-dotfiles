@@ -91,7 +91,7 @@ setopt auto_resume
 # to avoid the shell hanging if its tty goes away.Also, if this option is set and the Zsh Line Editor is used, widgets implemented by shell
 # functions can be bound to EOF (normally Control-D) without printing the normal warning message.
 # This works only for normal widgets, not for completion widgets.
-setopt ignore_eof
+#setopt ignore_eof
 
 # Treat the ‘#’, ‘~’ and ‘^’ characters as part of patterns for filename generation, etc.
 # (An initial unquoted ‘~’ always produces named directory expansion.)

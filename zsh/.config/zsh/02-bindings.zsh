@@ -17,16 +17,16 @@ if (( ${+terminfo[smkx]} )) && (( ${+terminfo[rmkx]} )); then
   zle -N zle-line-finish
 fi
 
-bindkey -e                                            # Use emacs key bindings
+bindkey -e # Use emacs key bindings
 
-bindkey '\ew' kill-region                             # [Esc-w] - Kill from the cursor to the mark
-bindkey -s '\el' 'ls\n'                               # [Esc-l] - run command: ls
-bindkey '^r' history-incremental-search-backward      # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
+bindkey '\ew' kill-region # [Esc-w] - Kill from the cursor to the mark
+bindkey -s '\el' 'ls\n' # [Esc-l] - run command: ls
+bindkey '^r' history-incremental-search-backward # [Ctrl-r] - Search backward incrementally for a specified string. The string may begin with ^ to anchor the search to the beginning of the line.
 if [[ "${terminfo[kpp]}" != "" ]]; then
-  bindkey "${terminfo[kpp]}" up-line-or-history       # [PageUp] - Up a line of history
+  bindkey "${terminfo[kpp]}" up-line-or-history # [PageUp] - Up a line of history
 fi
 if [[ "${terminfo[knp]}" != "" ]]; then
-  bindkey "${terminfo[knp]}" down-line-or-history     # [PageDown] - Down a line of history
+  bindkey "${terminfo[knp]}" down-line-or-history # [PageDown] - Down a line of history
 fi
 
 # start typing + [Up-Arrow] - fuzzy find history forward
@@ -43,24 +43,24 @@ if [[ "${terminfo[kcud1]}" != "" ]]; then
 fi
 
 if [[ "${terminfo[khome]}" != "" ]]; then
-  bindkey "${terminfo[khome]}" beginning-of-line      # [Home] - Go to beginning of line
+  bindkey "${terminfo[khome]}" beginning-of-line # [Home] - Go to beginning of line
 fi
 if [[ "${terminfo[kend]}" != "" ]]; then
-  bindkey "${terminfo[kend]}"  end-of-line            # [End] - Go to end of line
+  bindkey "${terminfo[kend]}"  end-of-line # [End] - Go to end of line
 fi
 
-bindkey ' ' magic-space                               # [Space] - do history expansion
+bindkey ' ' magic-space # [Space] - do history expansion
 
-bindkey '^[[1;5C' forward-word                        # [Ctrl-RightArrow] - move forward one word
-bindkey '^[[1;5D' backward-word                       # [Ctrl-LeftArrow] - move backward one word
+bindkey '^[[1;5C' forward-word # [Ctrl-RightArrow] - move forward one word
+bindkey '^[[1;5D' backward-word # [Ctrl-LeftArrow] - move backward one word
 
 if [[ "${terminfo[kcbt]}" != "" ]]; then
-  bindkey "${terminfo[kcbt]}" reverse-menu-complete   # [Shift-Tab] - move through the completion menu backwards
+  bindkey "${terminfo[kcbt]}" reverse-menu-complete # [Shift-Tab] - move through the completion menu backwards
 fi
 
-bindkey '^?' backward-delete-char                     # [Backspace] - delete backward
+bindkey '^?' backward-delete-char # [Backspace] - delete backward
 if [[ "${terminfo[kdch1]}" != "" ]]; then
-  bindkey "${terminfo[kdch1]}" delete-char            # [Delete] - delete forward
+  bindkey "${terminfo[kdch1]}" delete-char # [Delete] - delete forward
 else
   bindkey "^[[3~" delete-char
   bindkey "^[3;5~" delete-char
