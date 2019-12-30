@@ -47,6 +47,10 @@ zplug 'plugins/git', from:oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cargo
 zplug 'plugins/cargo', from:oh-my-zsh
 
+# adds colors to man pages.
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages
+zplug 'plugins/colored-man-pages', from:oh-my-zsh
+
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
