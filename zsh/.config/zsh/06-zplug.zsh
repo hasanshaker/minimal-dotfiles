@@ -74,6 +74,10 @@ if [ "$(command -v hub 2>/dev/null)" ] ||
     zplug 'plugins/github', from:oh-my-zsh
 fi
 
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/gnu-utils
+# Load if "if" tag returns true
+zplug 'plugins/gnu-utils', from:oh-my-zsh, if:"[[ $DISTRO == FreeBSD ]]"
+
 # completion for the Rust build tool cargo.
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cargo
 zplug 'plugins/cargo', from:oh-my-zsh
