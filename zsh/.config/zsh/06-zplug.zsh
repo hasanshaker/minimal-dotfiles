@@ -43,6 +43,10 @@ zplug 'zsh-users/zsh-completions', depth:1 # more completions
 # bunch of git aliases, see https://github.com/robbyrussell/oh-my-zsh/wiki/Plugin:git
 zplug 'plugins/git', from:oh-my-zsh
 
+# completion for the Rust build tool cargo.
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/cargo
+zplug 'plugins/cargo', from:oh-my-zsh
+
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
