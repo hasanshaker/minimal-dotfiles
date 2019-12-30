@@ -51,6 +51,10 @@ zplug 'plugins/cargo', from:oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/colored-man-pages
 zplug 'plugins/colored-man-pages', from:oh-my-zsh
 
+# helpful shortcut aliases for many commonly used commands.
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
+zplug 'plugins/common-aliases', from:oh-my-zsh
+
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
