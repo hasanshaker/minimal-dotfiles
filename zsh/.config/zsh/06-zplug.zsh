@@ -55,6 +55,10 @@ zplug 'plugins/colored-man-pages', from:oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
 zplug 'plugins/common-aliases', from:oh-my-zsh
 
+# automatically starts fbterm if on a real TTY (/dev/tty*).
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fbterm
+zplug 'plugins/fbterm', from:oh-my-zsh
+
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
