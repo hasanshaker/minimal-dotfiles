@@ -94,6 +94,10 @@ zplug 'plugins/common-aliases', from:oh-my-zsh
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/fbterm
 zplug 'plugins/fbterm', from:oh-my-zsh
 
+# adds aliases for searching with Google, Wiki, Bing, YouTube and other popular services.
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/web-search
+zplug 'plugins/web-search', from:oh-my-zsh
+
 # Load theme file
 zplug 'dracula/zsh', as:theme
 
