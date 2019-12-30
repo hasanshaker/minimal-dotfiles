@@ -6,6 +6,9 @@
 # Functions to help us manage paths.  Second argument is the name of the
 # path variable to be modified (default: PATH)
 
+# don't run this on zsh for now
+[[ "${ZSH_VERSION}" ]] && return
+
 if [ "${SHELL}" != "/bin/sh" ];then
     if [ ! "$(type pathremove &>/dev/null)" ] ; then
         pathremove () {

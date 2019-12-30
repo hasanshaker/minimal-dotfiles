@@ -49,8 +49,9 @@ fi
 # ccache
 if [ "$(command -v ccache 2>/dev/null)" ]; then
     if [ -d "/usr/lib/ccache/bin" ]; then
-        if [ "${SHELL}" != "/bin/sh" ]; then
-          pathprepend /usr/lib/ccache/bin
+        if [ "${SHELL}" != "/bin/sh" ] &&
+               [ -z "$ZSH_VERSION" ]; then
+            pathprepend /usr/lib/ccache/bin
         else
           export PATH=/usr/lib/ccache/bin:"${PATH}"
         fi
