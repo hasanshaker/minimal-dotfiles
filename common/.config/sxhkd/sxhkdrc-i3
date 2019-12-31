@@ -35,7 +35,7 @@ super + shift + g
       gimp
 
 # visual editor (inside X)
-super + shift + h
+super + shift + v
       ${VISUAL}
 
 # terminal editor
