@@ -56,14 +56,14 @@ endif
 
 # XDG User Directories
 # https://wiki.archlinux.org/index.php/XDG_user_directories
-[ "$?XDG_DESKTOP_DIR" ] || setenv XDG_DESKTOP_DIR "${HOME}/Desktop"
-[ "$?XDG_DOWNLOAD_DIR" ] || setenv XDG_DOWNLOAD_DIR "${HOME}/Downloads"
-[ "$?XDG_TEMPLATES_DIR" ] || setenv XDG_TEMPLATES_DIR "${HOME}/Templates"
-[ "$?XDG_PUBLICSHARE_DIR" ] || setenv XDG_PUBLICSHARE_DIR "${HOME}/Public"
-[ "$?XDG_DOCUMENTS_DIR" ] || setenv XDG_DOCUMENTS_DIR "${HOME}/Documents"
-[ "$?XDG_MUSIC_DIR" ] || setenv XDG_MUSIC_DIR "${HOME}/Music"
-[ "$?XDG_PICTURES_DIR" ] || setenv XDG_PICTURES_DIR "${HOME}/Pictures"
-[ "$?XDG_VIDEOS_DIR" ] || setenv XDG_VIDEOS_DIR "${HOME}/Videos"
+[ "$?XDG_DESKTOP_DIR" ] && setenv XDG_DESKTOP_DIR "${HOME}/Desktop"
+[ "$?XDG_DOWNLOAD_DIR" ] && setenv XDG_DOWNLOAD_DIR "${HOME}/Downloads"
+[ "$?XDG_TEMPLATES_DIR" ] && setenv XDG_TEMPLATES_DIR "${HOME}/Templates"
+[ "$?XDG_PUBLICSHARE_DIR" ] && setenv XDG_PUBLICSHARE_DIR "${HOME}/Public"
+[ "$?XDG_DOCUMENTS_DIR" ] && setenv XDG_DOCUMENTS_DIR "${HOME}/Documents"
+[ "$?XDG_MUSIC_DIR" ] && setenv XDG_MUSIC_DIR "${HOME}/Music"
+[ "$?XDG_PICTURES_DIR" ] && setenv XDG_PICTURES_DIR "${HOME}/Pictures"
+[ "$?XDG_VIDEOS_DIR" ] && setenv XDG_VIDEOS_DIR "${HOME}/Videos"
 
 foreach dir ("${XDG_DESKTOP_DIR}" "${XDG_DOWNLOAD_DIR}" "${XDG_TEMPLATES_DIR}" \
                               "${XDG_PUBLICSHARE_DIR}" "${XDG_DOCUMENTS_DIR}" "${XDG_MUSIC_DIR}" \

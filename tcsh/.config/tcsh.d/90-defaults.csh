@@ -4,12 +4,12 @@
 # these variables can be override
 
 # editors
-[ "$?ALTERNATE_EDITOR" ] || setenv ALTERNATE_EDITOR "emacsclient -t"
-[ "$?EDITOR" ] || setenv EDITOR "emacsclient --alternate-editor= -t"
-[ "$?VISUAL" ] || setenv VISUAL "emacsclient -c"
+[ "$?ALTERNATE_EDITOR" ] && setenv ALTERNATE_EDITOR "emacsclient -t"
+[ "$?EDITOR" ] && setenv EDITOR "emacsclient --alternate-editor= -t"
+[ "$?VISUAL" ] && setenv VISUAL "emacsclient -c"
 
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
-[ "$?GPG_TTY" ] || setenv GPG_TTY `tty`
+[ "$?GPG_TTY" ] && setenv GPG_TTY `tty`
 
 # gpg-agent FreeBSD
 switch (${DISTRO})
