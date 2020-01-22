@@ -43,30 +43,34 @@ endif
 
 # Terminal apps
 # prioritize xterm above others
-if ( `where xterm` != "" ) then
-    setenv TERMINAL "xterm"
-else if ( `where urxvt` != "") then
-    setenv TERMINAL "urxvt"
-else if ( `where gnome-terminal` != "") then
-    setenv TERMINAL "gnome-terminal"
+if (! "$?TERMINAL" ) then
+    if ( `where xterm` != "" ) then
+        setenv TERMINAL "xterm"
+    else if ( `where urxvt` != "") then
+        setenv TERMINAL "urxvt"
+    else if ( `where gnome-terminal` != "") then
+        setenv TERMINAL "gnome-terminal"
+    endif
 endif
 
 # Browser
-if ( `where brave-bin` != "" ) then
-    # brave browser
-    # https://brave.com
-    setenv BROWSER "brave-bin"
-else if ( `where brave` != "" ) then
-    # brave browser
-    # https://brave.com
-    setenv BROWSER "brave"
-else if ( `where firefox` != "" ) then
-    # firefox
-    setenv BROWSER "firefox"
-else if ( `where chromium` != "" ) then
-    setenv BROWSER "chromium"
-else
-    setenv BROWSER "elinks"
+if (! "?$BROWSER" ) then
+    if ( `where brave-bin` != "" ) then
+        # brave browser
+        # https://brave.com
+        setenv BROWSER "brave-bin"
+    else if ( `where brave` != "" ) then
+        # brave browser
+        # https://brave.com
+        setenv BROWSER "brave"
+    else if ( `where firefox` != "" ) then
+        # firefox
+        setenv BROWSER "firefox"
+    else if ( `where chromium` != "" ) then
+        setenv BROWSER "chromium"
+    else
+        setenv BROWSER "elinks"
+    endif
 endif
 
 # file manager
@@ -74,14 +78,16 @@ endif
 
 # Window Manager
 # set priority of wm's if more than 1 is available
-if ( `where openbox-session` != "" ) then
-    setenv _WM openbox
-else if ( `where i3` != "" ) then
-    setenv _WM i3
-else if ( `where mate-session` != "" ) then
-    setenv _WM mate
-else if ( `where awesome` != "" ) then
-    setenv _WM awesome
+if (! "$?_WM" ) then
+    if ( `where openbox-session` != "" ) then
+        setenv _WM openbox
+    else if ( `where i3` != "" ) then
+        setenv _WM i3
+    else if ( `where mate-session` != "" ) then
+        setenv _WM mate
+    else if ( `where awesome` != "" ) then
+        setenv _WM awesome
+    endif
 endif
 
 setenv WLAN_IFACE `ifconfig|awk '/^wl*/{print $1}'|sed 's/\://'`
