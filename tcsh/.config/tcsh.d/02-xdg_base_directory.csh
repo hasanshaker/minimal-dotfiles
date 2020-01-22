@@ -25,7 +25,7 @@ if (! "$?XDG_DATA_HOME" ) then
 endif
 
 if (! "$?XDG_RUNTIME_DIR" ) then
-    switch "${DISTRO}"
+    switch ("${DISTRO}")
     case "gentoo":
             setenv XDG_RUNTIME_DIR "/tmp/${UID}-runtime-dir"
             if ( ! -d "${XDG_RUNTIME_DIR}" ) then
