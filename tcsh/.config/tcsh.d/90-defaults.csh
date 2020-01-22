@@ -4,12 +4,12 @@
 # these variables can be override
 
 # editors
-[ -z "${ALTERNATE_EDITOR}" ] && setenv ALTERNATE_EDITOR "emacsclient -t"
-[ -z "${EDITOR}" ] && setenv EDITOR "emacsclient --alternate-editor= -t"
-[ -z "${VISUAL}" ] && setenv VISUAL "emacsclient -c"
+[ "$?ALTERNATE_EDITOR" ] || setenv ALTERNATE_EDITOR "emacsclient -t"
+[ "$?EDITOR" ] || setenv EDITOR "emacsclient --alternate-editor= -t"
+[ "$?VISUAL" ] || setenv VISUAL "emacsclient -c"
 
 # from https://www.gnupg.org/documentation/manuals/gnupg/Invoking-GPG_002dAGENT.html
-[ -z "${GPG_TTY}" ] && setenv GPG_TTY `tty`
+[ "$?GPG_TTY" ] || setenv GPG_TTY `tty`
 
 # gpg-agent FreeBSD
 switch (${DISTRO})
@@ -70,7 +70,7 @@ else
 endif
 
 # file manager
-[ -z "$FILE" ] && setenv FILE "diredfm"
+[ "$?FILE" ] && setenv FILE "diredfm"
 
 # Window Manager
 # set priority of wm's if more than 1 is available
