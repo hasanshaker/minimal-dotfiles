@@ -17,7 +17,7 @@ case FreeBSD:
         if ( ! `pgrep -x gpg-agent` ) then
             /usr/local/bin/gpg-agent --enable-ssh-support \
                                      --pinentry-program /usr/local/bin/pinentry \
-                                     --daemon "$@"
+                                     --daemon "$argv[@]"
         endif
         breaksw
 case gentoo:
