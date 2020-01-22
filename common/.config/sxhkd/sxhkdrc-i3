@@ -36,7 +36,7 @@ super + shift + g
 
 # visual editor (inside X)
 super + shift + v
-      ${VISUAL}
+      sh -c "${VISUAL}"
 
 # terminal editor
 super + shift + n
