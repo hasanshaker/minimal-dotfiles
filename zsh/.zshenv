@@ -101,3 +101,6 @@ fi
 unset lp
 
 export READNULLCMD=${PAGER:-/usr/bin/pager}
+
+# Fix for TRAMP
+[ $TERM = "dumb" ] && unsetopt zle && PS1='$ '
