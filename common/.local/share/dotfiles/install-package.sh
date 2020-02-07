@@ -21,7 +21,7 @@ case ${DISTRO} in
             printf "we'll replace vim with gvim\n"
             sudo pacman -R --noconfirm vim 2>/dev/null
         fi
-        sudo pacman -Sqq --noconfirm ${package_list}
+        sudo pacman -Sqq --noconfirm --needed ${package_list}
         if ! $(command -v yay 2>/dev/null);then
             _install_yay
         fi
