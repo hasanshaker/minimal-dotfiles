@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # install packages
+set -e
 
 function _install_yay (){
     printf "installing yay\n"
