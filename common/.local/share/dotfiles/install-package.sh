@@ -17,7 +17,7 @@ case ${DISTRO} in
             . ~/.local/share/dotfiles/packages.sh
         fi
         # possible conflicts
-        if [ $(pacman -Qq vim 2>/dev/null) ];then
+        if [ $(pacman -Qq | grep "^vim$") ];then
             printf "we'll replace vim with gvim\n"
             sudo pacman -R --noconfirm vim 2>/dev/null
         fi
