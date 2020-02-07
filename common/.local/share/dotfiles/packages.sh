@@ -15,4 +15,13 @@ case ${DISTRO} in
             xorg"
         aur_list="ts polybar transmission-remote-cli-git screenkey-git"
         ;;
+    "FreeBSD")
+        package_list="dmenu elinks emacs feh firefox gnupg i3-gaps i3lock \
+            i3status keychain htop lsof rofi screen stow sxhkd openssh-askpass \
+            xinit xterm ffmpeg mpv youtube_dl awesome noto mpd mpc dunst libnotify \
+            xwininfo xorg-fonts arandr calcurse compton xprop sxiv ncmpcpp maim socat \
+            unclutter unrar unzip xclip xdotool xdpyinfo zathura zathura-pdf-mupdf \
+            poppler mediainfo atool highlight pavucontrol transmission-cli \
+            font-awesome texlive-base xorg-minimal"
+        ;;
 esac

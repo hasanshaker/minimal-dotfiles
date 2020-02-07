@@ -11,11 +11,12 @@ function _install_yay (){
     cd -
 }
 
+if [ -z ${package_list} ];then
+    . ~/.local/share/dotfiles/packages.sh
+fi
+
 case ${DISTRO} in
     "arch")
-        if [ -z ${package_list} ];then
-            . ~/.local/share/dotfiles/packages.sh
-        fi
         # possible conflicts
         if [ $(pacman -Qq | grep "^vim$") ];then
             printf "we'll replace vim with gvim\n"
@@ -27,5 +28,8 @@ case ${DISTRO} in
         fi
         # install aur_list
         yay -Sqq --noconfirm  ${aur_list} 2>/dev/null
+        ;;
+    "FreeBSD")
+        pkg install ${package_list}
         ;;
 esac
