@@ -243,3 +243,4 @@ for_window [instance="dropdown_*"] move scratchpad
 for_window [instance="dropdown_*"] sticky enable
 for_window [instance="dropdown_*"] scratchpad show
 for_window [instance="dropdown_*"] move position center
+for_window [instance="dropdown_*"] resize set 800 300
