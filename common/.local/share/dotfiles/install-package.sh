@@ -14,7 +14,7 @@ case ${DISTRO} in
         if [ -z ${package_list} ];then
             . ~/.local/share/dotfiles/packages.sh
         fi
-        sudo pacman -Sqq ${package_list}
+        sudo pacman -Sqq --noconfirm ${package_list}
         if ! $(command -v yay 2>/dev/null);then
             _install_yay
         fi
