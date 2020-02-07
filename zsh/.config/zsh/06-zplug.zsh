@@ -103,8 +103,8 @@ zplug 'dracula/zsh', as:theme
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
-    if $(ping -q -w1 -c1 google.com &>/dev/null);then
-        echo; zplug install
+    if $(ping -q -c1 google.com &>/dev/null);then
+        zplug install
     fi
 fi
 
