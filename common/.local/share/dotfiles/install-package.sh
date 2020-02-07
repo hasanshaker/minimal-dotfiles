@@ -18,7 +18,7 @@ case ${DISTRO} in
         # possible conflicts
         if [ $(pacman -Qq vim 2>/dev/null) ];then
             printf "we'll replace vim with gvim\n"
-            sudo pacman -Rqq --noconfirm vim 2>/dev/null
+            sudo pacman -R --noconfirm vim 2>/dev/null
         fi
         sudo pacman -Sqq --noconfirm ${package_list}
         if ! $(command -v yay 2>/dev/null);then
