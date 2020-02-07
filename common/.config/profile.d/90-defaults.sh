@@ -104,3 +104,9 @@ elif [ -n "${ETH2}" ];then
     export ETH_IFACE="${ETH2}"
 fi
 unset ETH1 ETH2
+
+case "$TERM" in
+"dumb")
+    export PS1="> "
+    ;;
+esac
