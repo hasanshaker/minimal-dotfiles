@@ -30,6 +30,6 @@ case ${DISTRO} in
         yay -Sqq --noconfirm  ${aur_list} 2>/dev/null
         ;;
     "FreeBSD")
-        pkg install ${package_list}
+        sudo pkg install ${package_list}
         ;;
 esac
