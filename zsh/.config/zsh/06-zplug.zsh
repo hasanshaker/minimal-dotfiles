@@ -4,7 +4,7 @@
 
 # Ensure zplug is installed
 if [[ ! -d "$ZPLUG_HOME" ]]; then
-    if $(ping -q -w1 -c1 google.com &>/dev/null);then
+    if $(ping -q -c1 google.com &>/dev/null);then
         git clone https://github.com/zplug/zplug "$ZPLUG_HOME"
         source "$ZPLUG_HOME/init.zsh" && zplug --self-manage
     fi
