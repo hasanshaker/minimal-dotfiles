@@ -59,13 +59,27 @@ case "${_WM}" in
         case "${DISTRO}" in
             arch)
                 mkdir -p "${XDG_DATA_HOME}"/i3
-                exec i3 -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
+                if [ -e ~/.config/i3/config.local ];then
+                    exec i3 -c ~/.config/i3/config.local -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
+                else
+                    exec i3 -V >> "${XDG_DATA_HOME}"/i3/i3-"$(date +%F_%H-%M-%S)"
+                fi
                 ;;
             FreeBSD)
-                exec i3 -c ~/.config/i3/config-freebsd
+                if [ -e ~/.config/i3/config-freebsd.local ];then
+                    exec i3 -c ~/.config/i3/config-freebsd.local
+                else
+                    exec i3 -c ~/.config/i3/config-freebsd
+                fi
                 ;;
             gentoo)
-                openrc_ck i3
+                if [ -e ~/.config/i3/config-gentoo ];then
+                    openrc_ck i3 -c ~/.config/i3/config-gentoo
+                elif [ -e ~/.config/i3/config.local ];then
+                    openrc_ck i3 -c ~/.config-i3/config.local
+                else
+                    openrc_ck i3
+                fi
                 ;;
         esac
         ;;
