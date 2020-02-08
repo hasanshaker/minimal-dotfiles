@@ -114,3 +114,10 @@ case "$TERM" in
     export PS1="> "
     ;;
 esac
+
+# org-directory
+if [ -z ${ORG_DIR} ];then
+    # use my default
+    [ ! -d "${HOME}/Projects/org-mode" ] &&
+        mkdir -p ${HOME}/Projects/org-mode
+fi
