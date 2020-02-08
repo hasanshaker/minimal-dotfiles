@@ -29,6 +29,10 @@ case "${DISTRO}" in
             fi
         fi
         ;;
+    *)
+        # append pinentry-program since its location varied for each distro
+        gpg-agent --pinentry-program $(command -v pinentry)
+        ;;
 esac
 
 # keychain
