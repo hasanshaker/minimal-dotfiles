@@ -12,7 +12,7 @@ case ${DISTRO} in
             ncmpcpp alsa-utils maim socat unclutter unrar unzip xclip xdotool \
             xorg-xdpyinfo zathura zathura-pdf-mupdf poppler mediainfo atool highlight \
             pavucontrol byzanz transmission-cli ttf-font-awesome texlive-most \
-            xorg"
+            xorg inetutils"
         aur_list="ts polybar transmission-remote-cli-git screenkey-git"
         ;;
     "FreeBSD")
