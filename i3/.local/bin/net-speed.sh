@@ -24,7 +24,7 @@
 #
 
 # Auto detect interfaces
-ifaces=$(ls /sys/class/net | grep -E '^(eth|wlan|enp|wlp|extern)')
+ifaces=$(ls /sys/class/net | grep -E '^(eth|wlan|enp|wlp|extern|intern)')
 
 last_time=0
 last_rx=0
