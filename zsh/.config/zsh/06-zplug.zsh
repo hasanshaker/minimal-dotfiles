@@ -52,7 +52,7 @@ export GIT_AUTO_FETCH_INTERVAL=1200 #in seconds
 # https://jeffkreeftmeijer.com/git-flow/
 # only do 'zplug' if git-flow installed
 # https://github.com/petervanderdoes/gitflow-avh#installing-git-flow
-if [ -f /usr/local/bin/git-flow ];then
+if [ $(command -v git-flow) ];then
     # adds completion for the git-flow (AVH Edition).
     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-flow-avh
     zplug 'plugins/git-flow-avh', from:oh-my-zsh
@@ -60,7 +60,7 @@ fi
 
 # http://datasift.github.io/gitflow/index.html
 # only do 'zplug' if git-hf installed
-if [ -f /usr/local/bin/git-hf ];then
+if [ $(command -v git-hf) ];then
     # adds completion for HubFlow (GitFlow for GitHub), as well as some aliases for common commands
     # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-hubflow
     zplug 'plugins/git-hubflow', from:oh-my-zsh
