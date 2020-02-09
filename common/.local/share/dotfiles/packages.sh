@@ -13,7 +13,7 @@ case ${DISTRO} in
             xorg-xdpyinfo zathura zathura-pdf-mupdf poppler mediainfo atool highlight \
             pavucontrol byzanz transmission-cli ttf-font-awesome texlive-most \
             xorg inetutils net-tools"
-        aur_list="ts polybar transmission-remote-cli-git screenkey-git"
+        aur_list="ts polybar transmission-remote-cli-git screenkey-git gitflow-avh"
         ;;
     "FreeBSD")
         package_list="dmenu elinks emacs feh firefox gnupg i3-gaps i3lock \
@@ -22,6 +22,6 @@ case ${DISTRO} in
             xwininfo xorg-fonts arandr calcurse compton xprop sxiv ncmpcpp maim socat \
             unclutter unrar unzip xclip xdotool xdpyinfo zathura zathura-pdf-mupdf \
             poppler mediainfo atool highlight pavucontrol transmission-cli \
-            font-awesome texlive-base xorg-minimal"
+            font-awesome texlive-base xorg-minimal gitflow"
         ;;
 esac

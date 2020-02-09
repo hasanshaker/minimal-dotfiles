@@ -33,3 +33,10 @@ case ${DISTRO} in
         sudo pkg install ${package_list}
         ;;
 esac
+
+# install hubflow
+# https://github.com/datasift/gitflow
+if [ ! -f /usr/local/bin/git-hf ];then
+    git clone git@github.com:datasift/gitflow.git ~/.local/share/gitflow
+    sudo sh ~/.local/share/gitflow/install.sh
+fi
