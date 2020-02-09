@@ -27,7 +27,7 @@ case ${DISTRO} in
             _install_yay
         fi
         # install aur_list
-        yay -Sqq --noconfirm  ${aur_list} 2>/dev/null
+        yay -Sqq --needed --noconfirm --pacman "--needed --noconfirm" ${aur_list} 2>/dev/null
         ;;
     "FreeBSD")
         sudo pkg install ${package_list}
