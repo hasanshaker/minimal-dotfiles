@@ -121,9 +121,3 @@ if [ -z ${ORG_DIR} ];then
     [ ! -d "${HOME}/Projects/org-mode" ] &&
         mkdir -p ${HOME}/Projects/org-mode
 fi
-
-#
-if [ $(command -v dbus-update-activation-environment) ] &&
-       [ $(command -v systemctl) ];then
-    dbus-update-activation-environment --systemd --all
-fi
