@@ -12,7 +12,8 @@ case ${DISTRO} in
             compton xorg-xprop sxiv ncmpcpp alsa-utils maim socat unclutter \
             unrar unzip xclip xdotool xorg-xdpyinfo zathura zathura-pdf-mupdf \
             poppler mediainfo atool highlight pavucontrol byzanz transmission-cli \
-            ttf-font-awesome texlive-most xorg inetutils net-tools gtk2"
+            ttf-font-awesome texlive-most xorg inetutils net-tools gtk2 breeze \
+            breeze-gtk breeze-icons"
         aur_list="ts polybar transmission-remote-cli-git screenkey-git gitflow-avh"
         ;;
     "FreeBSD")
