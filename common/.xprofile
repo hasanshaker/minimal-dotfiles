@@ -53,3 +53,6 @@ emacs --daemon &
 
 # sxhkd
 sxhkd -c "${XDG_CONFIG_HOME}/sxhkd/sxhkdrc-${_WM}" &
+
+# in case using network-manager
+[ $(command -v nm-applet 2>/dev/null) ] && nm-applet &
